@@ -1,0 +1,29 @@
+
+  .card_spacing {
+    padding: 50px;
+  }
+  .Card_arrangement {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: center;
+    padding: 50px;
+  }
+  #o_h1{color: white;}
+  #OSer{
+    background-color:   #ffffff;
+background-image: linear-gradient(to right, transparent 0%, #ffffff 100%);
+border-radius: 10px;
+width: 40vh;
+height: 0.313rem;
+box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.4);
+}
+.our_serv{
+    padding-left: 8vw;
+    padding-top: 10vh;
+    
+}
+.Our_serv_all_con{
+    padding-bottom: 10vh;
+}

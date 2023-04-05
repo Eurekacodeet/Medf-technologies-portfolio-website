@@ -1,0 +1,54 @@
+.Test_all_con{
+    background-image: url('../../assets/worldmapdone.png');
+    background-color: whitesmoke;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 8vw;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+.test_sub_arranger{
+    display: flex;
+    flex-direction: column;
+}
+.Testsubcon{
+    display: flex;
+    flex-direction: row;
+    
+}
+#h3_test{
+    background-color:  #000000;
+    background-image: linear-gradient(to right, transparent 0%, #000000 100%);
+    border-radius: 10px;
+    width: 40vh;
+    height: 0.313rem;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+#test_h1{
+    color: black;
+}
+
+#p_test{
+    color: black;
+
+}
+
+/* .Testimony_map{
+    background-image: url('../../assets/in-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 180%;
+     /* adjust this value based on the aspect ratio of the background image */
+
+/* } */ 
+.Testimony_map {
+    position: relative;
+    width: 200%;
+    height: 0;
+    padding-bottom: 122.66%; /* adjust this value based on the aspect ratio of the background image */
+    background-image: url('../../assets/in-bg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: 1px solid red;
+}
