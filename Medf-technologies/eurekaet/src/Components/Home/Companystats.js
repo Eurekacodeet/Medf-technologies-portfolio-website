@@ -13,12 +13,12 @@ const Companystats = () => {
 
  <div className='rounded-full bg-black w-10 h-[0.6rem] mt-4 hover:w-40 transition-width duration-500 ease-in-out shadow shadow-black'></div>
 </div>
-  <div className="flex justify-center text-center border-l-2 border-t-2 rounded-tl-3xl border-gray-300 flex-col"><ClockCircleOutlined className='text-5xl p-4' /><p className="text_sm">Punctuality</p></div>
-  <div className="flex justify-center text-center  border-t-2 border-l-2 border-gray-300 flex-col"><TrophyOutlined className='text-5xl p-4'/><p className="text-sm">Quality</p></div>
+  <div className="flex justify-center text-center border-l-2 border-t-2 rounded-tl-3xl border-gray-300 flex-col"><ClockCircleOutlined className='text-5xl p-4' /><p className="text-base font-medium">Punctuality</p></div>
+  <div className="flex justify-center text-center  border-t-2 border-l-2 border-gray-300 flex-col"><TrophyOutlined className='text-5xl p-4'/><p className="text-base font-medium">Quality</p></div>
   <div className='flex justify-center items-center border-2 border-gray-300 row-span-2 bg-black rounded-br-3xl rounded-tr-xl'> <img  className="rounded-tr-xl rounded-br-3xl"src={Efko}/></div>
-  <div className="flex justify-center items-center border-l-2 border-t-2 border-b-2 border-gray-300 flex-col rounded-tl-3xl rounded-bl-2xl"><UserOutlined className='text-5xl p-4' /> <h2 className='text-3xl font-bold p-4'>20</h2><p className="text-sm">Clients</p></div>
-  <div className="flex justify-center items-center border-y-2 border-l-2 border-gray-300 flex-col"><UsergroupAddOutlined className='text-5xl p-4' /><h2 className='text-3xl font-bold p-4'>20</h2><p className="text-sm">Members</p></div>
-  <div className="flex justify-center items-center border-t-2 border-l-2 border-b-2 border-gray-300 flex-col"><CodeSandboxOutlined className='text-5xl p-4' /><h2 className='text-3xl font-bold p-4'>20</h2><p className="text-sm">Projects</p></div>
+  <div className="flex justify-center items-center border-l-2 border-t-2 border-b-2 border-gray-300 flex-col rounded-tl-3xl rounded-bl-2xl"><UserOutlined className='text-5xl p-4' /> <h2 className='text-3xl font-bold p-4'>20</h2><p className="text-base font-medium">Clients</p></div>
+  <div className="flex justify-center items-center border-y-2 border-l-2 border-gray-300 flex-col"><UsergroupAddOutlined className='text-5xl p-4' /><h2 className='text-3xl font-bold p-4'>20</h2><p className="text-base font-medium">Members</p></div>
+  <div className="flex justify-center items-center border-t-2 border-l-2 border-b-2 border-gray-300 flex-col"><CodeSandboxOutlined className='text-5xl p-4' /><h2 className='text-3xl font-bold p-4'>20</h2><p className="text-base font-medium">Projects</p></div>
   
 </div>
   )
