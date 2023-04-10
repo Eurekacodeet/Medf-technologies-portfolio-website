@@ -3,6 +3,7 @@ import BgTestimonies from '../../assets/worldmap.png'
 import TestimonyMap from '../../assets/in-bg.png'
 import Avatar from '@mui/material/Avatar';
 import './Testimonies.css'
+import { UserOutlined } from '@ant-design/icons';
 const Testimonies = () => {
   const dummyTestimonies =[
     {
@@ -25,19 +26,19 @@ const Testimonies = () => {
 ]
 const [testimonies,setTestimonies]=useState(dummyTestimonies)
   return (
-    <div className='Test_all_con'>
-        <div className='Testsubcon'>
+    <div className=''>
+        <div className=''>
             
             <div>  
-       <p id="p_test">Testimonies</p> 
-       <h1 id="test_h1">We serve our clients</h1>
-        <h3 id="h3_test"></h3>
+       <p id="">Testimonies</p> 
+       <h1 id="">We serve our clients</h1>
+        <h3 id=""></h3>
         <div>
-        <div className='Testimony_map'>
+        <div className=''>
 {/* <img src={TestimonyMap}/> */}
 <button>
-  
-  <Avatar alt="Remy Sharp" src="../../assets/in-bg.png" /></button>
+<UserOutlined />
+</button>
 </div>
        </div>
 

@@ -11,7 +11,8 @@ const Companystats = () => {
   <div className=''> <p className="text-sm pb-4">Why choose us</p>
  <h1 className='text-[1.6rem] font-bold break-words mr-4'>EFKO unfolds solutions to everything </h1>
 
- <div className='rounded-full bg-black w-10 h-[0.6rem] mt-4 hover:w-40 transition-width duration-500 ease-in-out shadow shadow-black'></div>
+ <div className='rounded-full bg-black w-10 h-[0.4rem] mt-4 hover:w-40 
+ transition-width duration-500 ease-in-out shadow shadow-black'></div>
 </div>
   <div className="flex justify-center text-center border-l-2 border-t-2 rounded-tl-3xl border-gray-300 flex-col"><ClockCircleOutlined className='text-5xl p-4' /><p className="text-base font-medium antialiased">Punctuality</p></div>
   <div className="flex justify-center text-center  border-t-2 border-l-2 border-gray-300 flex-col"><TrophyOutlined className='text-5xl p-4'/><p className="text-base font-medium antialiased">Quality</p></div>

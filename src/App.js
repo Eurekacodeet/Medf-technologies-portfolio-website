@@ -6,6 +6,7 @@ import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import "./App.css";
 
 import Mainapp from './Mainapp'
+import Aboutus from "./Components/Aboutus/Aboutus";
 
 export default function App() {
  
@@ -17,6 +18,8 @@ export default function App() {
      
      
                <Route path='/' element={<Mainapp/>}/>
+               <Route path='/About' element={<Aboutus/>}/>
+
                {/* <Route path='/aboutus' element={user ?<Aboutroute/>: <Login/>} />
                <Route path='/services' element={user ?<Servicesroute/>: <Login/>} />
                <Route path='/register' element={<Register/>} />
