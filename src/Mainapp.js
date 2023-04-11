@@ -9,6 +9,7 @@ import Tools from './Components/Home/Tools';
 import Blogs from './Components/Home/Blogs';
 import Whychus from './Components/Home/Whychus';
 import Footer from './Components/Home/Footer';
+import Testimonies from './Components/Home/Testimonies';
 
 const Mainapp = () => {
   return (
@@ -19,11 +20,12 @@ const Mainapp = () => {
 <Companystats/>
 <Ourservices/>
         <Tools/>
-        <About/>
+        <About/> 
+         <Testimonies/>
         <Blogs/>
         <Whychus/>
         <Footer/>
-        {/* <Testimonies/> */}
+      
         {/* <Industries/> */}
     </div>
         

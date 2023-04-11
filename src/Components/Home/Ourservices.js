@@ -7,10 +7,16 @@ const Ourservices = () => {
   return (
     <div className='bg-black text-white p-10'>
     <div className='' >
-      <h1 className='text-[1.6rem] font-bold break-words mr-4 '>Our services </h1>
 
-<div className='rounded-full bg-white w-10 h-[0.4rem] 
-mt-4 hover:w-36 transition-width duration-500 ease-in-out shadow shadow-white'></div>
+
+    <div className='relative group'>
+  <h1 className='text-3xl py-4 font-bold hover:text-white mb-8 hover:cursor-default'>Our services</h1>
+  <div className='rounded-full bg-white w-10 h-[0.4rem] mt-2 
+               absolute left-0 bottom-0 transition-all duration-500 ease-in-out shadow
+                shadow-white group-hover:w-[11rem]'></div>
+</div>
+
+  
 
     </div>
     <div className='flex flex-wrap pt-10 justify-evenly'>
