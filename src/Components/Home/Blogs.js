@@ -5,12 +5,17 @@ const { Meta } = Card;
 const Blogs = () => {
   return (
     <div className='bg-white p-10'>
-        <div className=''> <p className="text-sm pb-4">Blogs</p>
- <h1 className='text-[1.6rem] font-bold break-words mr-4'>Latest Blogs</h1>
+  <p className="text-sm pb-4">Blogs</p>
 
- <div className='rounded-full bg-black w-10 h-[0.4rem] mt-4 hover:w-36 
- transition-width duration-500 ease-in-out shadow shadow-black'></div>
-    </div>
+
+    <div className='relative group'>
+  <h1 className='text-3xl pb-4 font-bold hover:text-black mb-8 hover:cursor-default'>Latest Blogs</h1>
+  <div className='rounded-full bg-black w-10 h-[0.4rem] mt-2 
+               absolute left-0 bottom-0 transition-all duration-500 ease-in-out shadow
+                shadow-black group-hover:w-[10.6rem]'></div>
+</div>
+
+
     <div className='flex flex-wrap pt-10 justify-evenly'>
     <Card
     hoverable

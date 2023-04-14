@@ -65,24 +65,24 @@ console.log(testimonies, "testimonies")
   <div className="flex justify-center items-center p-14">
     <div className="grid grid-cols-3 gap-4">
       <div className="col-span-1 w-[5vw] h-[5vw] bg-zinc-500 lg:w-[5vw] lg:h-[5vw] m-auto flex justify-center items-center rounded-full">
-        <button onClick={()=>setTestimonies(dummyTestimonies[0])} onMouseOver={() => setTestimonies(dummyTestimonies[0])}><img className="rounded-full border-2 border-white" src={'https://res.cloudinary.com/dvqawl4nw/image/upload/v1681215360/ef2kgpaolfbh88muw7aw.jpg'}/></button>
+        <button onClick={()=>setTestimonies(dummyTestimonies[0])} onMouseOver={() => setTestimonies(dummyTestimonies[0])}><img className="rounded-full border-2 border-zinc-600 hover:border-white" src={'https://res.cloudinary.com/dvqawl4nw/image/upload/v1681215360/ef2kgpaolfbh88muw7aw.jpg'}/></button>
       </div>
       <div className="col-span-1"></div>
       <div className="col-span-1 w-[5vw] h-[5vw] bg-zinc-500 lg:w-[5vw] lg:h-[5vw] flex justify-center items-center rounded-full">
-        <button onClick={()=>setTestimonies(dummyTestimonies[1])} onMouseOver={() => setTestimonies(dummyTestimonies[1])}><img className="rounded-full border-2 border-white" src='https://res.cloudinary.com/dvqawl4nw/image/upload/v1681215291/zeuidy2neaeug5zyxe9r.jpg'/></button>
+        <button onClick={()=>setTestimonies(dummyTestimonies[1])} onMouseOver={() => setTestimonies(dummyTestimonies[1])}><img className="rounded-full border-2 border-zinc-600 hover:border-white" src='https://res.cloudinary.com/dvqawl4nw/image/upload/v1681215291/zeuidy2neaeug5zyxe9r.jpg'/></button>
       </div>
       <div className="col-span-1"></div>
       <div className="col-span-1 w-[5vw] h-[5vw] bg-zinc-500 lg:w-[5vw] lg:h-[5vw] flex justify-center items-center rounded-full">
-        <button onClick={()=>setTestimonies(dummyTestimonies[2])} onMouseOver={() => setTestimonies(dummyTestimonies[2])}><img className="rounded-full border-2 border-white" src='https://res.cloudinary.com/dvqawl4nw/image/upload/v1681215279/oonoqezud5spqbhmzxrh.jpg'/></button>
+        <button onClick={()=>setTestimonies(dummyTestimonies[2])} onMouseOver={() => setTestimonies(dummyTestimonies[2])}><img className="rounded-full border-2 border-zinc-600 hover:border-white" src='https://res.cloudinary.com/dvqawl4nw/image/upload/v1681215279/oonoqezud5spqbhmzxrh.jpg'/></button>
       </div>
       <div className="col-span-1"></div>
       <div className="col-span-1 w-[5vw] h-[5vw] bg-zinc-500 lg:w-[5vw] lg:h-[5vw] flex justify-center items-center rounded-full">
-        <button onClick={()=>setTestimonies(dummyTestimonies[3])} onMouseOver={() => setTestimonies(dummyTestimonies[3])}><img className="rounded-full border-2 border-white" src='https://res.cloudinary.com/dvqawl4nw/image/upload/v1681215257/rbxybcxzgcrnxyxsxduz.jpg'/></button>
+        <button onClick={()=>setTestimonies(dummyTestimonies[3])} onMouseOver={() => setTestimonies(dummyTestimonies[3])}><img className="rounded-full border-2 border-zinc-600 hover:border-white" src='https://res.cloudinary.com/dvqawl4nw/image/upload/v1681215257/rbxybcxzgcrnxyxsxduz.jpg'/></button>
       </div>
       <div className="col-span-1"></div>
       <div className="col-span-1 w-[5vw] h-[5vw] bg-zinc-500 lg:w-[5vw] lg:h-[5vw] flex justify-center items-center rounded-full">
   <button onClick={() => setTestimonies(dummyTestimonies[4])} onMouseOver={() => setTestimonies(dummyTestimonies[4])}>
-    <img className="rounded-full border-2 border-white" src='https://res.cloudinary.com/dvqawl4nw/image/upload/v1681156342/tqdptjffmucilgtawkvq.jpg' alt='Profile'/>
+    <img className="rounded-full border-2 border-zinc-600 hover:border-white" src='https://res.cloudinary.com/dvqawl4nw/image/upload/v1681156342/tqdptjffmucilgtawkvq.jpg' alt='Profile'/>
   </button>
 </div>
 

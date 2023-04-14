@@ -28,9 +28,13 @@ const Footer = () => {
     
     </div>
     <div className='flex flex-col w-full items-start xl:w-1/2 xl:pl-10'>
-     <h2 className='text-2xl font-semibold'>Contact us</h2>
-     <div className='rounded-full bg-white w-10 h-[0.4rem] 
-mt-2 mb-4 hover:w-[7.5rem] transition-width duration-500 ease-in-out shadow shadow-white'></div>
+        <div className='relative group flex mb-4'>
+  <h2 className='text-2xl font-bold hover:text-white mb-4 hover:cursor-default'>Contact us</h2>
+  <div className='rounded-full bg-white w-10 h-[0.4rem]
+               absolute left-0 bottom-0 transition-all duration-500 ease-in-out shadow
+                shadow-white group-hover:w-[7.5rem]'></div>
+</div>
+
 <Input className="bg-black text-white mb-4 placeholder-white hover:border-white" placeholder="Name" />
   <Input className="bg-black text-white mb-4 placeholder-white hover:border-white" placeholder="Email" />
   <TextArea className="bg-black text-white mb-4 placeholder-white hover:border-white" placeholder="Message" rows={4} />

@@ -7,6 +7,7 @@ import "./App.css";
 
 import Mainapp from './Mainapp'
 import Aboutus from "./Components/Aboutus/Aboutus";
+import Contactus from "./Components/Contact us/Contactus";
 
 export default function App() {
  
@@ -19,6 +20,7 @@ export default function App() {
      
                <Route path='/' element={<Mainapp/>}/>
                <Route path='/About' element={<Aboutus/>}/>
+               <Route path='/Contact' element={<Contactus/>}/>
 
                {/* <Route path='/aboutus' element={user ?<Aboutroute/>: <Login/>} />
                <Route path='/services' element={user ?<Servicesroute/>: <Login/>} />
