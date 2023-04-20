@@ -10,7 +10,7 @@ const Dh = () => {
         <p className='text-sm'>Obtain High Quality Webapps</p>
         <div className='relative group'>
           <h1 className='text-3xl py-4 font-bold hover:text-white mb-8 hover:cursor-default'>Full Stack Web Development</h1>
-          <div className='rounded-full bg-white w-10 h-[0.25rem] mt-1
+          <div className='rounded-full bg-white w-10 h-[0.15rem] mt-1
                absolute left-0 bottom-0 transition-all duration-500 ease-in-out shadow
                 shadow-white group-hover:w-[87%]'></div>
         </div>
