@@ -10,26 +10,27 @@ import Blogs from './Components/Home/Blogs';
 import Whychus from './Components/Home/Whychus';
 import Footer from './Components/Home/Footer';
 import Testimonies from './Components/Home/Testimonies';
+import BlogList from './Components/Home/BlogList';
+import NavBar from './Components/navbar/NavBar';
 
 const Mainapp = () => {
   return (
-   
- <div>
-       
-    <Dh/>
-<Companystats/>
-<Ourservices/>
-        <Tools/>
-        <About/> 
-         <Testimonies/>
-        <Blogs/>
-        <Whychus/>
-        <Footer/>
-      
-        {/* <Industries/> */}
+
+    <div>
+      <NavBar/>
+      <Dh />
+      <Companystats />
+      <Ourservices />
+      <Tools />
+      <About />
+      <Testimonies />
+      <BlogList />
+      <Whychus />
+      <Footer />
+      {/* <Industries/> */}
     </div>
-        
- 
+
+
   )
 }
 
