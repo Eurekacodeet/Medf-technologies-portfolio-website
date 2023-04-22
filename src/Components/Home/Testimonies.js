@@ -90,15 +90,18 @@ console.log(testimonies, "testimonies")
 </div>
 
 <div className='w-full lg:w-3/5'>
-  <div className="p-6 bg-white rounded-lg shadow text-center w-full">
+  <div className=' h-[35vh]'>
+  <div className="p-6 bg-white rounded-lg shadow text-center w-full overflow-y-scroll">
     <p className="mb-3 font-normal text-gray-500">{testimonies.Testimonies}</p>
   </div>
-
-  <div className='flex items-start justify-start flex-row h-1/5'>
-    <img className="mt-4 rounded-full w-12 h-12 sm:w-20 sm:h-20" src={testimonies.Profielimage}/>
-    <p className="mt-4 pl-4 ">{testimonies.Username}</p>
-  </div>
 </div>
+<div className='flex items-start justify-start flex-row h-[calc(100% - 35vh)]'>
+  <img className="mt-4 rounded-full w-12 h-12 sm:w-20 sm:h-20" src={testimonies.Profielimage}/>
+  <p className="mt-4 pl-4 ">{testimonies.Username}</p>
+</div>
+
+</div>
+
 
 
 
