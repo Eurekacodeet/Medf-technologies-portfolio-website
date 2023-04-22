@@ -5,8 +5,8 @@ import V3 from './V5.js';
 
 const Dh = () => {
   return (
-    <div className='flex flex-row bg-black text-white p-10 h-[80vh]'>
-      <div className='w-2/5 mr-10 '>
+    <div className='flex flex-col bg-black  text-white p-10 h-[85vh] md:flex md:flex-row overflow-hidden'>
+      <div className='w-full mr-10 md:w-2/5'>
         <p className='text-sm'>Obtain High Quality Webapps</p>
         <div className='relative group'>
           <h1 className='text-3xl py-4 font-bold hover:text-white mb-8 hover:cursor-default'>Full Stack Web Development</h1>
@@ -16,7 +16,7 @@ const Dh = () => {
         </div>
         <p className='text-sm'>We help you to grow you business by developing awesome and interactive web apps </p>
       </div>
-      <div className='w-3/5 '>
+      <div className='md:w-3/5 h-[80%] w-full md:h-full pt-6'>
         <Canvas className=''>
           <OrbitControls />
           <directionalLight intensity={0.5} />

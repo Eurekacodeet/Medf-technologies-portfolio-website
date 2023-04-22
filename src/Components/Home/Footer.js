@@ -2,7 +2,10 @@ import { EnvironmentOutlined, FacebookOutlined, InstagramOutlined, LinkedinOutli
 import { Col, Row } from 'antd'
 import React from 'react'
 import { Input } from 'antd';
+import { Bars3Icon,EnvelopeIcon, MapPinIcon, DevicePhoneMobileIcon } from '@heroicons/react/24/outline'
 const { TextArea } = Input;
+
+
 const Footer = () => {
   return (
     <div className='flex flex-col  bg-black text-white p-16'>
@@ -10,18 +13,18 @@ const Footer = () => {
  
 
     <div>
-    <div class="grid grid-rows-3 grid-flow-col gap-4">
-  <div class="row-span-3 pr-3 "><PhoneOutlined className='text-3xl pt-3 bg-zinc-900 h-[11vh] w-[7vw] rounded'/></div>
+    <div class="grid grid-rows-3 grid-flow-col gap-4 pb-4">
+  <div class="row-span-3 bg-zinc-900 flex p-3 rounded items-center"><DevicePhoneMobileIcon width={40} height={40}/></div>
   <div class="col-span-2 "> <p>+251912345678</p></div>
   <div class="row-span-2 col-span-2 ">  <p>Fahradit klasický smysluplný text vhodnou bezvýznamovo</p></div>
 </div>
-<div class="grid grid-rows-3 grid-flow-col gap-4">
-  <div class="row-span-3 "><EnvironmentOutlined className='text-3xl pt-3 bg-zinc-900 h-[11vh] w-[7vw] rounded'/></div>
+<div class="grid grid-rows-3 grid-flow-col gap-4 pb-4">
+  <div class="row-span-3 bg-zinc-900 flex p-3 rounded items-center"><MapPinIcon width={40} height={40}/></div>
   <div class="col-span-2 "> <p>Addis Ababa, Ethiopia</p></div>
   <div class="row-span-2 col-span-2 ">  <p>Fahradit klasický smysluplný text vhodnou bezvýznamovo</p></div>
 </div>
-<div class="grid grid-rows-3 grid-flow-col gap-4">
-  <div class="row-span-3 "><MailOutlined  className='text-3xl pt-3 bg-zinc-900 h-[11vh] w-[7vw] rounded'/></div>
+<div class="grid grid-rows-3 grid-flow-col gap-4 pb-4">
+  <div class="row-span-3 bg-zinc-900 flex p-3 rounded items-center"><EnvelopeIcon width={40} height={40}/></div>
   <div class="col-span-2 "> <p>example@gmail.com</p></div>
   <div class="row-span-2 col-span-2 ">  <p>Fahradit klasický smysluplný text vhodnou bezvýznamovo</p></div>
 </div>

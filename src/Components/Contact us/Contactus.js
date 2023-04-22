@@ -20,7 +20,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="flex flex-col items-center h-full p-10 bg-white">
+    <div className="flex flex-col items-center h-full p-10 bg-white mt-100 ">
              <div >
       <h1 className='text-[1.6rem] font-bold break-words mr-4 text-black whitespace-pre '>C o n t a c t    u s </h1>
 

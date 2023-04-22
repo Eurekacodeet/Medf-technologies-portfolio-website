@@ -1,6 +1,5 @@
 import React from "react";
 
-
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 
 import "./App.css";
@@ -9,16 +8,17 @@ import Mainapp from './Mainapp'
 import Aboutus from "./Components/Aboutus/Aboutus";
 import Contactus from "./Components/Contact us/Contactus";
 import PageNotFound from "./Components/Home/NotFound";
+import NavBar from "./Components/navbar/NavBar";
 
 export default function App() {
 
   return (
     <div>
-      {/* <NavBar/> */}
       <Router>
+        <NavBar />
         <Routes>
           <Route path='/' element={<Mainapp />} />
-          <Route path='/About' element={<Aboutus />} />
+          <Route path='/ourteam' element={<Aboutus />} />
           <Route path='/Contact' element={<Contactus />} />
           <Route path='*' element={<PageNotFound />} />
           {/* <Route path='/aboutus' element={user ?<Aboutroute/>: <Login/>} />
@@ -35,4 +35,3 @@ export default function App() {
     </div>
   );
 }
-

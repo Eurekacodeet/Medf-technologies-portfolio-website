@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import BgTestimonies from '../../assets/worldmap.png'
 import TestimonyMap from '../../assets/in-bg.png'
 import { UserOutlined } from '@ant-design/icons';
@@ -24,19 +24,27 @@ const Testimonies = () => {
   },
   {
     Profielimage:"https://res.cloudinary.com/dvqawl4nw/image/upload/v1681215257/rbxybcxzgcrnxyxsxduz.jpg",
-    Username:"Zeberga",
+    Username:"John Smith",
     Testimonies:"I have been thoroughly impressed by this company's expertise and professionalism. They always go above and beyond to ensure that their clients are satisfied and that their products are of the highest quality.",
 
   },
   {
     Profielimage:"https://res.cloudinary.com/dvqawl4nw/image/upload/v1681156342/tqdptjffmucilgtawkvq.jpg",
-    Username:"Zeberga",
+    Username:"John Doe",
     Testimonies:"This company's software solutions have been a game-changer for our business. They have helped us streamline our operations, increase productivity, and achieve better results. Their personalized support and guidance have been invaluable.",
 
   }
 
 ]
 const [testimonies,setTestimonies]=useState(dummyTestimonies[0])
+useEffect(() => {
+  let currentIndex = 0;
+  const interval = setInterval(() => {
+    currentIndex = currentIndex === dummyTestimonies.length - 1 ? 0 : currentIndex + 1;
+    setTestimonies(dummyTestimonies[currentIndex]);
+  }, 5000);
+  return () => clearInterval(interval);
+}, []);
 console.log(testimonies, "testimonies")
   return (
     <div className='bg-[url("https://res.cloudinary.com/dvqawl4nw/image/upload/v1681151993/dswa4jvlordlohgz9hyf.png")] bg-cover bg-no-repeat text-white p-10'>
@@ -50,18 +58,9 @@ console.log(testimonies, "testimonies")
                absolute left-0 bottom-0 transition-all duration-500 ease-in-out shadow
                 shadow-white group-hover:w-[10.4rem]'></div>
 </div>
-
-
-
-
-
         <div className=''>
-{/* <img src={TestimonyMap}/> */}
-{/* <button>
-<UserOutlined />
-</button> */}
 <div  className='flex flex-col lg:flex  lg:flex-row'>
-<div className="flex flex-row items-start pl-8 brder-2 brder-red-500 w-2/5 lg:visible bg-no-repeat bg-contain bg-[url('https://res.cloudinary.com/dvqawl4nw/image/upload/v1681151992/oexvoxnkffeev3wzjqho.png')]">
+<div className="hidden lg:flex flex-row items-start pl-8 w-2/5 bg-no-repeat bg-contain bg-[url('https://res.cloudinary.com/dvqawl4nw/image/upload/v1681151992/oexvoxnkffeev3wzjqho.png')]">
   <div className="flex justify-center items-center p-14">
     <div className="grid grid-cols-3 gap-4">
       <div className="col-span-1 w-[5vw] h-[5vw] bg-zinc-500 lg:w-[5vw] lg:h-[5vw] m-auto flex justify-center items-center rounded-full">
@@ -90,40 +89,22 @@ console.log(testimonies, "testimonies")
   </div>
 </div>
 
-
-  <div className='brder-2 brder-green-400'>
-  <div className=' brder-2 brder-blue-500 flex flex-col items-center justify-center'>
-  <Card
-  className='w-1/5 lg:w-3/5'
-    title=""
-    brdered={false}
-    style={{
-      width: 600,
-    }}
-  >
-    <p>{testimonies.Testimonies}</p>
-    {/* <p>Card content</p>
-    <p>Card content</p> */}
-  </Card>
- 
+<div className='w-full lg:w-3/5'>
+  <div className="p-6 bg-white rounded-lg shadow text-center w-full">
+    <p className="mb-3 font-normal text-gray-500">{testimonies.Testimonies}</p>
   </div>
-  <div className='flex items-start justify-start flex-row'>
-  <img className="mt-4 rounded-full w-[5vw] h-[5vw]" src={testimonies.Profielimage}/><p className="mt-4 pl-4 ">{testimonies.Username}</p></div>
+
+  <div className='flex items-start justify-start flex-row h-1/5'>
+    <img className="mt-4 rounded-full w-12 h-12 sm:w-20 sm:h-20" src={testimonies.Profielimage}/>
+    <p className="mt-4 pl-4 ">{testimonies.Username}</p>
+  </div>
 </div>
+
+
 
  
 </div>
 </div>
-  
-
-{/* <div className=''>
-<div>
-{testimonies.map(testimonies=>
-<p>{testimonies.Username}</p>
-)}
-
-</div>
-</div> */}
 </div>
     </div>
   )

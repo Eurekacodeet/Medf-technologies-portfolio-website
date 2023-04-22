@@ -4,7 +4,7 @@ import Footer from '../Home/Footer'
 
 const Aboutus = () => {
   return (
-    <div>
+    <div className=''>
     <div className='bg-black p-10 flex flex-col items-center h-full '>
       <div >
       <h1 className='text-[1.6rem] font-bold break-words mr-4 text-white whitespace-pre '>M e e t    t h e   t e a m </h1>
