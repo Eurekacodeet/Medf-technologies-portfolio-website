@@ -92,7 +92,7 @@ console.log(testimonies, "testimonies")
 <div className='w-full lg:w-3/5'>
   <div className=' h-[35vh]'>
   <div className="p-6 bg-white rounded-lg shadow text-center w-full overflow-y-scroll">
-    <p className="mb-3 font-normal text-gray-500">{testimonies.Testimonies}</p>
+    <p className="mb-3 font-normal lg:text-base text-sm text-gray-500">{testimonies.Testimonies}</p>
   </div>
 </div>
 <div className='flex items-start justify-start flex-row h-[calc(100% - 35vh)]'>

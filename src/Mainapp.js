@@ -20,9 +20,9 @@ const Mainapp = () => {
     <div className=''>
       <Dh />
       <Companystats />
-      <Ourservices />
+      <div id="ourservices"><Ourservices /></div>
       <Tools />
-      <About />
+      <div className='' id="about"><About/></div>
       <Portfolio/>
       <Testimonies />
       <BlogList />

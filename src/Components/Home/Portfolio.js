@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import {Bars3Icon, ComputerDesktopIcon, CubeIcon, DevicePhoneMobileIcon, GlobeAltIcon, PaintBrushIcon, PuzzlePieceIcon} from '@heroicons/react/24/outline'
 
 function Tabs() {
   const [activeTab, setActiveTab] = useState(1);
@@ -12,6 +13,15 @@ function Tabs() {
     { id: 5, label: "Blender 3D", content: () => <p>Content for Tab 5</p> },
     { id: 6, label: "Graphics design", content: () => <p>Content for Tab 6</p> },
     { id: 7, label: "Games", content: () => <p>Content for Tab 7</p> },
+  ];
+  const tabsMobile = [
+    { id: 1, icon: Bars3Icon, content: () => <p>Content for Tab 1</p> },
+    { id: 2, icon: ComputerDesktopIcon, content: () => <p>Content for Tab 2</p> },
+    { id: 3, icon: GlobeAltIcon, content: () => <p>Content for Tab 3</p> },
+    { id: 4, icon: DevicePhoneMobileIcon, content: () => <p>Content for Tab 4</p> },
+    { id: 5, icon: CubeIcon, content: () => <p>Content for Tab 5</p> },
+    { id: 6, icon: PaintBrushIcon, content: () => <p>Content for Tab 6</p> },
+    { id: 7, icon: PuzzlePieceIcon, content: () => <p>Content for Tab 7</p> },
   ];
   const [size, setSize] = useState(window.innerWidth);
 
@@ -63,37 +73,39 @@ function Tabs() {
         </div>
       </div>
     </div>
-     {size < 1024 && ( <div className="">
+     {size < 1024 && ( <div className="mx-10 mb-10 overflow-y-scroll">
 
-    <div className="flex flex-row mb-8 ">
-      <div className="w-1/3">
-        <nav className="flex flex-col">
-          {tabs.map((tab) => (
-            <p
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`text-gray-500 font-bold py-2 px-4 cursor-pointer${
-                activeTab === tab.id ? "text-black border-l-4 border-black bg-gray-100" : ""
-              }`}
-            >
-              {tab.label}
-            </p>
-          ))}
-        </nav>
-      </div>
-      <div className="w-2/3">
-        <div className="">
+     <div className="">
+        <div className=" w-full  border-b-[1px] border-gray-200">
+          <nav className="-mb-px flex text-center items-center" aria-label="Tabs">
+            {tabsMobile.map((tab) => (
+              <tab.icon
+              width={28} height={28}
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`w-1/4 px-1 text-center text-sm border-b-[1px] ${
+                  activeTab === tab.id
+                    ? " text-center items-center border-black overscroll-contain text-black font-bold hover:cursor-pointer whitespace-nowrap pr-2"
+                    : "truncate border-border-transparent text-gray-400 hover:text-gray-700 whitespace-nowrap hover:border-gray-300 hover:cursor-pointer focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
+                }`}
+              >
+                {tab.label}
+              </tab.icon>
+            ))}
+          </nav>
+        </div>
+
+        <div className="mt-8">
           {tabs.map((tab) => (
             <div
               key={tab.id}
-              className={`${activeTab === tab.id ? "block ml-8" : "hidden"} tab-content`}
+              className={`${activeTab === tab.id ? "block" : "hidden"} tab-content`}
             >
               {tab.content()}
             </div>
           ))}
         </div>
       </div>
-    </div>
  
 </div>
  )}

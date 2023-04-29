@@ -38,16 +38,17 @@ const products = [
 
 export default function BlogList() {
   return (
-    <div className="bg-white">
-     
-      <div className="mx-auto max-w-2xl px-8 py-16 sm:px-6 sm:py-10 lg:max-w-7xl lg:px-8">
-      <p className="text-sm pb-4">Blogs</p>
-      <div className='relative group'>
-  <h1 className='text-3xl pb-4 font-bold hover:text-black mb-8 hover:cursor-default'>Latest Blogs</h1>
+    <div className="bg-white flex flex-col p-10">
+      <div className='relative group'> 
+        <p className="text-sm pb-4">Blogs</p>
+  <h1 className='text-3xl pb-4 font-bold hover:text-black hover:cursor-default'>Latest Blogs</h1>
   <div className='rounded-full bg-black w-10 h-[0.4rem] mt-2 
                absolute left-0 bottom-0 transition-all duration-500 ease-in-out shadow
                 shadow-black group-hover:w-[10.6rem]'></div>
 </div>
+      <div className="mx-auto max-w-2xl px-8 py-16 sm:px-6 sm:py-10 lg:max-w-7xl lg:px-8">
+   
+     
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
           {products.map((product) => (
             

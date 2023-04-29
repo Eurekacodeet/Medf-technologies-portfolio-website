@@ -1,7 +1,7 @@
 import { Fragment, useState } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon, PhoneIcon } from '@heroicons/react/24/outline'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Drawer } from 'antd'
 import { MenuOutlined } from '@ant-design/icons';
 
@@ -18,9 +18,31 @@ function classNames(...classes) {
 }
 
 export default function NavBar() {
+    let navigate=useNavigate();
     const [isDrawerVisible, setIsDrawerVisible] = useState(false);
     const [currentMenu, setCurrentMenu] = useState('home');
-  
+
+
+
+
+    const handleNavbarClick = (sectionID) => {
+        if (window.location.pathname !== '/') {
+          navigate('/');
+          setTimeout(() => {
+            const navbarHeight = document.querySelector('nav').offsetHeight;
+            const element = document.getElementById(sectionID);
+            const offset = element.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+            window.scrollTo({ top: offset, behavior: 'smooth' });
+          }, 500);
+        } else {
+          const navbarHeight = document.querySelector('nav').offsetHeight;
+          const element = document.getElementById(sectionID);
+          const offset = element.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+          window.scrollTo({ top: offset, behavior: 'smooth' });
+        }
+      }
+      
+
     const handleDrawerClose = () => {
       setIsDrawerVisible(false);
     };
@@ -36,7 +58,7 @@ export default function NavBar() {
       }
     };
     return (
-        <nav class="bg-black dark:bg-back sticky w-full z-20 top-0 left-0 border-b border-black dark:border-gray-600">
+        <nav id="nav" class="bg-black dark:bg-back sticky w-full z-20 top-0 left-0 border-b border-black dark:border-gray-600">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="/" class="flex items-center">
                     <img src="" class="h-8 mr-3" alt="Logo" />
@@ -62,12 +84,12 @@ export default function NavBar() {
                             </div>
                         </li>
                         <li className='group/about hover:cursor-pointer'>
-                        <Link to="/services"> <p class="block py-2 pl-3 pr-4 text-white bg-gray-100 rounded md:bg-transparent md:p-0 hover:cursor-pointer">About</p></Link>
+                        <button onClick={()=>handleNavbarClick("about")}> <p class="block py-2 pl-3 pr-4 text-white bg-gray-100 rounded md:bg-transparent md:p-0 hover:cursor-pointer">About</p></button>
                             <div className='rounded-full bg-white w-0 h-[0.15rem] mt-1
                             transition-all relative duration-300 ease-in-out group-hover/about:w-full'></div>
                         </li>
                         <li className='group/services hover:cursor-pointer'>
-                        <Link to="/services"><p class="block py-2 pl-3 pr-4 text-white bg-gray-100 rounded md:bg-transparent md:p-0 hover:cursor-pointer">Services</p></Link> 
+                        <button onClick={()=>handleNavbarClick('ourservices')}><p class="block py-2 pl-3 pr-4 text-white bg-gray-100 rounded md:bg-transparent md:p-0 hover:cursor-pointer">Services</p></button> 
                             <div className='rounded-full bg-white w-0 h-[0.15rem] mt-1 relative
                             transition-all duration-300 ease-in-out group-hover/services:w-full'></div>
                         </li>
@@ -84,17 +106,18 @@ export default function NavBar() {
                 <Drawer title="Menu" open={isDrawerVisible} onClose={handleDrawerClose} placement="right" as="div">
   <Menu mode="vertical" selectedKeys={[currentMenu]} onClick={handleMenuClick} as="div">
     <Menu.Item key="home" as="div" onClick={handleDrawerClose}>
-    <Link to="/"><button onClick={()=>setIsDrawerVisible(false)}>Home</button></Link> 
+    <Link to="/"><button onClick={()=>setIsDrawerVisible(false)}>Home</button> </Link>
     </Menu.Item>
     <Menu.Item key="services" as="div"  onClick={handleDrawerClose}>
-       <Link to="/services"><button onClick={()=>setIsDrawerVisible(false)}>Services</button>
- </Link>   </Menu.Item>
+    <Link to="/"><button 
+    onClick={()=>{setIsDrawerVisible(false);handleNavbarClick('ourservices');}}>Services</button></Link>
+  </Menu.Item>
     <Menu.Item key="our-team" as="div"  onClick={handleDrawerClose}>
        <Link to="/ourteam"><button onClick={()=>setIsDrawerVisible(false)}>Our Team</button>
  </Link>   </Menu.Item>
     <Menu.Item key="about" as="div"  onClick={handleDrawerClose}>
-       <Link to="/about"><button onClick={()=>setIsDrawerVisible(false)}>About</button>
-    </Link></Menu.Item>
+    <button onClick={()=>{setIsDrawerVisible(false);handleNavbarClick("about");}}>About</button>
+   </Menu.Item>
     <Menu.Item key="contact-us" as="div"  onClick={handleDrawerClose}>
        <Link to="/contact"><button onClick={()=>setIsDrawerVisible(false)}>Contact Us</button></Link>
     </Menu.Item>

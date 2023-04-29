@@ -1,8 +1,11 @@
 import React from 'react'
 import { Card } from 'antd';
 import { AntDesignOutlined } from '@ant-design/icons'
-import { ComputerDesktopIcon } from '@heroicons/react/24/outline'
+import { ComputerDesktopIcon, DevicePhoneMobileIcon, GlobeAltIcon, QuestionMarkCircleIcon, CubeIcon, PuzzlePieceIcon, CursorArrowRaysIcon, LightBulbIcon, PaintBrushIcon } from '@heroicons/react/24/outline'
+import BlenderIcon from '../../assets/blender.svg'
+import UXUXIcon from '../../assets/ui_ux.svg'
 const { Meta } = Card;
+
 
 const Ourservices = () => {
   const iconName="ComputerDesktopIcon"
@@ -14,54 +17,55 @@ const Ourservices = () => {
        "link": "#"
     },
     {
-       "icon": ComputerDesktopIcon,
-       "title": "Software Development",
+       "icon": DevicePhoneMobileIcon,
+       "title": "Mobile app Development",
        "description": "We develop custom software tailored to your unique business needs.",
        "link": "#"
     },
     {
-       "icon": ComputerDesktopIcon,
-       "title": "Telegram bot Development",
+       "icon": GlobeAltIcon,
+       "title": "Web Development",
        "description": "We build conversational AI chatbots to enhance customer interactions.",
        "link": "#"
     },
     {
-       "icon": ComputerDesktopIcon,
-       "title": "Database Management",
+       "icon": QuestionMarkCircleIcon,
+       "title": "Project consultancy",
        "description": "We provide expert database management services to ensure optimal performance.",
        "link": "#"
+    }, 
+     {
+       "icon": CubeIcon,
+       "title": "Blender 3D",
+       "description": "We manage your infrastructure to ensure it's secure, reliable, and scalable.",
+       "link": "#"
     },
+
     {
-       "icon": ComputerDesktopIcon,
-       "title": "Web Development",
+       "icon": PaintBrushIcon,
+       "title": "Graphics design",
        "description": "We create responsive and dynamic websites that captivate audiences.",
        "link": "#"
     },
     {
-       "icon": ComputerDesktopIcon,
-       "title": "Cloud Solutions",
+       "icon": PuzzlePieceIcon,
+       "title": "Game development",
        "description": "We help you transition to the cloud and streamline your business processes.",
        "link": "#"
     },
     {
-       "icon": ComputerDesktopIcon,
-       "title": "IT Consulting",
+       "icon": CursorArrowRaysIcon,
+       "title": "IT Maintenance & Installation",
        "description": "We offer comprehensive IT consulting services to optimize your technology infrastructure.",
        "link": "#"
     },
     {
-       "icon": ComputerDesktopIcon,
+       "icon": LightBulbIcon,
        "title": "Training & Education",
        "description": "We provide training and education to equip your team with the latest industry knowledge.",
        "link": "#"
     },
-    {
-       "icon": ComputerDesktopIcon,
-       "title": "Infrastructure Management",
-       "description": "We manage your infrastructure to ensure it's secure, reliable, and scalable.",
-       "link": "#"
-    }
- ]
+   ],
 }
 
   return (
