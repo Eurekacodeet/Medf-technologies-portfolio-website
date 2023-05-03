@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Medftech/static/css/main.12716cd7.css",
-    "main.js": "/Medftech/static/js/main.655b54ca.js",
+    "main.js": "/Medftech/static/js/main.8b3bfae7.js",
     "static/js/787.51d5d547.chunk.js": "/Medftech/static/js/787.51d5d547.chunk.js",
     "static/media/worldmap.png": "/Medftech/static/media/worldmap.b74910d4f599efb8d332.png",
     "static/media/in-bg.png": "/Medftech/static/media/in-bg.b24ceabc18b59aead899.png",
@@ -9,11 +9,11 @@
     "index.html": "/Medftech/index.html",
     "static/media/ui_ux.svg": "/Medftech/static/media/ui_ux.523d680f1a091ce1aa95ee40bdaa66c2.svg",
     "main.12716cd7.css.map": "/Medftech/static/css/main.12716cd7.css.map",
-    "main.655b54ca.js.map": "/Medftech/static/js/main.655b54ca.js.map",
+    "main.8b3bfae7.js.map": "/Medftech/static/js/main.8b3bfae7.js.map",
     "787.51d5d547.chunk.js.map": "/Medftech/static/js/787.51d5d547.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.12716cd7.css",
-    "static/js/main.655b54ca.js"
+    "static/js/main.8b3bfae7.js"
   ]
 }
