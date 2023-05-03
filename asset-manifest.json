@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.12716cd7.css",
-    "main.js": "/static/js/main.fa88e0bc.js",
-    "static/js/787.51d5d547.chunk.js": "/static/js/787.51d5d547.chunk.js",
-    "static/media/worldmap.png": "/static/media/worldmap.b74910d4f599efb8d332.png",
-    "static/media/in-bg.png": "/static/media/in-bg.b24ceabc18b59aead899.png",
-    "static/media/blender.svg": "/static/media/blender.993ef036c6624c1b2271e24cd0c071b9.svg",
-    "index.html": "/index.html",
-    "static/media/ui_ux.svg": "/static/media/ui_ux.523d680f1a091ce1aa95ee40bdaa66c2.svg",
-    "main.12716cd7.css.map": "/static/css/main.12716cd7.css.map",
-    "main.fa88e0bc.js.map": "/static/js/main.fa88e0bc.js.map",
-    "787.51d5d547.chunk.js.map": "/static/js/787.51d5d547.chunk.js.map"
+    "main.css": "/Medftech/static/css/main.12716cd7.css",
+    "main.js": "/Medftech/static/js/main.655b54ca.js",
+    "static/js/787.51d5d547.chunk.js": "/Medftech/static/js/787.51d5d547.chunk.js",
+    "static/media/worldmap.png": "/Medftech/static/media/worldmap.b74910d4f599efb8d332.png",
+    "static/media/in-bg.png": "/Medftech/static/media/in-bg.b24ceabc18b59aead899.png",
+    "static/media/blender.svg": "/Medftech/static/media/blender.993ef036c6624c1b2271e24cd0c071b9.svg",
+    "index.html": "/Medftech/index.html",
+    "static/media/ui_ux.svg": "/Medftech/static/media/ui_ux.523d680f1a091ce1aa95ee40bdaa66c2.svg",
+    "main.12716cd7.css.map": "/Medftech/static/css/main.12716cd7.css.map",
+    "main.655b54ca.js.map": "/Medftech/static/js/main.655b54ca.js.map",
+    "787.51d5d547.chunk.js.map": "/Medftech/static/js/787.51d5d547.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.12716cd7.css",
-    "static/js/main.fa88e0bc.js"
+    "static/js/main.655b54ca.js"
   ]
 }
