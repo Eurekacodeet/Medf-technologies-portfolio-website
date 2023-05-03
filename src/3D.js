@@ -62,12 +62,12 @@ const Dh = () => {
         <p className="text-sm">We help you to grow your business by developing awesome and interactive web and mobile apps </p>
       </div>
       <div className="md:w-3/5 h-[80%] w-full md:h-full pt-6">
-        <Canvas className="">
+        {/* <Canvas className="">
           <OrbitControls />
           <directionalLight intensity={0.5} />
           <ambientLight intensity={0.2} />
           <V3 />
-        </Canvas>
+        </Canvas> */}
       </div>
     </div>
   );
