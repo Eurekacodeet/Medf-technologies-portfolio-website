@@ -47,7 +47,7 @@ export default function BlogList() {
   const [isModalVisible, setIsModalVisible]=useState(false)
   useEffect(()=>{
     const fetchBlog=async()=>{
-const response=await fetch('http://localhost:8000/blog')
+const response=await fetch('https://efkobend.onrender.com/blog')
 const result=await response.json()
 setBlogs(result)
     }

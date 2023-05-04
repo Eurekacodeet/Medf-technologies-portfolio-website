@@ -30,7 +30,7 @@ setIsViewModalVisible(false)
 useEffect(()=>{
 
   const fetchProject=async()=>{
- try{ const response=await fetch('http://localhost:8000/project/')
+ try{ const response=await fetch('https://efkobend.onrender.com/project/')
   const data=await response.json();
   setProjects(data)
   console.log("projects",projects)}catch(err){console.log(err)}
@@ -58,7 +58,7 @@ setIsViewModalVisible(true)
       label: "All categories",
       content: () => (
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-          {projects.slice(0, 6).map((project) => (
+          {projects.slice(0, 4).map((project) => (
             <>
             <div key={project._id} className="group flex flex-col items-center">
               <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden object-fill rounded-lg xl:aspect-h-8 xl:aspect-w-7">
@@ -70,7 +70,7 @@ setIsViewModalVisible(true)
                   className="object-cover object-center group-hover:opacity-75"
                 />
               </div>
-              <h3 className="mt-4 text-md font-bold text-gray-700 truncate w-4/5">
+              <h3 className="mt-4 text-md font-bold text-gray-700 text-center truncate w-4/5">
                 {project.projectName}
               </h3>
               <a href={projectContent.link} target="_blank">
@@ -93,7 +93,7 @@ footer={null}
 className='h-[80vh]'
 >
   <p>Project Name:</p>
- <h1 className='text-xl font-bold'>{projectName}</h1> 
+ <h1 className='text-xl font-bold text-center'>{projectName}</h1> 
 <p className='pb-1 pt-2'>Project Description:</p>
 <div className="max-h-[30vh] overflow-y-scroll">
  <p>
@@ -184,7 +184,7 @@ className="h-[30vh] w-[50vw] object-cover object-center group-hover:opacity-75"
       <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
         {projects.slice(0, 6).map((project) => (
           <>
-          <div key={project._id} className="group flex flex-col items-center">
+          <div key={project._id} className="group flex flex-col items-center mb-4">
             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden object-fill rounded-lg xl:aspect-h-8 xl:aspect-w-7">
               <Image
                 width={250}
@@ -225,13 +225,14 @@ className='h-[80vh]'
   <p className='pb-1 pt-2'>Project Link:</p>
 <a className=' underline' href={projectContent.link} target='_blank'>Click here to view project</a> 
 <p className='pb-4 pt-2'>Project Image:</p>
+{/* <div className="overflow-hidden border-2 border-red-500 ">
 <Image
 width={470}
 height={235}
 src={fileData}
 alt="Image was here."
-className="h-[30vh] w-[50vw] object-cover object-center group-hover:opacity-75"
-/>
+className="object-contain border-2 border-blue-500 object-center group-hover:opacity-75"
+/></div> */}
 </Modal>
           </div></>
         ))}

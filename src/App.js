@@ -9,9 +9,17 @@ import Aboutus from "./Components/Aboutus/Aboutus";
 import Contactus from "./Components/Contact us/Contactus";
 import PageNotFound from "./Components/Home/NotFound";
 import NavBar from "./Components/navbar/NavBar";
+// import ReactGA from 'react-ga';
+
 
 export default function App() {
-
+// ReactGA.initialize('UA-000000-01');
+// const trackPageView = () => {
+//   ReactGA.pageview(window.location.pathname + window.location.search);
+// };
+// useEffect(() => {
+//   trackPageView();
+// }, []);
   return (
     <div>
       <Router>
