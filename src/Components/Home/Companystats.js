@@ -7,7 +7,7 @@ import { TrophyOutlined, UserOutlined, UsergroupAddOutlined, CodeSandboxOutlined
 
 const Companystats = () => {
   return (
-    <div class="grid grid-cols-4 p-10 ">
+    <div className="grid grid-cols-4 p-10 ">
       <div className=''>
         <p className="text-sm">Why choose us</p>
         <div className='relative group'>

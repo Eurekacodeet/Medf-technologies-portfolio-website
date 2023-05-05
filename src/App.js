@@ -9,6 +9,9 @@ import Aboutus from "./Components/Aboutus/Aboutus";
 import Contactus from "./Components/Contact us/Contactus";
 import PageNotFound from "./Components/Home/NotFound";
 import NavBar from "./Components/navbar/NavBar";
+import AllPortfolioProjects from "./Components/Home/Portfolio/AllPortfolioProjects";
+import AllBlogs from "./Components/Home/Blogs/AllBlogs";
+
 // import ReactGA from 'react-ga';
 
 
@@ -28,6 +31,10 @@ export default function App() {
           <Route path='/' element={<Mainapp />} />
           <Route path='/ourteam' element={<Aboutus />} />
           <Route path='/Contact' element={<Contactus />} />
+          <Route path='/allprojects' element={<AllPortfolioProjects />} />
+          <Route path='/allblogs' element={<AllBlogs />} />
+
+
           <Route path='*' element={<PageNotFound />} />
           {/* <Route path='/aboutus' element={user ?<Aboutroute/>: <Login/>} />
                <Route path='/services' element={user ?<Servicesroute/>: <Login/>} />

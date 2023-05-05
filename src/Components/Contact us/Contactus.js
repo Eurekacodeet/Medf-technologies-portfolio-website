@@ -14,11 +14,9 @@ const ContactUs = () => {
 
   const onFinish = async (values) => {
     try {
-      const { email, service, message, firstName, lastName, phone } = values;
+      const { email, service, message, fullName, phone } = values;
   
-      const fullName = `${firstName} ${lastName}`;
-  
-      const data = {
+        const data = {
         from: email,
         subject: service.toString(),
         text: message,
@@ -26,7 +24,7 @@ const ContactUs = () => {
         phoneNumber: phone
       };
   
-      console.log('Request Data:', data);
+      // console.log('Request Data:', data);
   
       const response = await fetch('https://efkobend.onrender.com/email/sendFromClient', {
         method: 'POST',
@@ -38,24 +36,24 @@ const ContactUs = () => {
   
       if (response.ok) {
         const responseData = await response.json();
-        console.log('Success', responseData);
+        // console.log('Success', responseData);
         form.resetFields();
       } else {
         throw new Error('Failed to send email');
       }
     } catch (error) {
-      console.log('Error', error);
+      // console.log('Error', error);
       // Handle error here
     }
   };
 
   return (
     <div className="flex flex-col items-center h-full p-10 bg-white mt-100">
-      <div>
-        <h1 className='text-[1.6rem] font-bold break-words mr-4 text-black whitespace-pre'>C o n t a c t    u s </h1>
-        <div className='rounded-full w-10 h-[0.4rem] mt-4 hover:w-[16.7rem] transition-width bg-black duration-500 ease-in-out shadow shadow-black'></div>
+      <div className='group'>
+        <h1 className='text-[1.6rem] font-bold break-words text-black whitespace-pre'>C o n t a c t    u s </h1>
+        <div className='rounded-full w-1/5 h-[0.4rem] mt-4 group-hover:w-full transition-width bg-black duration-500 ease-in-out shadow shadow-black'></div>
       </div> 
-      <Card className="w-full max-w-4xl mx-4 bg-black mt-10">
+      <Card className="w-full bg-black mt-10 shadow shadow-gray-700 ">
         <div className="md:flex md:flex-row md:justify-between">
           <div className="md:w-1/2 md:mr-4 bg-black bg-fill p-8 text-white rounded ">
             <h1 className='text-2xl font-medium pb-4'>Contact information</h1>
@@ -75,40 +73,32 @@ const ContactUs = () => {
               </div>
             </div>
           </div>
-          <div className="md:w-1/2 mt-4 md:mt-0 bg-white p-10 ">
+          <div className="md:w-1/2 mt-4 md:mt-0 md:border-l-[1px] md:border-l-400 bg-fill bg-black h-full pl-2 pr-2 md:pl-10 md:pr-4 md:py-10 ">
               <Form
                 form={form}
                 name="contact-form"
                 onFinish={onFinish}
                 layout="vertical"
+                className='w-full md:w-full'
+
               >
                 <Form.Item
-                  name="firstName"
-                  label="First Name"
+                  name="fullName"
+                  label={<label style={{ color: "white" }}>Name</label>}
+
                   rules={[
                     {
                       required: true,
-                      message: 'Please input your first name!',
+                      message: 'Please input your name!',
                     },
                   ]}
                 >
-                  <Input placeholder="First Name" />
+                  <Input placeholder="Name" />
                 </Form.Item>
-                <Form.Item
-                  name="lastName"
-                  label="Last Name"
-                  rules={[
-                    {
-                      required: true,
-                      message: 'Please input your last name!',
-                    },
-                  ]}
-                >
-                  <Input placeholder="Last Name" />
-                </Form.Item>
+          
                 <Form.Item
                   name="email"
-                  label="Email"
+                  label={<label style={{ color: "white" }}>Email</label>}
                   rules={[
                     {
                       required: true,
@@ -124,7 +114,7 @@ const ContactUs = () => {
                 </Form.Item>
                 <Form.Item
                   name="phone"
-                  label="Phone"
+                  label={<label style={{ color: "white" }}>Phone</label>}
                   rules={[
                     {
                       required: true,
@@ -136,7 +126,8 @@ const ContactUs = () => {
                 </Form.Item>
                 <Form.Item
                   name="service"
-                  label="Type of Service"
+                  label={<label style={{ color: "white" }}>Type of Service</label>}
+
                   rules={[
                     {
                       required: true,
@@ -157,7 +148,7 @@ const ContactUs = () => {
                 </Form.Item>
                 <Form.Item
                   name="message"
-                  label="Message"
+                  label={<label style={{ color: "white" }}>Message</label>}
                   rules={[
                     {
                       required: true,
@@ -168,7 +159,7 @@ const ContactUs = () => {
                   <Input.TextArea placeholder="Message" />
                 </Form.Item>
                 <Form.Item>
-                  <Button className="bg-black" type="primary" htmlType="submit">
+                  <Button className="bg-white text-black font-semibold" type="primary" htmlType="submit">
                     Send Message
                   </Button>
                 </Form.Item>

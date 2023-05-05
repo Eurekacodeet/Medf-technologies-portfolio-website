@@ -46,7 +46,7 @@ const Styles = styled.div`
   }
 `;
 
-export default class Slider extends React.Component {
+export default className Slider extends React.Component {
   state = {
     value: 50
   }

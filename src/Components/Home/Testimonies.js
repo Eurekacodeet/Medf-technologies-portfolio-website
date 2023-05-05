@@ -45,7 +45,7 @@ useEffect(() => {
   }, 5000);
   return () => clearInterval(interval);
 }, []);
-console.log(testimonies, "testimonies")
+// console.log(testimonies, "testimonies")
   return (
     <div className='bg-[url("https://res.cloudinary.com/dvqawl4nw/image/upload/v1681151993/dswa4jvlordlohgz9hyf.png")] bg-cover bg-no-repeat text-white p-10'>
         <div className=''>

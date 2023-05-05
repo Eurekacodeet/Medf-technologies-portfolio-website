@@ -17,7 +17,7 @@ import 'aos/dist/aos.css'
 const useSlider = (min, max, defaultState, label, id) => {
   const [state, setSlide] = useState(defaultState);
   const handleChange = e => {
-    console.log('setting level', e.target.value)
+    // console.log('setting level', e.target.value)
     setSlide(e.target.value);
   };
 
@@ -30,7 +30,7 @@ const useSlider = (min, max, defaultState, label, id) => {
       step={0.5}
       // value={state} // don't set value from state
       defaultValue={state} // but instead pass state value as default value
-      onChange={e => console.log(e.target.value)} // don't set state on all change as react will re-render
+      // onChange={e => console.log(e.target.value)} // don't set state on all change as react will re-render
       onMouseUp={handleChange} // only set state when handle is released
     />
   );
@@ -101,7 +101,7 @@ const Getintouch = () => {
 <textarea name="" placeholder="Your Message"/>
 </form>
       </div>
-      <div class="slidecontainer">
+      <div className="slidecontainer">
   <div className="par_align"><p>Enter Captcha</p><p id="red_star">*</p></div>
  <div  className="cap_align"> <div> <img src={Captcha}/></div><div><input type="text" placeholder="Enter captcha value"/></div></div>
   

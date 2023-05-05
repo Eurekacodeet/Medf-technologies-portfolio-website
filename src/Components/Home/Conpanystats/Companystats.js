@@ -24,14 +24,14 @@ const Companystats = () => {
   useEffect(() => {
     function handleResize() {
       setSize(window.innerWidth);
-      console.log(window.innerWidth)
+      // console.log(window.innerWidth)
     }
 
     window.addEventListener("resize", handleResize);
   }, [size]);
   return (
     <div>
-{size >950 &&(<div class="grid grid-cols-4 p-10 ">
+{size >950 &&(<div className="grid grid-cols-4 p-10 ">
   <div className=''>
   <p className="text-sm pb-4">Why choose us</p>
   <div className='relative group'>
