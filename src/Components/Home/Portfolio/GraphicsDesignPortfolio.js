@@ -77,13 +77,14 @@ const GraphicsDesignPortfolio = (props) => {
    <p className='pb-1 pt-2'>Project Link:</p>
    <a className=' underline' href={projectContent.link} target='_blank'>Click here to view project</a> 
    <p className='pb-4 pt-2'>Project Image:</p>
-   <Image
+   <div className='overflow-clip'>
+    <Image
    width={470}
    height={235}
    src={fileData}
    alt="Image was here."
    className="h-[30vh] w-[50vw] object-cover object-center group-hover:opacity-75"
-   />
+   /></div>
    </Modal>
          </div></>
        ))}
