@@ -18,6 +18,10 @@ const Dh = () => {
   useEffect(() => {
     localStorage.setItem('conditionalMode', JSON.stringify(conditionalMode));
   }, [conditionalMode]);
+
+  const toggleConditionalMode = () => {
+    setConditionalMode(!conditionalMode);
+  };
   const handleScroll = () => {
     const componentHeight = document.querySelector('.dh-component').getBoundingClientRect().height;
     window.scrollBy({
