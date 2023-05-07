@@ -1,12 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import V3 from './V5.js';
-import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
+import New3D from './New3D1';
+import { ChevronUpIcon, ChevronDownIcon, CubeIcon, VideoCameraIcon, InformationCircleIcon } from '@heroicons/react/24/outline';
 
 const Dh = () => {
   const [showButton, setShowButton] = useState(true);
+  const [androidVersion, setAndroidVersion] = useState(null);
+  const [screenSize, setScreenSize] = useState({ width: 0, height: 0 });
+  const [conditionalMode, setConditionalMode] = useState(true);
 
+  useEffect(() => {
+    const userAgent = navigator.userAgent;
+    const androidRegex = /Android\s(\d+\.\d+)/;
+    const match = userAgent.match(androidRegex);
+  
+    if (match) {
+      const version = parseFloat(match[1]);
+      setAndroidVersion(version);
+      console.log("version", match);
+    }
+  }, []);
+
+  const toggleConditionalMode = () => {
+    setConditionalMode(!conditionalMode);
+  };
   const handleScroll = () => {
     const componentHeight = document.querySelector('.dh-component').getBoundingClientRect().height;
     window.scrollBy({
@@ -61,14 +79,29 @@ const Dh = () => {
         </div>
         <p className="text-sm">We help you to grow your business by developing awesome and interactive web and mobile apps </p>
       </div>
-      <div className="md:w-3/5 h-[80%] w-full md:h-full pt-6">
-        {/* <Canvas className="">
+      <div className="md:w-3/5 h-[100%] w-full md:h-full pt-2">
+      <button className='flex justify-start items-start' onClick={toggleConditionalMode}>
+        {conditionalMode?<div className='mt-4 flex flex-row items-center justify-center'>
+          <CubeIcon className='bg-white text-black rounded mr-4' width={32}/><InformationCircleIcon width={20}/>
+          <p className='text-xs'>Experiencing performance issues click the cube</p></div>
+        :<div><VideoCameraIcon className='mt-4 bg-white text-black rounded' width={32}/></div>}
+      </button>
+     {conditionalMode? <div className='md:w-full h-[90%] w-full md:h-[90%] pt-2'>
+        <Canvas className="">
           <OrbitControls />
           <directionalLight intensity={0.5} />
           <ambientLight intensity={0.2} />
-          <V3 />
-        </Canvas> */}
-      </div>
+          <New3D />
+        </Canvas>
+      </div>:<div className="md:w-full h-[80%] w-full md:h-[80%] pt-2">
+      <video 
+      className='md:w-full object-contain object-center w-[100%] h-[100%] md:h-full' 
+      src="https://res.cloudinary.com/dvqawl4nw/video/upload/v1683454642/gdgmk6iz1ugkxhvairzy.3gp" 
+      autoPlay 
+      loop 
+      alt="there should be a video here"
+       />
+        </div>}</div>
     </div>
   );
 };
