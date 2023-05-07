@@ -14,12 +14,12 @@ const ContactUs = () => {
 
   const onFinish = async (values) => {
     try {
-      const { email, service, message, fullName, phone } = values;
+      const { email, service, Message, fullName, phone } = values;
   
         const data = {
         from: email,
         subject: service.toString(),
-        text: message,
+        text: Message,
         fullName,
         phoneNumber: phone
       };
@@ -36,9 +36,10 @@ const ContactUs = () => {
   
       if (response.ok) {
         const responseData = await response.json();
+       message.success('Message senty succesfully!')
         // console.log('Success', responseData);
         form.resetFields();
-        message.success('Message senty succesfully!')
+     
       } else {
        message.error('An error has occured!')    
       }
@@ -148,7 +149,7 @@ const ContactUs = () => {
                   </Select>
                 </Form.Item>
                 <Form.Item
-                  name="message"
+                  name="Message"
                   label={<label style={{ color: "white" }}>Message</label>}
                   rules={[
                     {
