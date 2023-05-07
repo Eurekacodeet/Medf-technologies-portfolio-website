@@ -36,7 +36,7 @@ const ContactUs = () => {
   
       if (response.ok) {
         const responseData = await response.json();
-       message.success('Message senty succesfully!')
+       message.success('Message sent successfully!')
         // console.log('Success', responseData);
         form.resetFields();
      
