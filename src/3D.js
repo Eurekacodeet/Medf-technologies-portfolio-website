@@ -7,7 +7,22 @@ import { ChevronUpIcon, ChevronDownIcon, CubeIcon, VideoCameraIcon, InformationC
 const Dh = () => {
   const [showButton, setShowButton] = useState(true);
   const [conditionalMode, setConditionalMode] = useState(true);
+  const [onlineStatus, setOnlineStatus] = useState(true);
+  useEffect(() => {
+    setOnlineStatus(navigator.onLine);
 
+    const handleOnlineStatusChange = () => {
+      setOnlineStatus(navigator.onLine);
+    };
+
+    window.addEventListener('online', handleOnlineStatusChange);
+    window.addEventListener('offline', handleOnlineStatusChange);
+
+    return () => {
+      window.removeEventListener('online', handleOnlineStatusChange);
+      window.removeEventListener('offline', handleOnlineStatusChange);
+    };
+  }, []);
   useEffect(() => {
     const storedConditionalMode = localStorage.getItem('conditionalMode');
     if (storedConditionalMode !== null) {
@@ -93,13 +108,15 @@ const Dh = () => {
       </div>:<div className="md:w-full h-[80%] w-full md:h-[80%] pt-2">
       <video 
       className='md:w-full object-contain object-center w-[100%] h-[100%] md:h-full' 
-      src="https://res.cloudinary.com/dvqawl4nw/video/upload/v1683454642/gdgmk6iz1ugkxhvairzy.3gp" 
+      src="/vidalt.mp4" 
+      type="video/mp4"
       autoPlay 
       loop
       muted 
       alt="there should be a video here"
        />
-        </div>}</div>
+</div>}
+        </div>
     </div>
   );
 };
