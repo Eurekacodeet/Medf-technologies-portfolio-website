@@ -1,10 +1,7 @@
 import React, { useState }  from 'react'
-import {Bars3Icon, ComputerDesktopIcon, CubeIcon, DevicePhoneMobileIcon, GlobeAltIcon, PaintBrushIcon, PuzzlePieceIcon} from '@heroicons/react/24/outline'
-import { Form } from "antd";
-import { Input, Card, Select, Button, message, Upload, Modal, Space, Image, Empty } from 'antd';
-import { InboxOutlined } from '@ant-design/icons';
-import { ArrowRightOutlined, ExclamationCircleOutlined} from '@ant-design/icons';
-import { PlusIcon, AdjustmentsHorizontalIcon, PencilSquareIcon  } from '@heroicons/react/24/outline';
+import { Form,Modal,  Image } from "antd";
+import { ArrowRightOutlined} from '@ant-design/icons';
+
 
 const WebsitePortfolio = (props) => {
 

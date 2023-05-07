@@ -4,7 +4,6 @@ import Efko from '../../../assets/efko.png'
 
 import {ClockCircleOutlined} from '@ant-design/icons'
 import {TrophyOutlined,  UserOutlined, UsergroupAddOutlined, CodeSandboxOutlined} from '@ant-design/icons'
-import { useCounter } from 'react-use';
 import NumberCounter from './NumberCounter';
 const Companystats = () => {
   const [count, setCount] = useState(0);
