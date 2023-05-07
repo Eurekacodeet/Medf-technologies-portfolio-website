@@ -95,7 +95,8 @@ const Dh = () => {
       className='md:w-full object-contain object-center w-[100%] h-[100%] md:h-full' 
       src="https://res.cloudinary.com/dvqawl4nw/video/upload/v1683454642/gdgmk6iz1ugkxhvairzy.3gp" 
       autoPlay 
-      loop 
+      loop
+      muted 
       alt="there should be a video here"
        />
         </div>}</div>
