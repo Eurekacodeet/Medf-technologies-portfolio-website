@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, Form, Input, Select, Button } from 'antd';
+import { Card, Form, Input, Select, Button, message} from 'antd';
 import { EnvironmentOutlined, MailOutlined, PhoneOutlined } from '@ant-design/icons';
 
 const { Option } = Select;
@@ -38,10 +38,11 @@ const ContactUs = () => {
         const responseData = await response.json();
         // console.log('Success', responseData);
         form.resetFields();
+        message.success('Message senty succesfully!')
       } else {
-        throw new Error('Failed to send email');
+       message.error('An error has occured!')    
       }
-    } catch (error) {
+    } catch (error) {   
       // console.log('Error', error);
       // Handle error here
     }
