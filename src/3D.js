@@ -6,25 +6,18 @@ import { ChevronUpIcon, ChevronDownIcon, CubeIcon, VideoCameraIcon, InformationC
 
 const Dh = () => {
   const [showButton, setShowButton] = useState(true);
-  const [androidVersion, setAndroidVersion] = useState(null);
-  const [screenSize, setScreenSize] = useState({ width: 0, height: 0 });
   const [conditionalMode, setConditionalMode] = useState(true);
 
   useEffect(() => {
-    const userAgent = navigator.userAgent;
-    const androidRegex = /Android\s(\d+\.\d+)/;
-    const match = userAgent.match(androidRegex);
-  
-    if (match) {
-      const version = parseFloat(match[1]);
-      setAndroidVersion(version);
-      console.log("version", match);
+    const storedConditionalMode = localStorage.getItem('conditionalMode');
+    if (storedConditionalMode !== null) {
+      setConditionalMode(JSON.parse(storedConditionalMode));
     }
   }, []);
 
-  const toggleConditionalMode = () => {
-    setConditionalMode(!conditionalMode);
-  };
+  useEffect(() => {
+    localStorage.setItem('conditionalMode', JSON.stringify(conditionalMode));
+  }, [conditionalMode]);
   const handleScroll = () => {
     const componentHeight = document.querySelector('.dh-component').getBoundingClientRect().height;
     window.scrollBy({
