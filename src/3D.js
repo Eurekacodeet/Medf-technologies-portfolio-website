@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import New3D from './New3D1';
+import AnimationFixed from './Animationfixed';
 import { ChevronUpIcon, ChevronDownIcon, CubeIcon, VideoCameraIcon, InformationCircleIcon } from '@heroicons/react/24/outline';
 
 const Dh = () => {
@@ -98,12 +98,12 @@ const Dh = () => {
           <p className='text-xs'>Experiencing performance issues click the cube</p></div>
         :<div><VideoCameraIcon className='mt-4 bg-white text-black rounded' width={32}/></div>}
       </button>
-     {conditionalMode? <div className='md:w-full h-[90%] w-full md:h-[90%] pt-2'>
+     {conditionalMode? <div className='md:w-full h-[87%] w-full md:h-[90%] pt-2'>
         <Canvas className="">
           <OrbitControls />
           <directionalLight intensity={0.5} />
           <ambientLight intensity={0.2} />
-          <New3D />
+          <AnimationFixed />
         </Canvas>
       </div>:<div className="md:w-full h-[80%] w-full md:h-[80%] pt-2">
       <video 
