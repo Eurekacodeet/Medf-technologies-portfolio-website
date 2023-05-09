@@ -38,13 +38,14 @@ const MobileAppPortfolio = (props) => {
          <>
          <div key={project._id} className="group flex flex-col items-center">
            <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden object-fill rounded-lg xl:aspect-h-8 xl:aspect-w-7">
+           <div className='overflow-clip'>
              <Image
                width={250}
                height={110}
                src={project.coverImage}
                alt="Image was here."
                className="object-cover object-center group-hover:opacity-75"
-             />
+             /></div>
            </div>
            <h3 className="mt-4 text-center text-md font-bold text-gray-700 truncate w-4/5">
              {project.projectName}
@@ -77,7 +78,8 @@ const MobileAppPortfolio = (props) => {
    <p className='pb-1 pt-2'>Project Link:</p>
    <a className=' underline' href={projectContent.link} target='_blank'>Click here to view project</a> 
    <p className='pb-4 pt-2'>Project Image:</p>
-   <div className='overflow-clip'><Image
+   <div className='overflow-clip'>
+    <Image
    width={470}
    height={235}
    src={fileData}

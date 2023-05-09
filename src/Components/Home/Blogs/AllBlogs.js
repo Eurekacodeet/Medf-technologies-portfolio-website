@@ -105,7 +105,7 @@ const props = {
 useEffect(()=>{
   const fetchData=async()=>{
 
-  try{  const response=await fetch('https://efkomedia.onrender.com/blog/')
+  try{  const response=await fetch('https://efkobend.onrender.com/blog/')
     const result=await response.json()
       console.log(result)
     setBlogs(result)
@@ -300,13 +300,14 @@ useEffect(() => {
             <>
             <div key={blog._id} className="group flex flex-col items-center ">
               <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden object-fill rounded-lg xl:aspect-h-8 xl:aspect-w-7">
+              <div className='overflow-clip'>
               <Image
     width={250}
     height={110}
     src={blog.imageSrc}
     alt="Image was here."
     className="object-cover object-center group-hover:opacity-75"
-  />
+  /></div>
               </div>
               <h3 className="mt-4 text-md font-bold text-center text-gray-700 truncate w-4/5">{blog.title}</h3>
              
@@ -338,13 +339,14 @@ useEffect(() => {
                 <p>
                    {description}</p></div>
                <p className='pb-4 pt-2'>Blog image:</p>
+               <div className='overflow-clip'>
                 <Image
                  width={470}
                  height={235}
                  src={fileData}
                  alt="Image was here."
                  className="h-[30vh] w-[50vw] object-cover object-center group-hover:opacity-75"
-               />
+               /></div>
                </Modal>
                </>
           ))):
@@ -368,13 +370,14 @@ useEffect(() => {
             
             <div key={blog._id} className="group flex flex-col items-center ">
             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden object-fill rounded-lg xl:aspect-h-8 xl:aspect-w-7">
+            <div className='overflow-clip'>
               <Image
     width={250}
     height={110}
     src={blog.imageSrc}
     alt="Image was here."
     className="object-cover object-center group-hover:opacity-75"
-  />
+  /></div>
               </div>
             <h3 className="mt-4 text-md font-bold text-gray-700 truncate w-4/5">{blog.title}</h3>
             <button
@@ -399,13 +402,14 @@ className='h-[80vh]'
  <p>
     {description}</p></div>
 <p className='pb-4 pt-2'>Blog image:</p>
+<div className='overflow-clip'>
  <Image
   width={470}
   height={235}
   src={fileData}
   alt="Image was here."
   className="h-[30vh] w-[50vw] object-cover object-center group-hover:opacity-75"
-/>
+/></div>
 </Modal>
           </div>
           )

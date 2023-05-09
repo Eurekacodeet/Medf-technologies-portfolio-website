@@ -54,13 +54,14 @@ setIsModalVisible(false)
             
             <div key={blog._id} className="group flex flex-col items-center ">
             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden object-fill rounded-lg xl:aspect-h-8 xl:aspect-w-7">
+            <div className='overflow-clip'>
             <Image
   width={290}
   height={160}
   src={blog.imageSrc}
   alt="Image was here."
   className="object-cover object-center group-hover:opacity-75"
-/>
+/></div>
             </div>
             <h3 className="mt-4 text-md font-bold text-center text-gray-700 truncate w-4/5">{blog.title}</h3>
         
@@ -95,13 +96,14 @@ setIsModalVisible(false)
                    {description}</p></div>
                <p className='pb-4 pt-2'>Blog image:</p>
                <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden object-fill rounded-lg xl:aspect-h-8 xl:aspect-w-7">
+               <div className='overflow-clip'>
                 <Image
                  width={470}
                  height={235}
                  src={fileData}
                  alt="Image was here."
                  className="h-[30vh] w-[50vw] object-cover object-center group-hover:opacity-75"
-               />
+               /></div>
                </div>
                </Modal>
       </div>
