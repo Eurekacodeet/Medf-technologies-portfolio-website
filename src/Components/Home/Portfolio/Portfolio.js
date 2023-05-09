@@ -40,7 +40,7 @@ setIsViewModalMobileVisible(false)
 // useEffect(()=>{
 
 //   const fetchProject=async()=>{
-//  try{ const response=await fetch('https://efkobend.onrender.com/project/')
+//  try{ const response=await fetch('https://efkomedia.onrender.com/project/')
 //   const data=await response.json();
 //   setProjects(data)
 //   console.log("projects",projects)}catch(err){console.log(err)}
@@ -54,7 +54,7 @@ setIsViewModalMobileVisible(false)
 useEffect(() => {
   const fetchProject = async () => {
     try {
-      const response = await fetch('https://efkobend.onrender.com/project/');
+      const response = await fetch('https://efkomedia.onrender.com/project/');
       const data = await response.json();
       setProjects(data);
     } catch (err) {
