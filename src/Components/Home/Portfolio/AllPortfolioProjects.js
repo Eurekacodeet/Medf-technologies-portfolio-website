@@ -324,7 +324,7 @@ className='h-[80vh]'
 <Image
                   width={550}
                   height={210}
-                  src={project.coverImage}
+                  src={fileData}
                   alt="Image was here."
                   className="object-cover object-center group-hover:opacity-75"
                 /></div>
