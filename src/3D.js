@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import AnimationFixed from './Animationfixed';
 import { ChevronUpIcon, ChevronDownIcon, CubeIcon, VideoCameraIcon, InformationCircleIcon } from '@heroicons/react/24/outline';
-
+import { Button, Divider, Segmented, Tooltip } from 'antd';
 const Dh = () => {
   const [showButton, setShowButton] = useState(true);
   const [conditionalMode, setConditionalMode] = useState(true);
@@ -67,7 +67,20 @@ const Dh = () => {
       window.removeEventListener('scroll', handleScrollEvent);
     };
   }, []);
-
+  const options = ['Show', 'Hide', 'Center'];
+  const [arrow, setArrow] = useState('Show');
+  const mergedArrow = useMemo(() => {
+    if (arrow === 'Hide') {
+      return false;
+    }
+    if (arrow === 'Show') {
+      return true;
+    }
+    return {
+      pointAtCenter: true,
+    };
+  }, [arrow]);
+  const text="For better performance, switch to the video view by clicking the cube. We're optimizing the 3D view soon. Enjoy the video experience despite any performance issues."
   return (
     <div className="flex flex-col bg-black text-white p-10 h-[85vh] md:flex md:flex-row overflow-hidden dh-component">
       {showButton ? (
@@ -94,7 +107,8 @@ const Dh = () => {
       <div className="md:w-3/5 h-[100%] w-full md:h-full pt-2">
       <button className='flex justify-start items-start' onClick={toggleConditionalMode}>
         {conditionalMode?<div className='mt-4 flex flex-row items-center justify-center'>
-          <CubeIcon className='bg-white text-black rounded mr-4' width={32}/><InformationCircleIcon width={20}/>
+          <CubeIcon className='bg-white text-black rounded mr-4' width={32}/>
+          <Tooltip placement="topLeft" title={text} arrow={mergedArrow}><InformationCircleIcon width={20}/> </Tooltip>
           <p className='text-xs'>Experiencing performance issues click the cube</p></div>
         :<div><VideoCameraIcon className='mt-4 bg-white text-black rounded' width={32}/></div>}
       </button>
