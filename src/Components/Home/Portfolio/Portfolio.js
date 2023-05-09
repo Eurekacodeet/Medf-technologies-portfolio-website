@@ -99,13 +99,13 @@ setIsViewModalVisible(true)
     { id: 7, label: "Games", content: () => (<GamesPortfolio projects={projects}/>) },
   ];
   const tabsMobile = [
-    { id: 1, icon: Bars3Icon, content: () =>(<AllCategoriesPortfolio projects={projects}/>), },
-    { id: 2, icon: ComputerDesktopIcon, content: () => (<UiUxDesignPortfolio projects={projects}/>) },
-    { id: 3, icon: GlobeAltIcon, content: () =>( <WebsitePortfolio projects={projects}/> ) },
-    { id: 4, icon: DevicePhoneMobileIcon, content: () =>  (<MobileAppPortfolio projects={projects}/>)  },
-    { id: 5, icon: CubeIcon, content: () =>  (<BlenderthreeDPortfolio projects={projects}/>) },
-    { id: 6, icon: PaintBrushIcon, content: () => (<GraphicsDesignPortfolio projects={projects}/>) },
-    { id: 7, icon: PuzzlePieceIcon, content: () => (<GamesPortfolio projects={projects}/>)},
+    { id: 1, icon: Bars3Icon, label:"All categories", content: () =>(<AllCategoriesPortfolio projects={projects}/>), },
+    { id: 2, icon: ComputerDesktopIcon, label:"UI/UX Design", content: () => (<UiUxDesignPortfolio projects={projects}/>) },
+    { id: 3, icon: GlobeAltIcon,label:"Websites", content: () =>( <WebsitePortfolio projects={projects}/> ) },
+    { id: 4, icon: DevicePhoneMobileIcon,label:"Mobile applications", content: () =>  (<MobileAppPortfolio projects={projects}/>)  },
+    { id: 5, icon: CubeIcon,label:"Blender 3D", content: () =>  (<BlenderthreeDPortfolio projects={projects}/>) },
+    { id: 6, icon: PaintBrushIcon,label:"Graphics Design", content: () => (<GraphicsDesignPortfolio projects={projects}/>) },
+    { id: 7, icon: PuzzlePieceIcon,label:"Games", content: () => (<GamesPortfolio projects={projects}/>)},
   ];
   const [size, setSize] = useState(window.innerWidth);
 
@@ -179,7 +179,7 @@ setIsViewModalVisible(true)
                     : "truncate border-border-transparent text-gray-400 hover:text-gray-700 whitespace-nowrap hover:border-gray-300 hover:cursor-pointer focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
                 }`}
               >
-                {tab.label}
+              
               </tab.icon>
             ))}
           </nav>
@@ -191,7 +191,11 @@ setIsViewModalVisible(true)
               key={tab.id}
               className={`${activeTab === tab.id ? "block" : "hidden"} tab-content mb-4 flex flex-row justify-center items-center`}
             >
-              {tab.content()}
+                <div className=" flex-wrap  inline-block">
+                  <p className="text-xl font-bold text-black pb-6">{tab.label}</p>
+                   {tab.content()}
+                  </div>
+             
             </div>
           ))}
         </div>
