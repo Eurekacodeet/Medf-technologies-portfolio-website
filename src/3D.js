@@ -106,13 +106,13 @@ const Dh = () => {
       </div>
       <div className="md:w-3/5 h-[100%] w-full md:h-full pt-2">
       <button className='flex justify-start items-start' onClick={toggleConditionalMode}>
-        {conditionalMode?<div className='mt-4 flex flex-row items-center justify-center'>
+        {!conditionalMode?<div className='mt-4 flex flex-row items-center justify-center'>
           <CubeIcon className='bg-white text-black rounded mr-4' width={32}/>
           <Tooltip placement="topLeft" title={text} arrow={mergedArrow}><InformationCircleIcon width={20}/> </Tooltip>
           <p className='text-xs'>Experiencing performance issues click the cube</p></div>
         :<div><VideoCameraIcon className='mt-4 bg-white text-black rounded' width={32}/></div>}
       </button>
-     {conditionalMode? <div className='md:w-full h-[87%] w-full md:h-[90%] pt-2'>
+     {!conditionalMode? <div className='md:w-full h-[87%] w-full md:h-[90%] pt-2'>
         <Canvas className="">
           <OrbitControls />
           <directionalLight intensity={0.5} />
