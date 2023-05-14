@@ -24,7 +24,7 @@ const Footer = () => {
   
       // console.log('Request Data:', data);
   
-      const response = await fetch('https://efkobend.onrender.com/email/sendFromClient', {
+      const response = await fetch('https://efkoauth.onrender.com/email/sendFromClient', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

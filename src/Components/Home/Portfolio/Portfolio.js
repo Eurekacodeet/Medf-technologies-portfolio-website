@@ -40,7 +40,7 @@ setIsViewModalMobileVisible(false)
 // useEffect(()=>{
 
 //   const fetchProject=async()=>{
-//  try{ const response=await fetch('https://efkobend.onrender.com/project/')
+//  try{ const response=await fetch('https://efkomedia.onrender.com/project/')
 //   const data=await response.json();
 //   setProjects(data)
 //   console.log("projects",projects)}catch(err){console.log(err)}
@@ -54,7 +54,7 @@ setIsViewModalMobileVisible(false)
 useEffect(() => {
   const fetchProject = async () => {
     try {
-      const response = await fetch('https://efkobend.onrender.com/project/');
+      const response = await fetch('https://efkomedia.onrender.com/project/');
       const data = await response.json();
       setProjects(data);
     } catch (err) {
@@ -191,7 +191,7 @@ setIsViewModalVisible(true)
               key={tab.id}
               className={`${activeTab === tab.id ? "block" : "hidden"} tab-content mb-4 flex flex-row justify-center items-center`}
             >
-                <div className=" flex-wrap  inline-block">
+                <div className=" justify-center items-center inline-block">
                   <p className="text-xl font-bold text-black pb-6">{tab.label}</p>
                    {tab.content()}
                   </div>

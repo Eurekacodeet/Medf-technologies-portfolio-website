@@ -50,7 +50,7 @@ const handleFilter = (value) => {
 useEffect(()=>{
   const fetchData=async()=>{
 
-  try{  const response=await fetch('https://efkobend.onrender.com/project/')
+  try{  const response=await fetch('https://efkomedia.onrender.com/')
     const result=await response.json()
       console.log(result)
     setProjects(result)
