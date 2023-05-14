@@ -158,7 +158,7 @@ dedicated to delivering exceptional results that meet both technical and busines
             </Paragraph>
 
             {ellipsis && (
-              <button className='text-blue-300 underline' onClick={toggleExpandA}>
+              <button className='text-blue-600 underline' onClick={toggleExpandA}>
                 {expandedA ? 'Read less' : 'Read more'}
               </button>
             )}
