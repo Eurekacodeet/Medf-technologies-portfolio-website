@@ -50,7 +50,7 @@ mt-4 hover:w-[16.7rem] transition-width bg-white duration-500 ease-in-out shadow
             </Paragraph>
 
             {ellipsis && (
-              <button className='text-blue-300 underline' onClick={toggleExpand}>
+              <button className='text-blue-600 underline' onClick={toggleExpand}>
                 {expanded ? 'Read less' : 'Read more'}
               </button>
             )}
