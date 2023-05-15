@@ -130,8 +130,8 @@ setIsViewModalVisible(true)
       <div>
   <Link to="/allprojects" className='text-blue-400 underline py-4'>View all</Link>
   </div>
-      </div>
-      <p className="text-sm  brder-2 pt-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum</p>
+      </div>   
+      <p className="text-sm  brder-2 pt-4">   At Tsinue, we offer a comprehensive range of services to address various technological needs. From web application development, mobile application development, and computer maintenance and installation to graphics design, 3D animation and modeling, game development, and UI/UX design, our team of skilled professionals is equipped to deliver exceptional solutions. Whether you're looking for a customized web application, an innovative mobile app, reliable computer maintenance, captivating graphics, immersive game experiences, or user-centric UI/UX designs, we have the expertise to bring your ideas to life. View our projects below </p>
       <div className="lg:block hidden">
         <div className="border-b border-gray-200">
           <nav className="-mb-px flex" aria-label="Tabs">
