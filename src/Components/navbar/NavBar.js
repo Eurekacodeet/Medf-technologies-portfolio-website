@@ -83,21 +83,31 @@ export default function NavBar() {
                                 <div className='rounded-full bg-white w-0 h-[0.15rem] mt-1 relative transition-all duration-300 ease-in-out group-hover/home:w-full'></div>
                             </div>
                         </li>
-                        <li className='group/about hover:cursor-pointer'>
-                        <button onClick={()=>handleNavbarClick("about")}> <p className="block py-2 pl-3 pr-4 text-white bg-gray-100 rounded md:bg-transparent md:p-0 hover:cursor-pointer">About</p></button>
-                            <div className='rounded-full bg-white w-0 h-[0.15rem] mt-1
-                            transition-all relative duration-300 ease-in-out group-hover/about:w-full'></div>
-                        </li>
+                        
                         <li className='group/services hover:cursor-pointer'>
                         <button onClick={()=>handleNavbarClick('ourservices')}><p className="block py-2 pl-3 pr-4 text-white bg-gray-100 rounded md:bg-transparent md:p-0 hover:cursor-pointer">Services</p></button> 
                             <div className='rounded-full bg-white w-0 h-[0.15rem] mt-1 relative
                             transition-all duration-300 ease-in-out group-hover/services:w-full'></div>
                         </li>
-                        <li className='group/our_team hover:cursor-pointer'>
+<li className='group/our_team hover:cursor-pointer'>
+
                            <Link to="/ourteam"> <p className="block py-2 pl-3 pr-4 text-white bg-gray-100 rounded md:bg-transparent md:p-0">Our Team</p></Link>
+
                             <div className='rounded-full bg-white w-0 h-[0.15rem] mt-1 relative
+
                             transition-all duration-300 ease-in-out group-hover/our_team:w-full'></div>
+
                         </li>
+<li className='group/about hover:cursor-pointer'>
+
+                        <button onClick={()=>handleNavbarClick("about")}> <p className="block py-2 pl-3 pr-4 text-white bg-gray-100 rounded md:bg-transparent md:p-0 hover:cursor-pointer">About</p></button>
+
+                            <div className='rounded-full bg-white w-0 h-[0.15rem] mt-1
+
+                            transition-all relative duration-300 ease-in-out group-hover/about:w-full'></div>
+
+                        </li>
+                        
                       
                     </ul>
                     
