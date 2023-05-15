@@ -131,7 +131,15 @@ setIsViewModalVisible(true)
   <Link to="/allprojects" className='text-blue-400 underline py-4'>View all</Link>
   </div>
       </div>   
-      <p className="text-sm  brder-2 pt-4">   At Tsinue, we offer a comprehensive range of services to address various technological needs. From web application development, mobile application development, and computer maintenance and installation to graphics design, 3D animation and modeling, game development, and UI/UX design, our team of skilled professionals is equipped to deliver exceptional solutions. Whether you're looking for a customized web application, an innovative mobile app, reliable computer maintenance, captivating graphics, immersive game experiences, or user-centric UI/UX designs, we have the expertise to bring your ideas to life. View our projects below </p>
+      <p className="text-sm  brder-2 pt-4">
+          
+          At Tsinue, we provide a wide range of services to meet your technological needs.
+          From web and mobile app development to computer maintenance, graphics design, 3D animation,
+          game development, and UI/UX design, our skilled professionals deliver exceptional solutions.
+          Whether you need a customized web app, innovative mobile app, reliable maintenance, captivating graphics,
+          immersive games, or user-centric designs, we bring your ideas to life. Explore our projects below.
+
+   </p>
       <div className="lg:block hidden">
         <div className="border-b border-gray-200">
           <nav className="-mb-px flex" aria-label="Tabs">
