@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
+import { Route, Routes, BrowserRouter as Router, useLocation } from 'react-router-dom';
 
 import "./App.css";
 
 import Mainapp from './Mainapp'
-import Aboutus from "./Components/Aboutus/Aboutus";
+import Aboutus from "./Components/Ourteam/Aboutus";
 import Contactus from "./Components/Contact us/Contactus";
 import PageNotFound from "./Components/Home/NotFound";
 import NavBar from "./Components/navbar/NavBar";
@@ -23,10 +23,20 @@ export default function App() {
 // useEffect(() => {
 //   trackPageView();
 // }, []);
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
   return (
     <div>
       <Router>
         <NavBar />
+        <ScrollToTop /> 
         <Routes>
           <Route path='/' element={<Mainapp />} />
           <Route path='/ourteam' element={<Aboutus />} />

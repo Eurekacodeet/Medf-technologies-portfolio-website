@@ -22,11 +22,11 @@ setBlogs(result)}catch(err){
   },[blogs])
   const handleViewBlog = (blog) => {
     setIsModalVisible(true);
-  // console.log(blog._id,"blog id inside edit")
+  // //console.log(blog._id,"blog id inside edit")
   setTitle(blog.title);
   setDescription(blog.description);
   setCategory(blog.category);
-  // console.log("category",blog.category)
+  // //console.log("category",blog.category)
   setFileData(blog.imageSrc);
 
   };

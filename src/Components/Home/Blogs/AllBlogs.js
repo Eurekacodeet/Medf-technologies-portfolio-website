@@ -45,7 +45,7 @@ const handleFilter = (value) => {
   const filtered = blogs.filter((blog) =>
     blog.category.toLowerCase().includes(value.toLowerCase())
   );
-  console.log(filtered)
+  //console.log(filtered)
   setFilteredBlogs(filtered);
   setFilteredBLogsVisibility(true);
 };
@@ -59,11 +59,11 @@ const handleFilter = (value) => {
           setIsViewFilterModalVisible(false);
           setVisible(false)
           setIsModalViewVisible(true);
-          console.log(blog._id,"blog id inside edit")
+          //console.log(blog._id,"blog id inside edit")
           setTitle(blog.title);
           setDescription(blog.description);
           setCategory(blog.category);
-          console.log("category",blog.category)
+          //console.log("category",blog.category)
           setFileData(blog.imageSrc);
      
           };
@@ -73,11 +73,11 @@ const handleFilter = (value) => {
         
             setVisible(false)
           setIsViewFilterModalVisible(true);
-          console.log(blog._id,"blog id inside edit")
+          //console.log(blog._id,"blog id inside edit")
           setTitle(blog.title);
           setDescription(blog.description);
           setCategory(blog.category);
-          console.log("category",blog.category)
+          //console.log("category",blog.category)
           setFileData(blog.imageSrc);
      
           };
@@ -107,11 +107,11 @@ useEffect(()=>{
 
   try{  const response=await fetch('https://efkomedia.onrender.com/blog/')
     const result=await response.json()
-      console.log(result)
+      //console.log(result)
     setBlogs(result)
-  console.log("length of blogs",blogs.length)
+  //console.log("length of blogs",blogs.length)
 }catch(error){
-  console.log(error)
+  //console.log(error)
 }
   }
   fetchData();                                                                                                                                                                                                                                                    
@@ -151,7 +151,7 @@ const handleFilterVisibility = (event) => {
 
 const handleFilterSubmit = (values) => {
   // Handle filter submission here
-  console.log(values);
+  //console.log(values);
 };
 const cardRef = useRef(null);
 const handleSelectOpen = () => {
@@ -186,7 +186,7 @@ useEffect(() => {
     };
   }, [datePickerOpen, selectOpen, setFilterVisible]);
   const onChange = (date, dateString) => {
-    // console.log(date, dateString);
+    // //console.log(date, dateString);
   };
   return (
     <div className='flex flex-col pt-4 w-full'>

@@ -43,7 +43,7 @@ setIsViewModalMobileVisible(false)
 //  try{ const response=await fetch('https://efkomedia.onrender.com/project/')
 //   const data=await response.json();
 //   setProjects(data)
-//   console.log("projects",projects)}catch(err){console.log(err)}
+//   //console.log("projects",projects)}catch(err){//console.log(err)}
 //   }
 //   fetchProject();
 //   const intervalId=setInterval(()=>{
@@ -58,7 +58,7 @@ useEffect(() => {
       const data = await response.json();
       setProjects(data);
     } catch (err) {
-      // console.log(err);
+      // //console.log(err);
     }
   };
 
@@ -70,21 +70,21 @@ useEffect(() => {
 }, [projects]);
 const handleView = (project) => {
 setIsViewModalVisible(true)
-  // console.log(project._id,"project id inside edit")
+  // //console.log(project._id,"project id inside edit")
   setProjectName(project.projectName);
   setProjectDescription(project.projectDescription);
   setsetProjectCategory(project.content);
-  // console.log("projectContent",project.content)
+  // //console.log("projectContent",project.content)
   setFileData(project.coverImage);
 
   };
   const handleViewMobile = (project) => {
     setIsViewModalMobileVisible(true)
-      // console.log(project._id,"project id inside edit")
+      // //console.log(project._id,"project id inside edit")
       setProjectName(project.projectName);
       setProjectDescription(project.projectDescription);
       setsetProjectCategory(project.content);
-      // console.log("projectContent",project.content)
+      // //console.log("projectContent",project.content)
       setFileData(project.coverImage);
     
       };
@@ -112,7 +112,7 @@ setIsViewModalVisible(true)
   useEffect(() => {
     function handleResize() {
       setSize(window.innerWidth);
-      // console.log(window.innerWidth)
+      // //console.log(window.innerWidth)
     }
 
     window.addEventListener("resize", handleResize);

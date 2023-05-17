@@ -21,11 +21,11 @@ const BlenderthreeDPortfolio = (props) => {
    
        const handleView = (project) => {
            setIsViewModalVisible(true)
-            //  console.log(project._id,"project id inside edit")
+            //  //console.log(project._id,"project id inside edit")
              setProjectName(project.projectName);
              setProjectDescription(project.projectDescription);
              setsetProjectCategory(project.content);
-            //  console.log("projectContent",project.content)
+            //  //console.log("projectContent",project.content)
              setFileData(project.coverImage);
            
              };

@@ -12,7 +12,7 @@ export default function Model(props) {
   const { nodes, materials, animations } = useGLTF('/new3D1-transformed.glb')
   const { actions } = useAnimations(animations, group)
     useEffect(()=>{
-    // console.log(actions)
+    // //console.log(actions)
     actions.KeyBoardTyper.play()
     actions.GridAction.play()
     actions.CatRobot.play()

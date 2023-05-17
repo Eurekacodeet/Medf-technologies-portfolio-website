@@ -14,18 +14,18 @@ const GraphicsDesignPortfolio = (props) => {
     const [projectContent, setsetProjectCategory]=useState({category:"",link:""})
    const [isViewModalVisible, setIsViewModalVisible] = useState(false);
    const [isViewModalMobileVisible, setIsViewModalMobileVisible] = useState(false);
-  //  console.log("grom graphics side",props.projects[4].content.category)
+  //  //console.log("grom graphics side",props.projects[4].content.category)
    const handleCancel=()=>{
    setIsViewModalVisible(false)
    setIsViewModalMobileVisible(false)}
    
        const handleView = (project) => {
            setIsViewModalVisible(true)
-            //  console.log(project._id,"project id inside edit")
+            //  //console.log(project._id,"project id inside edit")
              setProjectName(project.projectName);
              setProjectDescription(project.projectDescription);
              setsetProjectCategory(project.content);
-            //  console.log("projectContent",project.content)
+            //  //console.log("projectContent",project.content)
              setFileData(project.coverImage);
            
              };

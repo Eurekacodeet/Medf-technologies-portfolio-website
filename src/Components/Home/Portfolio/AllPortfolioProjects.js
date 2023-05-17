@@ -42,7 +42,7 @@ const handleFilter = (value) => {
   const filtered = projects.filter((project) =>
     project.content.category.toLowerCase().includes(value.toLowerCase())
   );
-  console.log(filtered)
+  //console.log(filtered)
   setFilteredProjects(filtered);
   setFilteredProjectsVisibility(true);
 };
@@ -50,13 +50,13 @@ const handleFilter = (value) => {
 useEffect(()=>{
   const fetchData=async()=>{
 
-  try{  const response=await fetch('https://efkomedia.onrender.com/')
+  try{  const response=await fetch('https://efkomedia.onrender.com/project')
     const result=await response.json()
-      console.log(result)
+      // //console.log(result)
     setProjects(result)
-  console.log("length of projects",projects.length)
+  //console.log("length of projects",projects.length)
 }catch(error){
-  console.log(error)
+  //console.log(error)
 }
   }
   fetchData();    
@@ -68,11 +68,11 @@ const handleView = (project) => {
   setIsViewFilterModalVisible(false);
   setVisible(false)
   setIsModalViewVisible(true);
-  console.log(project._id,"project id inside edit")
+  //console.log(project._id,"project id inside edit")
   setProjectName(project.projectName);
   setProjectDescription(project.projectDescription);
   setsetProjectCategory(project.content);
-  console.log("projectContent",project.content)
+  //console.log("projectContent",project.content)
   setFileData(project.coverImage);
 
   };
@@ -101,7 +101,7 @@ const handleFilterVisibility = (event) => {
 
 const handleFilterSubmit = (values) => {
   // Handle filter submission here
-  console.log(values);
+  //console.log(values);
 };
 
 const cardRef = useRef(null);
@@ -121,10 +121,10 @@ useEffect(() => {
 }, []);
 
 const onChange = (date, dateString) => {
-  // console.log(date, dateString);
+  // //console.log(date, dateString);
 };
 const onSelect=(e)=>{
-  console.log(`checked = ${e.target.checked}`);
+  //console.log(`checked = ${e.target.checked}`);
 }
   return (
     <div className='flex flex-col pt-4 w-screen'>

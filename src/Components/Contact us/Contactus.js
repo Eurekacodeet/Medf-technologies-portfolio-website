@@ -24,7 +24,7 @@ const ContactUs = () => {
         phoneNumber: phone
       };
   
-      // console.log('Request Data:', data);
+      // //console.log('Request Data:', data);
   
       const response = await fetch('https://efkoauth.onrender.com/email/sendFromClient', {
         method: 'POST',
@@ -37,14 +37,14 @@ const ContactUs = () => {
       if (response.ok) {
         const responseData = await response.json();
        message.success('Message sent successfully!')
-        // console.log('Success', responseData);
+        // //console.log('Success', responseData);
         form.resetFields();
      
       } else {
        message.error('An error has occured!')    
       }
     } catch (error) {   
-      // console.log('Error', error);
+      // //console.log('Error', error);
       // Handle error here
     }
   };
@@ -67,7 +67,7 @@ const ContactUs = () => {
               </div>
               <div className="flex flex-row items-center mb-4">
                 <MailOutlined className='text-2xl pr-3' />
-                <p>example@gmail.com</p>
+                <p>support@tsinue.com</p>
               </div>
               <div className="flex flex-row items-center mb-4">
                 <EnvironmentOutlined className='text-2xl pr-3' />
@@ -146,6 +146,32 @@ const ContactUs = () => {
                     <Option value="UI/UX Design">UI/UX Design</Option>
                     <Option value="Mobile application development">Mobile application development</Option>
                     <Option value="Web application development">Web application development</Option>
+                    <Option value="database-management">Database Management</Option>
+                    <Option value="blender-3d">Blender 3D</Option>
+  <Option value="graphics-design">Graphics Design</Option>
+  <Option value="game">Game</Option>
+  <Option value="project-consultancy">Project Consultancy</Option>
+  <Option value="training-support">Training and Support</Option>
+  <Option value="computer-installation-maintenance">Computer Installation and Maintenance</Option>
+  <Option value="cloud-computing">Cloud Computing</Option>
+  <Option value="artificial-intelligence">Artificial Intelligence</Option>
+  <Option value="cybersecurity">Cybersecurity</Option>
+  <Option value="e-commerce-solutions">E-commerce Solutions</Option>
+  <Option value="content-management-systems">Content Management Systems (CMS)</Option>
+  <Option value="digital-marketing">Digital Marketing</Option>
+  <Option value="data-analysis-visualization">Data Analysis and Visualization</Option>
+  <Option value="it-infrastructure-management">IT Infrastructure Management</Option>
+  <Option value="user-interface-design">User Interface Design</Option>
+  <Option value="quality-assurance-testing">Quality Assurance and Testing</Option>
+  <Option value="it-consulting">IT Consulting</Option>
+  <Option value="network-administration">Network Administration</Option>
+  <Option value="internet-of-things">Internet of Things (IoT)</Option>
+  <Option value="virtual-reality">Virtual Reality (VR)</Option>
+  <Option value="augmented-reality">Augmented Reality (AR)</Option>
+  <Option value="machine-learning">Machine Learning</Option>
+  <Option value="rpa">Robotic Process Automation (RPA)</Option>
+  <Option value="big-data-analytics">Big Data Analytics</Option>
+  <Option value="project-management">Project Management</Option>
                   </Select>
                 </Form.Item>
                 <Form.Item

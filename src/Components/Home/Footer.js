@@ -22,7 +22,7 @@ const Footer = () => {
         phoneNumber: ""
       };
   
-      // console.log('Request Data:', data);
+      // //console.log('Request Data:', data);
   
       const response = await fetch('https://efkoauth.onrender.com/email/sendFromClient', {
         method: 'POST',
@@ -34,13 +34,13 @@ const Footer = () => {
   
       if (response.ok) {
         const responseData = await response.json();
-        // console.log('Success', responseData);
+        // //console.log('Success', responseData);
         form.resetFields();
       } else {
         throw new Error('Failed to send email');
       }
     } catch (error) {
-      // console.log('Error', error);
+      // //console.log('Error', error);
       // Handle error here
     }
   };

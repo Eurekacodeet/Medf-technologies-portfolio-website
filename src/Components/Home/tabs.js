@@ -36,7 +36,7 @@ export default function CenteredTabs() {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
-    // console.log("the value is ", newValue)
+    // //console.log("the value is ", newValue)
     setValue(newValue);
   };
 

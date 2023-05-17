@@ -23,7 +23,7 @@ const Companystats = () => {
   useEffect(() => {
     function handleResize() {
       setSize(window.innerWidth);
-      // console.log(window.innerWidth)
+      // //console.log(window.innerWidth)
     }
 
     window.addEventListener("resize", handleResize);
