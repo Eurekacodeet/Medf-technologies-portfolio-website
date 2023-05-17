@@ -52,18 +52,18 @@ const Footer = () => {
     <div>
     <div className="grid grid-rows-3 grid-flow-col gap-4 pb-4">
   <div className="row-span-3 bg-zinc-900 flex p-3 rounded items-center"><DevicePhoneMobileIcon width={40} height={40}/></div>
-  <div className="col-span-2 "> <p>+251912345678</p></div>
-  <div className="row-span-2 col-span-2 ">  <p>Fahradit klasický smysluplný text vhodnou bezvýznamovo</p></div>
+  <div className="col-span-2 "> <p>+251988177340</p><p>+251912121388</p><p>+251985197106</p></div>
+  <div className="row-span-2 col-span-2 ">  <p>Call us anytime. 24/7</p></div>
 </div>
 <div className="grid grid-rows-3 grid-flow-col gap-4 pb-4">
   <div className="row-span-3 bg-zinc-900 flex p-3 rounded items-center"><MapPinIcon width={40} height={40}/></div>
   <div className="col-span-2 "> <p>Addis Ababa, Ethiopia</p></div>
-  <div className="row-span-2 col-span-2 ">  <p>Fahradit klasický smysluplný text vhodnou bezvýznamovo</p></div>
+  <div className="row-span-2 col-span-2 ">  <p>Our location</p></div>
 </div>
 <div className="grid grid-rows-3 grid-flow-col gap-4 pb-4">
   <div className="row-span-3 bg-zinc-900 flex p-3 rounded items-center"><EnvelopeIcon width={40} height={40}/></div>
-  <div className="col-span-2 "> <p>example@gmail.com</p></div>
-  <div className="row-span-2 col-span-2 ">  <p>Fahradit klasický smysluplný text vhodnou bezvýznamovo</p></div>
+  <div className="col-span-2 "> <p>support@tsinue.com</p></div>
+  <div className="row-span-2 col-span-2 ">  <p>You can contact us through this email</p></div>
 </div>
     
     </div>
