@@ -1,12 +1,20 @@
 import React from 'react'
-import Hadoop from '../../assets/hadoop.png' 
-import Amazon from '../../assets/amazon_mc_learning.png'
-import Apache from '../../assets/apache_spark.png'
-import Azure from '../../assets/azure_mc_learning.png'
-import Java from '../../assets/java.png'
-import Jupyter from '../../assets/jupyter.png'
+import Reactimg from '../../assets/Reantimg-01.png' 
+import Nodejs from '../../assets/Nodejsimg-01.png'
+import MongoDB from '../../assets/Mongodbnew-01.png'
+import AdobeIlus from '../../assets/adobeillusnew-01.png'
+import Adobephoto from '../../assets/adobephotoshnew-01.png'
 import Python from '../../assets/python.png'
+import Figma from '../../assets/Figmanew-01.png'
+import Tailwind from '../../assets/tailwindneer-01.png'
+import Cplusplus from '../../assets/Cplusplus-01.png'
+import Flutter from '../../assets/Flutternew-01.png'
+import Unity from '../../assets/Unityimg-01.png'
+import UnrealEngine from '../../assets/uneng-01.png'
+
+
 import Marquee from "react-fast-marquee";
+import Cshr from '../../assets/Cshr-01.png'
 const Tools = () => {
   return (
     <div className="bg-white text-black p-10 flex flex-wrap overflow-hidden" >
@@ -27,12 +35,18 @@ const Tools = () => {
     </div>
 <div className='pr-4 w-3/5'>
 <Marquee speed={70} pauseOnHover={true} reverse={true} background="#f5f5f5" height="150px" className="marque_container"axis="X" width="1100px">
-<img src={Hadoop} className=" px-20 grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"/>
-<img src={Amazon} className=" px-20 grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"/>
-<img src={Apache} className=" px-20 grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"/>
-<img src={Azure} className=" px-20 grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"/>
-<img src={Java} className=" px-20 grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"/>
-<img src={Jupyter} className=" px-20 grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"/>
+<img src={Reactimg} className=" px-20 grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"/>
+<img src={Cshr} className=" px-20 grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"/>
+<img src={Nodejs} className=" px-20 grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"/>
+<img src={MongoDB} className=" px-20 grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"/>
+<img src={AdobeIlus} className=" px-20 grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"/>
+<img src={Adobephoto} className=" px-20 grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"/>
+<img src={Figma} className=" px-20 grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"/>
+<img src={Tailwind} className=" px-20 grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"/>
+<img src={Cplusplus} className=" px-20 grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"/>
+<img src={Flutter} className=" px-20 grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"/>
+<img src={Unity} className=" px-20 grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"/>
+<img src={UnrealEngine} className=" px-20 grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"/>
 {/* <img src={Kibana} className="img-fluid-2"/> */}
 {/* <img src={Parquet} className="img-fluid"/> */}
 <img src={Python} className=" px-20 grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"/>
