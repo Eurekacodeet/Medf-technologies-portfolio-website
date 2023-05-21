@@ -11,7 +11,7 @@ const Companystats = () => {
       <div className=''>
         <p className="text-sm">Why choose us</p>
         <div className='relative group'>
-          <h1 className='text-3xl py-4 font-bold hover:text-black mb-8 hover:cursor-default'>EFKO Unfolds Solutions</h1>
+          <h1 className='text-3xl py-4 font-bold hover:text-black mb-8 hover:cursor-default'>Tsinue Unfolds Solutions</h1>
           <div className='rounded-full bg-black w-10 h-[0.15rem] mt-2 
                absolute left-0 bottom-0 transition-all duration-500 ease-in-out shadow
                 shadow-black group-hover:w-[90%]'></div>
