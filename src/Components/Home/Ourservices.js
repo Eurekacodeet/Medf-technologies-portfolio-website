@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card } from 'antd';
 import { AntDesignOutlined } from '@ant-design/icons'
-import { ComputerDesktopIcon, DevicePhoneMobileIcon, GlobeAltIcon, QuestionMarkCircleIcon, CubeIcon, PuzzlePieceIcon, CursorArrowRaysIcon, LightBulbIcon, PaintBrushIcon } from '@heroicons/react/24/outline'
+import { ComputerDesktopIcon, DevicePhoneMobileIcon, GlobeAltIcon, QuestionMarkCircleIcon, CubeIcon, PuzzlePieceIcon, CursorArrowRaysIcon, LightBulbIcon, PaintBrushIcon, WifiIcon, LockClosedIcon, CursorArrowRippleIcon } from '@heroicons/react/24/outline'
 import BlenderIcon from '../../assets/blender.svg'
 import UXUXIcon from '../../assets/ui_ux.svg'
 import { useNavigate } from 'react-router-dom';
@@ -22,44 +22,44 @@ const Ourservices = () => {
     {
        "icon": DevicePhoneMobileIcon,
        "title": "Mobile app Development",
-       "description": "We develop custom software tailored to your unique business needs.",
+       "description": "We develop customized mobile applications for iOS and Android platforms that meet your specific needs and goals.",
        "link": "#"
     },
     {
-       "icon": GlobeAltIcon,
-       "title": "Web Development",
-       "description": "We build conversational AI chatbots to enhance customer interactions.",
-       "link": "#"
+      "icon": GlobeAltIcon,
+      "title": "Web Development",
+      "description": "We build modern and responsive websites with clean code and user-friendly interfaces to drive your online presence.",
+      "link": "#"
     },
     {
        "icon": QuestionMarkCircleIcon,
        "title": "Project consultancy",
-       "description": "We provide expert database management services to ensure optimal performance.",
+       "description": "Our experienced consultants provide expert guidance and support in managing and optimizing your projects for success.",
        "link": "#"
     }, 
-     {
-       "icon": CubeIcon,
-       "title": "Blender 3D",
-       "description": "We manage your infrastructure to ensure it's secure, reliable, and scalable.",
-       "link": "#"
+    {
+      "icon": CubeIcon,
+      "title": "Blender 3D",
+      "description": "We bring your ideas to life with high-quality 3D modeling, animation, and rendering using Blender.",
+      "link": "#"
     },
 
     {
-       "icon": PaintBrushIcon,
-       "title": "Graphics design",
-       "description": "We create responsive and dynamic websites that captivate audiences.",
-       "link": "#"
+      "icon": PaintBrushIcon,
+      "title": "Graphics Design",
+      "description": "Our expert designers create visually stunning and impactful designs for branding, marketing, and more.",
+      "link": "#"
     },
     {
-       "icon": PuzzlePieceIcon,
-       "title": "Game development",
-       "description": "We help you transition to the cloud and streamline your business processes.",
-       "link": "#"
+      "icon": PuzzlePieceIcon,
+      "title": "Game Development",
+      "description": "We specialize in creating captivating and immersive gaming experiences tailored to your specific requirements.",
+      "link": "#"
     },
     {
        "icon": CursorArrowRaysIcon,
        "title": "IT Maintenance & Installation",
-       "description": "We offer comprehensive IT consulting services to optimize your technology infrastructure.",
+       "description": "We offer comprehensive IT maintenance services to ensure optimal performance and reliability of your systems.",
        "link": "#"
     },
     {
@@ -68,6 +68,24 @@ const Ourservices = () => {
        "description": "We provide training and education to equip your team with the latest industry knowledge.",
        "link": "#"
     },
+    {
+      "icon": WifiIcon,
+      "title": "Network installation",
+      "description": "We provide professional network installation services to ensure seamless connectivity.",
+      "link": "#"
+   },
+   {
+    "icon": LockClosedIcon,
+    "title": "Cyber Security",
+    "description": "We provide robust cybersecurity solutions to safeguard your digital assets.",
+    "link": "#"
+ },
+ {
+  "icon": CursorArrowRippleIcon,
+  "title": "Software Testing",
+  "description": "Thorough testing to ensure software quality and reliability.",
+  "link": "#"
+},
    ],
 }
 

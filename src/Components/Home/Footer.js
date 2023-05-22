@@ -49,23 +49,52 @@ const Footer = () => {
     <div className='flex flex-wrap justify-between'>
  
 
-    <div>
-    <div className="grid grid-rows-3 grid-flow-col gap-4 pb-4">
-  <div className="row-span-3 bg-zinc-900 flex p-3 rounded items-center"><DevicePhoneMobileIcon width={40} height={40}/></div>
-  <div className="col-span-2 "> <p>+251912345678 </p></div>
-  <div className="row-span-2 col-span-2 ">  <p>Feel free to reach out to us directly for potential collaborations or answer any questions you may have.</p></div>
+    <div className='w-full lg:w-1/2 xl:w-1/2 sm:w-full'>
+    {/* <div className="grid grid-rows-3 grid-flow-col gap-4 pb-4">
+  <div className="row-span-3 bg-zinc-900 flex p-3 rounded items-center border-2 border-red-400">
+    < width={40} height={40}/></div>
+  <div className="col-span-2 "> </div>
+  <div className="row-span-2 col-span-2 "> </div>
 </div>
 <div className="grid grid-rows-3 grid-flow-col gap-4 pb-4">
-  <div className="row-span-3 bg-zinc-900 flex p-3 rounded items-center"><MapPinIcon width={40} height={40}/></div>
-  <div className="col-span-2 "> <p>Addis Ababa, Ethiopia</p></div>
-  <div className="row-span-2 col-span-2 ">  <p>Our studio is located in Addis Ababa, Ethiopia. Visit us at [Address] to discuss your project.</p></div>
+  <div className="row-span-3 bg-zinc-900 flex p-3 rounded items-center  border-2 border-red-400">< width={40} height={40}/></div>
+  <div className="col-span-2 "></div>
+  <div className="row-span-2 col-span-2 "> </div>
 </div>
 <div className="grid grid-rows-3 grid-flow-col gap-4 pb-4">
-  <div className="row-span-3 bg-zinc-900 flex p-3 rounded items-center"><EnvelopeIcon width={40} height={40}/></div>
-  <div className="col-span-2 "> <p>support@tsinue.com</p></div>
-  <div className="row-span-2 col-span-2 ">  <p>Get in touch via email. We're here to answer questions and provide information.</p></div>
-</div>
+  <div className="row-span-3 bg-zinc-900 flex p-3 rounded items-center  border-2 border-red-400">< width={40} height={40}/></div>
+  <div className="col-span-2 "></div>
+  <div className="row-span-2 col-span-2 "> </div>
+</div> */}
+    <table class="table-auto">
+  <tr>
+    <td className='p-5 border-8 border-black justify-center bg-zinc-900 rounded items-center ' rowspan="2">
+     
+    <DevicePhoneMobileIcon width={40} height={40}/></td>
+    <td>CC</td>
     
+  </tr>
+  <tr>
+    <td className='py-2'> <p>Feel free to reach out to us directly for potential collaborations or answer any questions you may have.</p></td>
+  </tr>
+  <tr>
+    <td className='p-5  border-8 border-black  justify-center bg-zinc-900 rounded items-center ' rowspan="2">
+    <MapPinIcon width={40} height={40}/></td>
+    <td> <p>Addis Ababa, Ethiopia</p></td>
+  </tr>
+  <tr>
+    <td  className='py-2'> <p>Our studio is located in Addis Ababa, Ethiopia. Visit us at [Address] to discuss your project.</p></td>
+  </tr>
+  <tr>
+    <td className='p-5  border-8 border-black  justify-center bg-zinc-900 rounded items-center ' rowspan="2">
+    <EnvelopeIcon width={40} height={40}/></td>
+    <td> <p>Support@tsinue.com</p></td>
+  </tr>
+  <tr>
+    <td  className='py-2'> <p>Get in touch via email. We're here to answer questions and provide information.</p></td>
+  </tr>
+</table>
+
     </div>
     <div className='flex flex-col w-full items-start xl:w-1/2 xl:pl-10'>
         <div className='relative group flex mb-4'>

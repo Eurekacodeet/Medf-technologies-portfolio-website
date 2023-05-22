@@ -37,15 +37,6 @@ const [isViewFilterModalVisible, setIsViewFilterModalVisible]=useState(false)
   setFilteredProjectsVisibility(true);
 };
 
-const handleFilter = (value) => {
-
-  const filtered = projects.filter((project) =>
-    project.content.category.toLowerCase().includes(value.toLowerCase())
-  );
-  //console.log(filtered)
-  setFilteredProjects(filtered);
-  setFilteredProjectsVisibility(true);
-};
 
 useEffect(()=>{
   const fetchData=async()=>{
@@ -80,6 +71,12 @@ const containerRef=useRef()
 const [isModalVisible, setIsModalVisible] = useState(false);
 const [isViewModalVisible, setIsModalViewVisible]=useState(false)
 const [filterVisible, setFilterVisible] = useState(false);
+const [uiUx,setUiUx] = useState(false);
+const [web,setWeb] = useState(false);
+const [mobile,setMobile] = useState(false);
+const [blenderThreeD,setBlenderThreeD] = useState(false);
+const [graphicsDesign,setGraphicsDesign] = useState(false);
+const [games,setGames] = useState(false);
 
 const handleAddProject = () => {
   setIsModalVisible(true);
@@ -121,11 +118,70 @@ useEffect(() => {
 }, []);
 
 const onChange = (date, dateString) => {
-  // //console.log(date, dateString);
+  console.log("datestring",dateString);
 };
 const onSelect=(e)=>{
   //console.log(`checked = ${e.target.checked}`);
 }
+const handleUiUx = () => {
+  setUiUx(!uiUx);
+};
+const handleWeb = () => {
+  setWeb(!web);
+};
+const handleMobile = () => {
+  setMobile(!mobile);
+};
+const handleBlenderThreeD = () => {
+  setBlenderThreeD(!blenderThreeD);
+};
+const handleGraphicsDesign = () => {
+  setGraphicsDesign(!graphicsDesign);
+};
+const handleGames = () => {
+  setGames(!games);
+};
+const handleFilterClear=()=>{
+  setUiUx(false);
+  setWeb(false);
+  setMobile(false);
+  setBlenderThreeD(false);
+  setGraphicsDesign(false);
+  setGames(false);
+}
+const handleFilter = (value) => {
+  let filteredProjects = [];
+
+  if (uiUx) {
+    filteredProjects = [...filteredProjects, ...projects.filter((project) => project.content.category === "ui-ux-design")];
+  }
+  if (web) {
+    filteredProjects = [...filteredProjects, ...projects.filter((project) => project.content.category === "web-dev")];
+  }
+  if (mobile) {
+    filteredProjects = [...filteredProjects, ...projects.filter((project) => project.content.category === "mobile-app-dev")];
+  }
+  if (blenderThreeD) {
+    filteredProjects = [...filteredProjects, ...projects.filter((project) => project.content.category === "blender-3d")];
+  }
+  if (graphicsDesign) {
+    filteredProjects = [...filteredProjects, ...projects.filter((project) => project.content.category === "graphics-design")];
+  }
+  if (games) {
+    filteredProjects = [...filteredProjects, ...projects.filter((project) => project.content.category === "game")];
+  } if (filteredProjects.length == 0) {
+    filteredProjects = [...projects];
+  }
+
+  const sorted = filteredProjects.sort((a, b) => a.projectName.localeCompare(b.projectName));
+  console.log("Sorted",sorted);
+  console.log(filteredProjects);
+
+  setFilteredProjects(sorted);
+  setFilteredProjectsVisibility(true);
+};
+
+
   return (
     <div className='flex flex-col pt-4 w-screen'>
        <div    style={{ position: 'fixed', top: 80, zIndex: 999 }} className='w-full flex flex-row items-center pt-8 pl-8'>
@@ -153,12 +209,12 @@ const onSelect=(e)=>{
         <Form onFinish={handleFilterSubmit}>
         <Form.Item>
           <div className='flex flex-col md:flex md:flex-row items-start'>
-          <Checkbox className='ml-2' onChange={onChange}>UI/UX design</Checkbox>
-          <Checkbox onChange={onChange}>Websites</Checkbox>
-          <Checkbox onChange={onChange}>Mobile apps</Checkbox>
-          <Checkbox onChange={onChange}>Blender 3D</Checkbox>
-          <Checkbox onChange={onChange}>Graphics design</Checkbox>
-          <Checkbox onChange={onChange}>Games</Checkbox>
+          <Checkbox checked={uiUx} className='ml-2' onChange={(e) => handleUiUx()}>UI/UX design</Checkbox>
+          <Checkbox checked={web} onChange={(e) => handleWeb()}>Websites</Checkbox>
+          <Checkbox checked={mobile} onChange={(e) => handleMobile()}>Mobile apps</Checkbox>
+          <Checkbox checked={blenderThreeD} onChange={(e) => handleBlenderThreeD()}>Blender 3D</Checkbox>
+          <Checkbox checked={graphicsDesign} onChange={(e) => handleGraphicsDesign()}>Graphics design</Checkbox>
+          <Checkbox checked={games} onChange={(e) => handleGames()}>Games</Checkbox>
 </div>
           </Form.Item>
           {/* <Form.Item>
@@ -171,12 +227,14 @@ const onSelect=(e)=>{
             />
           </Form.Item> */}
 
-          <Form.Item className='flex flex-col'><p className='pb-2'>Filter by date:</p><DatePicker size="middle" onChange={onChange} /></Form.Item>
+          {/* <Form.Item className='flex flex-col'>
+            <p className='pb-2'>Filter by date:</p><DatePicker size="middle" onChange={onChange} />
+            </Form.Item> */}
           <div className='flex flex-row pt-4'>
             <Button onClick={() => handleFilter(filterText)} className='bg-black text-white mr-2' type="primary" htmlType="submit">
               Apply Filter
             </Button>
-            <Button onClick={() => setFilteredProjectsVisibility(false)} className='bg-black text-white' type="primary" htmlType="submit">
+            <Button onClick={() => {setFilteredProjectsVisibility(false);handleFilterClear();}} className='bg-black text-white' type="primary" htmlType="submit">
               Clear Filter
             </Button>
           </div>
