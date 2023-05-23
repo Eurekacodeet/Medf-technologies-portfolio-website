@@ -124,13 +124,13 @@ const handleNavbarClick = (sectionID) => {
        <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
        {uiData.services.map((service)=>(
            <div key={service.title} className="group flex flex-col items-center max-w-sm p-6 ml-10 bg-white border 
-            border-gray-200 rounded-lg shadow text-center mb-10  hover:text-white hover:bg-black">
+            border-gray-200 rounded-lg shadow text-center mb-10  hover:text-white hover:bg-black hover:cursor-pointer">
            {service.icon && (
                    <service.icon className="text-black group-hover:text-white" width={100} height={100} />
                  )}
-               <a href="#">
+              
                    <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 group-hover:text-white">{service.title}</h5>
-               </a>
+             
                <p className="mb-3 font-normal text-gray-500 dark:text-gray-400 group-hover:text-white">{service.description}</p>
                <button onClick={()=>handleNavbarClick('portfolio')} href="#" className="inline-flex items-center text-blue-600 hover:underline">
                    See our works
