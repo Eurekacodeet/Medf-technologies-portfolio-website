@@ -294,7 +294,22 @@ const chartRef = useRef(null);
     { name: "3DA - 3D artist", },
     { name: "AD - App Dev", },
   ];
-  
+  const SkillsAbuki = [
+    { name: "DA - Data Analysis", },
+    { name: "UI/UX - User interface & experience design",},
+    { name: "WS - Web scrapping",},
+    { name: "BE - Back-end Dev", },
+    { name: " - ", },
+    { name: "AD - App Dev", },
+  ]; 
+  const SkillsAbel = [
+    { name: "BE - Back-end Dev", },
+    { name: "DevOps - Development & Operations",},
+    { name: "CS - Cyber Security",},
+    { name: "NE - Networking", },
+    { name: "UI/UX - UI/UX Design", },
+    { name: "MLops - Machine Learning Operations", },
+  ];
   const colors = [
     "bg-red-500",
   ];
@@ -429,7 +444,7 @@ Development
    {size<500&& <div>
     <p className='font-bold pb-4'>Legend</p>
     <ul className="list-none">
-    {Skills.map((certificate, index) => (
+    {SkillsAbuki.map((certificate, index) => (
         <div key={index} className="flex items-center mr-4 mb-4">
           <span
             className={`w-4 h-4 rounded-sm mr-2 bg-black`}
@@ -522,7 +537,7 @@ dedicated to delivering exceptional results that meet both technical and busines
    {size<500&& <div>
     <p className='font-bold pb-4'>Legend</p>
     <ul className="list-none">
-    {Skills.map((certificate, index) => (
+    {SkillsAbel.map((certificate, index) => (
         <div key={index} className="flex items-center mr-4 mb-4">
           <span
             className={`w-4 h-4 rounded-sm mr-2 bg-black`}
