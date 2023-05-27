@@ -68,7 +68,7 @@ const Footer = () => {
 </div> */}
     <table class="table-auto">
   <tr>
-    <td className='p-5 border-8 border-black justify-center bg-zinc-900 rounded items-center ' rowspan="2">
+    <td className='p-5 border-y-8 border-r-8 border-black justify-center bg-zinc-900 rounded items-center ' rowspan="2">
      
     <DevicePhoneMobileIcon width={40} height={40}/></td>
     <td><p>+251988177340</p><p>+251985197106</p><p>+251912121388</p></td>
@@ -78,7 +78,7 @@ const Footer = () => {
     <td className='py-2'> <p>Feel free to reach out to us directly for potential collaborations or answer any questions you may have.</p></td>
   </tr>
   <tr>
-    <td className='p-5  border-8 border-black  justify-center bg-zinc-900 rounded items-center ' rowspan="2">
+    <td className='p-5  border-y-8 border-r-8 border-black  justify-center bg-zinc-900 rounded items-center ' rowspan="2">
     <MapPinIcon width={40} height={40}/></td>
     <td> <p>Addis Ababa, Ethiopia</p></td>
   </tr>
@@ -86,7 +86,7 @@ const Footer = () => {
     <td  className='py-2'> <p>Our studio is located in Addis Ababa, Ethiopia. Visit us at [Address] to discuss your project.</p></td>
   </tr>
   <tr>
-    <td className='p-5  border-8 border-black  justify-center bg-zinc-900 rounded items-center ' rowspan="2">
+    <td className='p-5 border-y-8 border-r-8 border-black  justify-center bg-zinc-900 rounded items-center ' rowspan="2">
     <EnvelopeIcon width={40} height={40}/></td>
     <td> <p>Support@tsinue.com</p></td>
   </tr>

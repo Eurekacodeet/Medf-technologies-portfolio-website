@@ -42,7 +42,13 @@ const Companystats = () => {
 </div>
   <div className="flex justify-center text-center border-l-2 border-t-2 rounded-tl-3xl border-gray-300 flex-col"><ClockCircleOutlined className='text-5xl p-4' /><p className="text-base font-medium antialiased">Punctuality</p></div>
   <div className="flex justify-center text-center  border-t-2 border-l-2 border-gray-300 flex-col"><TrophyOutlined className='text-5xl p-4'/><p className="text-base font-medium antialiased">Quality</p></div>
-  <div className='flex justify-center items-center border-2 border-gray-300 row-span-2 bg-black rounded-br-3xl rounded-tr-xl'> <img  className="rounded-tr-xl rounded-br-3xl"src={Efko}/></div>
+  <div className='flex flex-col justify-top items-center text-center border-2 text-white border-gray-300 row-span-2 bg-black rounded-br-3xl rounded-tr-xl'> 
+  <h2 className="text-2xl  font-bold font-sans pr-20  py-10">Powered by</h2>
+  <img alt="Tsinue logo was here"  className="rounded-tr-xl object-center rounded-br-3xl w-[18vw]"src="https://res.cloudinary.com/dvqawl4nw/image/upload/v1685168441/xqyewapmhafvpkwb4deo.svg"/>
+   
+   <h2 className="text-3xl text-center font-bold font-sans ">TSINUE <p className=" text-center text-xs pb-10">TECHNOLOGIES</p></h2>
+  
+   </div>
   <div className="flex justify-center items-center border-l-2 border-t-2 border-b-2 border-gray-300 flex-col rounded-tl-3xl rounded-bl-2xl"><UserOutlined className='text-5xl p-4' /> 
   <NumberCounter startValue={0} endValue={20} /><p className="text-base font-medium antialiased pb-6">Clients</p></div>
   <div className="flex justify-center items-center border-y-2 border-l-2 border-gray-300 flex-col"><UsergroupAddOutlined className='text-5xl p-4' />
@@ -88,8 +94,11 @@ const Companystats = () => {
     <NumberCounter startValue={0} endValue={50} />
     <p className="text-base font-medium antialiased pb-6">Projects</p>
   </div>
-  <div className="bg-black p-4 col-span-2 flex flex-col justify-center items-center border-2 rounded-b-3xl border-gray-300 h-full">
-    <img className="object-contain max-h-full w-full rounded-tr-xl rounded-br-3xl" src={Efko} />
+  <div className="bg-black p-4 text-white col-span-2 flex flex-col justify-top items-center border-2 rounded-b-3xl border-gray-300 h-full">
+  <h2 className="text-2xl  font-bold font-sans pr-28  py-10">Powered by</h2>
+  
+  <img alt="Tsinue logo was here"  className="rounded-tr-xl object-center rounded-br-3xl w-[50vw]"src="https://res.cloudinary.com/dvqawl4nw/image/upload/v1685168441/xqyewapmhafvpkwb4deo.svg"/>
+  <h2 className="text-3xl text-center font-bold font-sans ">TSINUE <p className="text-center text-xs pb-10">TECHNOLOGIES</p></h2>
   </div>
 </div>
 

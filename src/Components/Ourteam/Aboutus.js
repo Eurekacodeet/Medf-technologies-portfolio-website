@@ -62,7 +62,45 @@ const chartRef = useRef(null);
     },
   ];
   
-
+  const dataSm = [
+    {
+      subject: 'FE',
+      A: 120,
+      B: 110,
+      fullMark: 150,
+    },
+    {
+      subject: 'UI/UX',
+      A: 98,
+      B: 130,
+      fullMark: 150,
+    },
+    {
+      subject: 'GD',
+      A: 86,
+      B: 130,
+      fullMark: 150,
+    },
+    {
+      subject: 'BE',
+      A: 40,
+      B: 100,
+      fullMark: 150,
+    },
+    {
+      subject: '3DA',
+      A: 70,
+      B: 90,
+      fullMark: 150,
+    },
+    {
+      subject: 'AD',
+      A: 65,
+      B: 85,
+      fullMark: 150,
+    },
+  ];
+  
   const toggleExpand = () => {
     setExpanded(!expanded);
   };
@@ -71,7 +109,7 @@ const chartRef = useRef(null);
     setExpandedA(!expandedA);
   };
 
-  const tabsPortfolio = [
+  const tabsAboutus = [
     {id: 1,label: "About",content: () => (<div></div>),},
     { id: 2, label: "Skills", content: () => (<div></div>) },
     { id: 3, label: "Certifications", content: () => (<div></div>) },
@@ -99,6 +137,7 @@ const [size, setSize] = useState(window.innerWidth);
 
     window.addEventListener("resize", handleResize);
   }, [size]);
+  const [activeTab, setActiveTab] = useState(1);
   return (
     <div className="">
      <div className='bg-black p-10 flex flex-col items-center h-full'>
@@ -110,34 +149,45 @@ mt-4 hover:w-[16.7rem] transition-width bg-white duration-500 ease-in-out shadow
       </div> 
 
 
-      <div className='flex flex-col lg:flex-row justify-evenly bg-white mt-10 p-10 rounded'>
+      <div className='flex flex-col lg:flex-row justify-evenly border-4 border-purple-900 bg-white mt-10 p-10 rounded'>
 
-{/* <div className="lg:w-1/6 mr-4">
- 
-
-
-</div>
-
-
-
-<div className='flex flex-col lg:w-2/5'>
-  <h1 className='text-3xl font-bold pt-2'></h1>
-  <div >
-  
-  </div>
-  <div className=''>
-  <h1 className='text-3xl font-bold pt-2'></h1>
-  </div>
-</div> */}
-<div></div>
-<div className="lg:w-1/2"><img src="https://res.cloudinary.com/dvqawl4nw/image/upload/v1681139440/hmgglatf5qjig2tqvjom.png"/></div>
-<div className='flex lg:w-[50vw] sm:w-[80vw] w-[80vw] flex-col boder-2 boder-red-500'>
+<div className=""><img className='lg:w-full w-full border-2 border-yellow-500 sm:w-full' src="https://res.cloudinary.com/dvqawl4nw/image/upload/v1681139440/hmgglatf5qjig2tqvjom.png"/></div>
+<div className='flex lg:w-[80vw] sm:w-[100vw] w-[80vw] flex-col border-2 border-red-500'>
 <div className='flex flex-row'>
-<div><h1 onClick={handleAbout} className={`text-base hover:cursor-pointer ${contentState=="About"?"font-bold underline underline-offset-4":"font-normal"} pr-6`}>About</h1></div>
-<div><h1 onClick={handleSKill} className={`text-base hover:cursor-pointer ${contentState=="Skills"?"font-bold underline underline-offset-4":"font-normal"} pr-6`}>Skills</h1></div>
-<div><h1 onClick={handleSelectedWork} className={`text-base hover:cursor-pointer ${contentState=="Selected works"?"font-bold underline underline-offset-4":"font-normal"} pr-6`}>Portfolio  </h1></div>
-<div><h1 onClick={handleCertification} className={`text-base hover:cursor-pointer ${contentState=="Certifications"?"font-bold underline underline-offset-4":"font-normal"} pr-6`}>Certifications  </h1></div>
+{/* <div><h1 onClick={handleAbout} className={`text-base select-none hover:cursor-pointer ${contentState=="About"?"font-bold underline underline-offset-4":"font-normal"} pr-6`}>About</h1></div>
+<div><h1 onClick={handleSKill} className={`text-base select-none hover:cursor-pointer ${contentState=="Skills"?"font-bold underline underline-offset-4":"font-normal"} pr-6`}>Skills</h1></div>
+<div><h1 onClick={handleSelectedWork} className={`text-base select-none hover:cursor-pointer ${contentState=="Selected works"?"font-bold underline underline-offset-4":"font-normal"} pr-6`}>Portfolio  </h1></div>
+<div><h1 onClick={handleCertification} className={`text-base select-none hover:cursor-pointer ${contentState=="Certifications"?"font-bold underline underline-offset-4":"font-normal"} pr-6`}>Certifications  </h1></div> */}
+ <div className="lg:block hidden">
+        <div className="border-b border-gray-200">
+          <nav className="-mb-px flex" aria-label="Tabs">
+            {tabsAboutus.map((tab) => (
+              <p
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`w-1/4 py-4 px-1 text-center text-sm border-b-2 ${
+                  activeTab === tab.id
+                    ? "border-black text-black font-bold hover:cursor-pointer"
+                    : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 hover:cursor-pointer focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
+                }`}
+              >
+                {tab.label}
+              </p>
+            ))}
+          </nav>
+        </div>
 
+        <div className="mt-8">
+          {tabsAboutus.map((tab) => (
+            <div
+              key={tab.id}
+              className={`${activeTab === tab.id ? "block" : "hidden"} tab-content flex flex-row items-start`}
+            >
+              {tab.content()}
+            </div>
+          ))}
+        </div>
+      </div>
 </div>
 <div>
   {contentState=="About"&&
@@ -171,7 +221,7 @@ mt-4 hover:w-[16.7rem] transition-width bg-white duration-500 ease-in-out shadow
    {contentState=="Skills"&&
 <div className='flex borer-2 brder-green-500 justify-center w-full h-[40vh] object-contain items-center'> 
 <ResponsiveContainer className="object-contain mt-10" width="100%" height="100%">
-        <RadarChart cx="50%" cy="50%" outerRadius={`${size<500?"50%":"80%"}`} data={data}>
+        <RadarChart cx="50%" cy="50%" outerRadius={`${size<500?"60%":"80%"}`} data={size<500?dataSm:data}>
           <PolarGrid  />
           <PolarAngleAxis  dataKey="subject" />
           <PolarRadiusAxis />
@@ -183,6 +233,13 @@ mt-4 hover:w-[16.7rem] transition-width bg-white duration-500 ease-in-out shadow
   <ul className='text-base pt-2'>
     <li>Link 1</li>
     <li>Link 2</li>
+  </ul></div>
+    }
+    {contentState=="Certifications"&&
+  <div>          
+  <ul className='text-base pt-2'>
+    <li>Certifications 1</li>
+    <li>Certifications 2</li>
   </ul></div>
     }
 </div>
