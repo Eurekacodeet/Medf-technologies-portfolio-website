@@ -44,7 +44,7 @@ const Companystats = () => {
   <div className="flex justify-center text-center  border-t-2 border-l-2 border-gray-300 flex-col"><TrophyOutlined className='text-5xl p-4'/><p className="text-base font-medium antialiased">Quality</p></div>
   <div className='flex flex-col justify-top items-center text-center border-2 text-white border-gray-300 row-span-2 bg-black rounded-br-3xl rounded-tr-xl'> 
   <h2 className="text-2xl  font-bold font-sans pr-20  py-10">Powered by</h2>
-  <img alt="Tsinue logo was here"  className="rounded-tr-xl object-center rounded-br-3xl w-[18vw]"src="https://res.cloudinary.com/dvqawl4nw/image/upload/v1685168441/xqyewapmhafvpkwb4deo.svg"/>
+  <img alt="Tsinue logo was here"  className="rounded-tr-xl object-center rounded-br-3xl w-[18vw]"src="https://res.cloudinary.com/dvqawl4nw/image/upload/v1685177015/uij7hxlprbq62zhcgkyq.svg"/>
    
    <h2 className="text-3xl text-center font-bold font-sans ">TSINUE <p className=" text-center text-xs pb-10">TECHNOLOGIES</p></h2>
   
@@ -97,7 +97,7 @@ const Companystats = () => {
   <div className="bg-black p-4 text-white col-span-2 flex flex-col justify-top items-center border-2 rounded-b-3xl border-gray-300 h-full">
   <h2 className="text-2xl  font-bold font-sans pr-28  py-10">Powered by</h2>
   
-  <img alt="Tsinue logo was here"  className="rounded-tr-xl object-center rounded-br-3xl w-[50vw]"src="https://res.cloudinary.com/dvqawl4nw/image/upload/v1685168441/xqyewapmhafvpkwb4deo.svg"/>
+  <img alt="Tsinue logo was here"  className="rounded-tr-xl object-center rounded-br-3xl w-[50vw]"src="https://res.cloudinary.com/dvqawl4nw/image/upload/v1685177015/uij7hxlprbq62zhcgkyq.svg"/>
   <h2 className="text-3xl text-center font-bold font-sans ">TSINUE <p className="text-center text-xs pb-10">TECHNOLOGIES</p></h2>
   </div>
 </div>
