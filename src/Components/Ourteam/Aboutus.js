@@ -433,7 +433,7 @@ Development
     <div className='flex flex-col brder brder-500 justify-center w-full h-full'>
     <div className={`object-contain flex items-center justify-center ${size<500?"w-[80vw] h-[80vw]":"w-[42vw] h-[22vw]"} mb-10`}>
       <ResponsiveContainer bounce="100%" width="100%" height="100%">
-        <RadarChart className='brder brder-500' cx="50%" cy="50%" outerRadius={`${size < 500 ? "60%" : "80%"}`} data={size < 500 ? dataSm : dataAbuki}>
+        <RadarChart className='brder brder-500' cx="50%" cy="50%" outerRadius={`${size < 500 ? "60%" : "80%"}`} data={size < 500 ? dataSmAbuki : dataAbuki}>
           <PolarGrid />
           <PolarAngleAxis dataKey="subject" />
           <PolarRadiusAxis />
@@ -526,7 +526,7 @@ dedicated to delivering exceptional results that meet both technical and busines
     <div className='flex flex-col brder brder-500 justify-center w-full h-full'>
     <div className={`object-contain flex items-center justify-center ${size<500?"w-[80vw] h-[80vw]":"w-[42vw] h-[22vw]"} mb-10`}>
       <ResponsiveContainer bounce="100%" width="100%" height="100%">
-        <RadarChart className='brder brder-500' cx="50%" cy="50%" outerRadius={`${size < 500 ? "60%" : "80%"}`} data={size < 500 ? dataSm : dataAbel}>
+        <RadarChart className='brder brder-500' cx="50%" cy="50%" outerRadius={`${size < 500 ? "60%" : "80%"}`} data={size < 500 ? dataSmAbel : dataAbel}>
           <PolarGrid />
           <PolarAngleAxis dataKey="subject" />
           <PolarRadiusAxis />
