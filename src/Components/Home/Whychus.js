@@ -23,7 +23,7 @@ const Whychus = () => {
 </button>
 </div>
 <div className='mt-10 w-full'>
-  <img className="w-full h-[40vh] object-cover" src="https://res.cloudinary.com/dvqawl4nw/image/upload/v1681052038/cw6ujcirna0z2lvexj6y.webp" />
+  <img className="w-full h-[40vh] object-cover" src="https://res.cloudinary.com/dvqawl4nw/image/upload/v1685362797/i4rxse1a9krnq4jyte6p.png" />
 </div>
 
 

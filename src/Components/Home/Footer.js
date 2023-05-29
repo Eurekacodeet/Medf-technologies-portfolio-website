@@ -88,7 +88,7 @@ const Footer = () => {
   <tr>
     <td className='p-5 border-y-8 border-r-8 border-black  justify-center bg-zinc-900 rounded items-center ' rowspan="2">
     <EnvelopeIcon width={40} height={40}/></td>
-    <td> <p>Support@tsinue.com</p></td>
+    <td> <p>support@tsinue.com</p></td>
   </tr>
   <tr>
     <td  className='py-2'> <p>Get in touch via email. We're here to answer questions and provide information.</p></td>

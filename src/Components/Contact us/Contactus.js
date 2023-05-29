@@ -67,7 +67,7 @@ const ContactUs = () => {
               </div>
               <div className="flex flex-row items-center mb-4">
                 <MailOutlined className='text-2xl pr-3' />
-                <p>Support@tsinue.com</p>
+                <p>support@tsinue.com</p>
               </div>
               <div className="flex flex-row items-center mb-4">
                 <EnvironmentOutlined className='text-2xl pr-3' />
