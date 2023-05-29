@@ -8,7 +8,7 @@ const Whychus = () => {
     <div className='flex flex-col justify-center items-center text-center text-white bg-[url("https://res.cloudinary.com/dvqawl4nw/image/upload/v1681051049/szpzxf4cq38iwlaupqcm.png")] bg-cover bg-center'>
       <div className='flex flex-col justify-center items-center text-center p-10'>
         <h3 className='text-[1.6rem] font-bold break-words mr-4 pb-6 '>Why you should choose us?</h3>
-      <p className="text-sm pb-4">When it comes to choosing a software development partner, 
+      <p className="text-sm pb-4 sm:w-[100%] w-50% lg:w-[50%]">When it comes to choosing a software development partner, 
       clients want a team that they can trust to deliver high-quality solutions on time and within budget.
        That's why our experienced team of developers works closely with clients to understand their unique 
        needs and develop custom solutions that meet those requirements. We use the latest technologies 
