@@ -60,9 +60,9 @@ export default function NavBar() {
     return (
         <nav id="nav" className="bg-black dark:bg-black sticky w-full z-20 top-0 left-0 border-b border-black dark:border-black">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <a href="/" className="flex items-center">
+                <Link to="/" className="flex items-center">
                     <img src="https://res.cloudinary.com/dvqawl4nw/image/upload/v1685177015/uij7hxlprbq62zhcgkyq.svg" className="h-8 mr-3" alt="Logo" />
-                </a>
+                </Link>
                 <div className="flex md:order-2">
                 <Link to="/contact" className="flex items-center text-white bg-gray-700 hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-800 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0">
                         Contact Us
