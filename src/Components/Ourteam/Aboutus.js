@@ -687,7 +687,7 @@ mt-4 hover:w-[16.7rem] transition-width bg-white duration-500 ease-in-out shadow
 <div className='flex flex-col lg:flex-row justify-evenly bordr-4 brder-purple-900 bg-white mt-10 p-10 rounded'>
 
 <div className="">
-  <img className='lg:w-full w-full brder boder-yellow-500 sm:w-full' src="https://res.cloudinary.com/dvqawl4nw/image/upload/v1685455756/rgczwucmmbhl62gyflqn.png"/></div>
+  <img className='lg:w-full w-full brder boder-yellow-500 sm:w-full' src="https://res.cloudinary.com/dvqawl4nw/image/upload/v1685464201/ry2mkj5e0pg7bnttq7yu.png"/></div>
 <div className='flex lg:w-[80vw] sm:w-[100vw] w-[80vw] flex-col brder brder-500'>
 <div className='flex flex-row'>
 {/* <div><h1 onClick={handleAbout} className={`text-base select-none hover:cursor-pointer ${contentState=="About"?"font-bold underline underline-offset-4":"font-normal"} pr-6`}>About</h1></div>
