@@ -616,7 +616,7 @@ const [size, setSize] = useState(window.innerWidth);
     <div className="">
      <div className='bg-black p-10 flex flex-col items-center h-full'>
       <div >
-      <h1 className='text-[1.6rem] font-bold break-words mr-4 text-white whitespace-pre '>M e e t    t h e   t e a m </h1>
+      <h1 className='text-[1.6rem] font-bold break-words mr-4 text-white whitespace-pre '>M e e t    t h e   c o r e   t e a m </h1>
 
 <div className='rounded-full w-10 h-[0.4rem] 
 mt-4 hover:w-[16.7rem] transition-width bg-white duration-500 ease-in-out shadow shadow-white'></div>
@@ -625,7 +625,7 @@ mt-4 hover:w-[16.7rem] transition-width bg-white duration-500 ease-in-out shadow
 
       <div className='flex flex-col lg:flex-row justify-evenly borer-4 borer-purple-900 bg-white mt-10 p-10 rounded'>
 
-<div className=""><img className='lg:w-full w-full brder border-yellow-500 sm:w-full' src="https://res.cloudinary.com/dvqawl4nw/image/upload/v1681139440/hmgglatf5qjig2tqvjom.png"/></div>
+<div className=""><img className='lg:w-full w-full brder boder-yellow-500 sm:w-full' src="https://res.cloudinary.com/dvqawl4nw/image/upload/v1685455757/s5dec8kw6e0982jsywcv.png"/></div>
 <div className='flex lg:w-[80vw] sm:w-[100vw] w-[80vw] flex-col brder brder-500'>
 <div className='flex flex-row'>
 {/* <div><h1 onClick={handleAbout} className={`text-base select-none hover:cursor-pointer ${contentState=="About"?"font-bold underline underline-offset-4":"font-normal"} pr-6`}>About</h1></div>
@@ -687,7 +687,7 @@ mt-4 hover:w-[16.7rem] transition-width bg-white duration-500 ease-in-out shadow
 <div className='flex flex-col lg:flex-row justify-evenly bordr-4 brder-purple-900 bg-white mt-10 p-10 rounded'>
 
 <div className="">
-  <img className='lg:w-full w-full brder boder-yellow-500 sm:w-full' src="https://res.cloudinary.com/dvqawl4nw/image/upload/v1681145174/bmh2e4qmekkxaohdkfqh.png"/></div>
+  <img className='lg:w-full w-full brder boder-yellow-500 sm:w-full' src="https://res.cloudinary.com/dvqawl4nw/image/upload/v1685455756/rgczwucmmbhl62gyflqn.png"/></div>
 <div className='flex lg:w-[80vw] sm:w-[100vw] w-[80vw] flex-col brder brder-500'>
 <div className='flex flex-row'>
 {/* <div><h1 onClick={handleAbout} className={`text-base select-none hover:cursor-pointer ${contentState=="About"?"font-bold underline underline-offset-4":"font-normal"} pr-6`}>About</h1></div>
@@ -749,7 +749,7 @@ mt-4 hover:w-[16.7rem] transition-width bg-white duration-500 ease-in-out shadow
 <div className='flex flex-col lg:flex-row justify-evenly bordr-4 brder-purple-900 bg-white mt-10 p-10 rounded'>
 
 <div className="">
-  <img className='lg:w-full w-full brder boder-yellow-500 sm:w-full' src="https://res.cloudinary.com/dvqawl4nw/image/upload/v1681059700/qqaoi6ju1nwaaglmi9vv.png"/></div>
+  <img className='lg:w-full w-full brder boder-yellow-500 sm:w-full' src="https://res.cloudinary.com/dvqawl4nw/image/upload/v1685455756/dpm5rxwymxxzjka7rwcv.png"/></div>
 <div className='flex lg:w-[80vw] sm:w-[100vw] w-[80vw] flex-col brder brder-500'>
 <div className='flex flex-row'>
 {/* <div><h1 onClick={handleAbout} className={`text-base select-none hover:cursor-pointer ${contentState=="About"?"font-bold underline underline-offset-4":"font-normal"} pr-6`}>About</h1></div>
