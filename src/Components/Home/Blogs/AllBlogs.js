@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Input, Card, Form, Select, Button, message, Upload, Modal, Space, Image, Empty, DatePicker } from 'antd';
+import { Input, Card, Form, Select, Button, message, Upload, Modal, Space, Image, Empty, DatePicker, Checkbox } from 'antd';
 import { InboxOutlined } from '@ant-design/icons';
 import { ArrowRightOutlined, ExclamationCircleOutlined} from '@ant-design/icons';
 import { PlusIcon, AdjustmentsHorizontalIcon, PencilSquareIcon, XMarkIcon  } from '@heroicons/react/24/outline';
@@ -42,11 +42,34 @@ const [isViewFilterModalVisible, setIsViewFilterModalVisible]=useState(false)
 
 const handleFilter = (value) => {
 
-  const filtered = blogs.filter((blog) =>
-    blog.category.toLowerCase().includes(value.toLowerCase())
-  );
-  //console.log(filtered)
-  setFilteredBlogs(filtered);
+  let filteredBlogs = [];
+
+  if (uiUx) {
+    filteredBlogs = [...filteredBlogs, ...blogs.filter((blog) => blog.category === "ui-ux-design")];
+  }
+  if (web) {
+    filteredBlogs = [...filteredBlogs, ...blogs.filter((blog) => blog.category === "web-dev")];
+  }
+  if (mobile) {
+    filteredBlogs = [...filteredBlogs, ...blogs.filter((blog) => blog.category === "mobile-app-dev")];
+  }
+  if (blenderThreeD) {
+    filteredBlogs = [...filteredBlogs, ...blogs.filter((blog) => blog.category === "blender-3d")];
+  }
+  if (graphicsDesign) {
+    filteredBlogs = [...filteredBlogs, ...blogs.filter((blog) => blog.category === "graphics-design")];
+  }
+  if (games) {
+    filteredBlogs = [...filteredBlogs, ...blogs.filter((blog) => blog.category === "game")];
+  } if (filteredBlogs.length == 0) {
+    filteredBlogs = [...blogs];
+  }
+
+  const sorted = filteredBlogs.sort((a, b) => a.title.localeCompare(b.title));
+  console.log("Sorted",sorted);
+  console.log(filteredBlogs);
+
+  setFilteredBlogs(sorted);
   setFilteredBLogsVisibility(true);
 };
 
@@ -123,7 +146,12 @@ const [filterVisible, setFilterVisible] = useState(false);
 const [selectOpen, setSelectOpen] = useState(false);
 const [datePickerOpen, setDatePickerOpen] = useState(false);
 const [service, setService] = useState([]);
-  
+const [uiUx,setUiUx] = useState(false);
+const [web,setWeb] = useState(false);
+const [mobile,setMobile] = useState(false);
+const [blenderThreeD,setBlenderThreeD] = useState(false);
+const [graphicsDesign,setGraphicsDesign] = useState(false);
+const [games,setGames] = useState(false);
 const handleServiceChange = (value) => {
 if(value.length>0){
     setService(value)
@@ -188,12 +216,39 @@ useEffect(() => {
   const onChange = (date, dateString) => {
     // //console.log(date, dateString);
   };
+  const handleUiUx = () => {
+    setUiUx(!uiUx);
+  };
+  const handleWeb = () => {
+    setWeb(!web);
+  };
+  const handleMobile = () => {
+    setMobile(!mobile);
+  };
+  const handleBlenderThreeD = () => {
+    setBlenderThreeD(!blenderThreeD);
+  };
+  const handleGraphicsDesign = () => {
+    setGraphicsDesign(!graphicsDesign);
+  };
+  const handleGames = () => {
+    setGames(!games);
+  };
+  const handleFilterClear=()=>{
+    setUiUx(false);
+    setWeb(false);
+    setMobile(false);
+    setBlenderThreeD(false);
+    setGraphicsDesign(false);
+    setGames(false);
+  }
+  
   return (
     <div className='flex flex-col pt-4 w-full'>
        <div    style={{ position: 'fixed', top: 80, zIndex: 999 }} className='w-full flex flex-row items-center pt-8 pl-8'>
        
        <Search
-     placeholder="Search projects"
+     placeholder="Search blogs"
      allowClear
      onChange={(e)=>{setSearchText(e.target.value);handleSearch(e.target.value);}}
      className='w-4/5 bg-white rounded'
@@ -213,65 +268,20 @@ useEffect(() => {
         <div ref={cardRef}>
             <Card className='ml-8 mt-[9.5rem] w-[82%] mr-10' style={{ position: 'fixed', top: 0, zIndex: 999 }}>
         <Form onFinish={handleFilterSubmit}>
-        <Form.Item className='flex flex-col'><p className='pb-2'>
-            Filter by category:</p>
-            <Select
-                    mode="multiple"
-                    placeholder="Select a category"
-                    onChange={handleServiceChange}
-                    onDropdownVisibleChange={handleSelectOpen}
-    onBlur={handleSelectClose}
-                  >
-                    <Option value="Soft-dev">Software development</Option>
-                    <Option value="ui-ux-design">UI/UX Design</Option>
-                    <Option value="mobile-app-dev">Mobile application development</Option>
-                    <Option value="web-dev">Web application development</Option>
-  <Option value="graphics-design">Graphics Design</Option>
-  <Option value="project-consultancy">Project Consultancy</Option>
-  <Option value="training-support">Training and Support</Option>
-  <Option value="computer-installation-maintenance">Computer Installation and Maintenance</Option>
-  <Option value="software-dev">Software Development</Option>
-  <Option value="database-management">Database Management</Option>
-  <Option value="cloud-computing">Cloud Computing</Option>
-  <Option value="artificial-intelligence">Artificial Intelligence</Option>
-  <Option value="cybersecurity">Cybersecurity</Option>
-  <Option value="e-commerce-solutions">E-commerce Solutions</Option>
-  <Option value="content-management-systems">Content Management Systems (CMS)</Option>
-  <Option value="digital-marketing">Digital Marketing</Option>
-  <Option value="data-analysis-visualization">Data Analysis and Visualization</Option>
-  <Option value="it-infrastructure-management">IT Infrastructure Management</Option>
-  <Option value="user-interface-design">User Interface Design</Option>
-  <Option value="quality-assurance-testing">Quality Assurance and Testing</Option>
-  <Option value="it-consulting">IT Consulting</Option>
-  <Option value="network-administration">Network Administration</Option>
-  <Option value="internet-of-things">Internet of Things (IoT)</Option>
-  <Option value="virtual-reality">Virtual Reality (VR)</Option>
-  <Option value="augmented-reality">Augmented Reality (AR)</Option>
-  <Option value="machine-learning">Machine Learning</Option>
-  <Option value="rpa">Robotic Process Automation (RPA)</Option>
-  <Option value="big-data-analytics">Big Data Analytics</Option>
-  <Option value="project-management">Project Management</Option>
-                  </Select>
-            </Form.Item>
-          {/* <Form.Item>
-            <Input
-              placeholder="Filter by category"
-              allowClear
-              size="large"
-              onPressEnter={(e) => { handleFilter(e.target.value); setFilterText(e.target.value); }}
-              onChange={(e) => { setFilterText(e.target.value); }}
-            />
-          </Form.Item> */}
-          <Form.Item className='flex flex-col'><p className='pb-2'>
-            Filter by date:</p><DatePicker onOpenChange={handleDatePickerOpen}
-  onBlur={handleDatePickerClose} size="middle" onChange={onChange} />
-            </Form.Item>
-         
+        
+        <div className='flex flex-col md:flex md:flex-row items-start'>
+          <Checkbox checked={uiUx} className='ml-2' onChange={(e) => handleUiUx()}>UI/UX design</Checkbox>
+          <Checkbox checked={web} onChange={(e) => handleWeb()}>Websites</Checkbox>
+          <Checkbox checked={mobile} onChange={(e) => handleMobile()}>Mobile apps</Checkbox>
+          <Checkbox checked={blenderThreeD} onChange={(e) => handleBlenderThreeD()}>Blender 3D</Checkbox>
+          <Checkbox checked={graphicsDesign} onChange={(e) => handleGraphicsDesign()}>Graphics design</Checkbox>
+          <Checkbox checked={games} onChange={(e) => handleGames()}>Games</Checkbox>
+</div>
           <div className='flex flex-row pt-4'>
             <Button onClick={() => handleFilter(filterText)} className='bg-black text-white mr-2' type="primary" htmlType="submit">
               Apply Filter
             </Button>
-            <Button onClick={() => setFilteredBLogsVisibility(false)} className='bg-black text-white' type="primary" htmlType="submit">
+            <Button onClick={() => {setFilteredBLogsVisibility(false);handleFilterClear();}} className='bg-black text-white' type="primary" htmlType="submit">
               Clear Filter
             </Button>
           </div>
