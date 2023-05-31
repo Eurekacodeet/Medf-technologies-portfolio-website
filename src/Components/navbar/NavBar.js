@@ -1,9 +1,9 @@
 import { Fragment, useState } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon, PhoneIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, BellIcon, XMarkIcon, PhoneIcon, HomeIcon, UserGroupIcon, WrenchScrewdriverIcon, InformationCircleIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
 import { Link, useNavigate } from 'react-router-dom'
 import { Drawer } from 'antd'
-import { MenuOutlined } from '@ant-design/icons';
+import { GroupOutlined, InfoCircleFilled, InfoCircleOutlined, MailOutlined, MenuOutlined, MessageOutlined } from '@ant-design/icons';
 
 
 const navigation = [
@@ -114,22 +114,23 @@ export default function NavBar() {
 
                 </div>
                 <Drawer title="Menu" open={isDrawerVisible} onClose={handleDrawerClose} placement="right" as="div">
-  <Menu mode="vertical" selectedKeys={[currentMenu]} onClick={handleMenuClick} as="div">
-    <Menu.Item key="home" as="div" onClick={handleDrawerClose}>
-    <Link to="/"><button onClick={()=>setIsDrawerVisible(false)}>Home</button> </Link>
+                  {/* <img src="https://res.cloudinary.com/dvqawl4nw/image/upload/v1685220718/mg0qj46wimjt3epvkvpu.png"/> */}
+  <Menu className="flex flex-col" mode="vertical" selectedKeys={[currentMenu]} onClick={handleMenuClick} as="div">
+    <Menu.Item className="flex flex-row" key="home" as="div" onClick={handleDrawerClose}>
+    <Link to="/"><button className='flex flex-row borer-2 brder-red-500 mb-4' onClick={()=>setIsDrawerVisible(false)}><HomeIcon className='mr-4' width={24} height={24}/><p className="text-base uppercas">Home</p></button> </Link>
     </Menu.Item>
     <Menu.Item key="services" as="div"  onClick={handleDrawerClose}>
-    <Link to="/"><button 
-    onClick={()=>{setIsDrawerVisible(false);handleNavbarClick('ourservices');}}>Services</button></Link>
+    <Link to="/"><button className='flex items-center flex-row borer-2 mb-4 border-red-500' 
+    onClick={()=>{setIsDrawerVisible(false);handleNavbarClick('ourservices');}}><WrenchScrewdriverIcon  className='mr-4' width={24}/><p className="text-base uppercas">Services</p></button></Link>
   </Menu.Item>
     <Menu.Item key="our-team" as="div"  onClick={handleDrawerClose}>
-       <Link to="/ourteam"><button onClick={()=>setIsDrawerVisible(false)}>Our Team</button>
+       <Link to="/ourteam"><button className='flex flex-row boder-2 mb-4 items-center border-red-500'  onClick={()=>setIsDrawerVisible(false)}><UserGroupIcon  className='mr-4' width={24}/><p className="text-base uppercas">Our Team</p></button>
  </Link>   </Menu.Item>
     <Menu.Item key="about" as="div"  onClick={handleDrawerClose}>
-    <button onClick={()=>{setIsDrawerVisible(false);handleNavbarClick("about");}}>About</button>
+    <button className='flex flex-row items-center borer-2 mb-4 boder-red-500'  onClick={()=>{setIsDrawerVisible(false);handleNavbarClick("about");}}><InformationCircleIcon  className='mr-4'  width={24} height={24}/><p className="text-base uppercas">About</p></button>
    </Menu.Item>
     <Menu.Item key="contact-us" as="div"  onClick={handleDrawerClose}>
-       <Link to="/contact"><button onClick={()=>setIsDrawerVisible(false)}>Contact Us</button></Link>
+       <Link to="/contact"><button className='flex flex-row boder-2 items-center border-red-500'  onClick={()=>setIsDrawerVisible(false)}><EnvelopeIcon  className='mr-4'  width={24} height={24}/><p className="text-base uppercas">Contact Us</p></button></Link>
     </Menu.Item>
   </Menu>
 </Drawer>
