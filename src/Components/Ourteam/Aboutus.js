@@ -69,7 +69,7 @@ const chartRef = useRef(null);
   const dataSm = [
     {
       subject: 'FE',
-      A: 120,
+      A: 110,
       B: 110,
       fullMark: 150,
     },

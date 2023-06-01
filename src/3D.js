@@ -108,9 +108,12 @@ const Dh = () => {
       <button className='flex justify-start items-start' onClick={toggleConditionalMode}>
         {!conditionalMode?<div className='mt-4 flex flex-row items-center justify-center'>
           <CubeIcon className='bg-white text-black rounded mr-4' width={32}/>
-          <Tooltip placement="topLeft" title={text} arrow={mergedArrow}><InformationCircleIcon width={20}/> </Tooltip>
+          <Tooltip placement="topLeft" title={text} arrow={mergedArrow}>
+            <InformationCircleIcon width={20}/> </Tooltip>
           <p className='text-xs'>Experiencing performance issues click the cube</p></div>
-        :<div><VideoCameraIcon className='mt-4 bg-white text-black rounded' width={32}/></div>}
+        :<div className='mt-4 flex flex-row items-center justify-center'>
+           <VideoCameraIcon className='bg-white text-black rounded mr-4' width={32}/><Tooltip placement="topLeft" title={text} arrow={mergedArrow}><InformationCircleIcon width={20}/> </Tooltip>
+        <p className='text-xs'>Click the video icon to see something cool</p></div>}
       </button>
      {!conditionalMode? <div className='md:w-full h-[87%] w-full md:h-[90%] pt-2'>
         <Canvas className="">
