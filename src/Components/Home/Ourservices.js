@@ -110,7 +110,7 @@ const handleNavbarClick = (sectionID) => {
 
   return (
 <div className='bg-black flex flex-col pr-10'>
-<div className='relative group ml-10 mt-10 flex flex-col'>
+<div className='relative group ml-10 mt-10'>
   <h1 className='text-3xl font-bold text-white hover:text-white mb-4 hover:cursor-default'>Our services</h1>
   <div className='rounded-full bg-white w-10 h-[0.4rem] mt-2 absolute left-0 bottom-0 transition-all duration-500 ease-in-out shadow shadow-white group-hover:w-[11rem]'></div>
 </div>

@@ -269,23 +269,188 @@ const chartRef = useRef(null);
   const handleButtonClick = (url) => {
     window.open(url, '_blank');
   };
-  const certificates = [
+  const certificates = [   
     {
       id: 1,
-      name: 'React basics',
-      issuer: 'Issuer 1',
-      issuerPhoto:"https://media.licdn.com/dms/image/C4D0BAQGexnfBxeEG-g/company-logo_200_200/0/1608039227697?e=1693440000&v=beta&t=xEUTGKICllvYjAR8uWtLy3kPQPmqJHHCqZDw5LM_1rA",
-      credentialURL: 'https://www.coursera.org/account/accomplishments/verify/ZWH4YS4PXAKR',
+      name: 'Founder Academy',
+      issuerPhoto:"https://res.cloudinary.com/dvqawl4nw/image/upload/v1685602315/kzh6heqmawyk3rauq6bq.jpg",
+      issuer: 'alx',
+      credentialURL: 'https://www.virtualbadge.io/certificate-validator?credential=0c3b4713-1ea7-429e-9040-024ce770991b',
     },
+   
     {
       id: 2,
       name: 'Introduction to Git and GitHub',
       issuerPhoto:"https://media.licdn.com/dms/image/C4D0BAQGexnfBxeEG-g/company-logo_200_200/0/1608039227697?e=1693440000&v=beta&t=xEUTGKICllvYjAR8uWtLy3kPQPmqJHHCqZDw5LM_1rA",
-      issuer: 'Issuer 2',
+      issuer: 'Coursera',
       credentialURL: 'https://www.coursera.org/account/accomplishments/verify/4W4N67YQ3R6N',
+    },
+    {
+      id:3,
+      name: 'Fundamentals of Graphics Design',
+      issuerPhoto:"https://media.licdn.com/dms/image/C4D0BAQGexnfBxeEG-g/company-logo_200_200/0/1608039227697?e=1693440000&v=beta&t=xEUTGKICllvYjAR8uWtLy3kPQPmqJHHCqZDw5LM_1rA",
+      issuer: 'Coursera',
+      credentialURL: 'https://www.coursera.org/account/accomplishments/verify/2275NUGDRHW9',
+    },
+    {
+      id: 4,
+      name: 'Meta Introduction to frontend development',
+      issuerPhoto:"https://media.licdn.com/dms/image/C4D0BAQGexnfBxeEG-g/company-logo_200_200/0/1608039227697?e=1693440000&v=beta&t=xEUTGKICllvYjAR8uWtLy3kPQPmqJHHCqZDw5LM_1rA",
+      issuer: 'Coursera',
+      credentialURL: 'https://www.coursera.org/account/accomplishments/verify/TACDKKXMPR5X',
+    },
+    {
+      id: 5,
+      name: 'Meta introduction to backend development',
+      issuerPhoto:"https://media.licdn.com/dms/image/C4D0BAQGexnfBxeEG-g/company-logo_200_200/0/1608039227697?e=1693440000&v=beta&t=xEUTGKICllvYjAR8uWtLy3kPQPmqJHHCqZDw5LM_1rA",
+      issuer: 'Coursera',
+      credentialURL: 'https://www.coursera.org/account/accomplishments/verify/MRW53PFBEKF6',
+    },
+    {
+      id: 6,
+      name: 'Python for everybody',
+      issuerPhoto:"https://media.licdn.com/dms/image/C4D0BAQGexnfBxeEG-g/company-logo_200_200/0/1608039227697?e=1693440000&v=beta&t=xEUTGKICllvYjAR8uWtLy3kPQPmqJHHCqZDw5LM_1rA",
+      issuer: 'Coursera',
+      credentialURL: 'https://www.coursera.org/account/accomplishments/verify/8F5ZUS2NACXF',
+    }, 
+    {
+      id: 7,
+      name: 'React basics',
+      issuer: 'Coursera',
+      issuerPhoto:"https://media.licdn.com/dms/image/C4D0BAQGexnfBxeEG-g/company-logo_200_200/0/1608039227697?e=1693440000&v=beta&t=xEUTGKICllvYjAR8uWtLy3kPQPmqJHHCqZDw5LM_1rA",
+      credentialURL: 'https://www.coursera.org/account/accomplishments/verify/ZWH4YS4PXAKR',
+    },
+ 
+    // Add more certificate objects as needed
+  ];
+
+  const certificatesAbuki = [
+    {
+      id: 1,
+      name: 'Founder Academy',
+      issuer: 'alx',
+      issuerPhoto:"https://res.cloudinary.com/dvqawl4nw/image/upload/v1685602315/kzh6heqmawyk3rauq6bq.jpg",
+      credentialURL: 'https://www.virtualbadge.io/certificate-validator?credential=0c4e83b4-a5cd-4583-a171-06aa6e7eaef6',
+    },
+    {
+      id: 2,
+      name: 'Exam 480: Programming in HTML5 with JavaScript and CSS3',
+      issuerPhoto:"https://res.cloudinary.com/dvqawl4nw/image/upload/v1685602621/jjhecmbbaau565fnypog.jpg",
+      issuer: 'Microsoft',
+      credentialURL: 'https://www.credly.com/badges/474d8a86-b9f9-4da5-aab5-31dc60c1c096/linked_in_profile',
+    },
+    {
+      id: 3,
+      name: 'JavaScript: Functions',
+      issuerPhoto:"https://res.cloudinary.com/dvqawl4nw/image/upload/v1685602741/blofhl9qp4rcjcfogf9u.jpg",
+      issuer: 'LinkedIn',
+      credentialURL: 'https://www.linkedin.com/learning/certificates/1ed34551e9e7f3c444edbcb4f2cb6ff9239cb21014cdb1c8c20d3bd2ac97b4bd?trk=backfilled_certificate',
+    },
+    {
+      id: 4,
+      name: 'Microsoft Certified: Azure Fundamentals',
+      issuerPhoto:"https://res.cloudinary.com/dvqawl4nw/image/upload/v1685602621/jjhecmbbaau565fnypog.jpg",
+      issuer: 'Microsoft',
+      credentialURL: 'https://www.youracclaim.com/badges/22e9b845-4780-468e-aae0-a5742d0c696b?source=linked_in_profile',
+    },
+    {
+      id: 5,
+      name: 'JavaScript Essential Training',
+      issuerPhoto:"https://res.cloudinary.com/dvqawl4nw/image/upload/v1685602741/blofhl9qp4rcjcfogf9u.jpg",
+      issuer: 'LinkedIn',
+      credentialURL: 'https://www.linkedin.com/learning/certificates/82ffed8ce2ad541c154bfd61fe0ecf6bf227416a3cc64c1f3ed8ed39a21bd6f8?trk=backfilled_certificate&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B16oPA1LCTIGKoefkoRQtsQ%3D%3D',
+    },
+    {
+      id: 6,
+      name: 'JavaScript: Classes',
+      issuerPhoto:"https://res.cloudinary.com/dvqawl4nw/image/upload/v1685602741/blofhl9qp4rcjcfogf9u.jpg",
+      issuer: 'LinkedIn',
+      credentialURL: 'https://www.linkedin.com/learning/certificates/492ef0e3714b5ed69e0f394d9ee692e2239491ef6a1709cf54485fab091f8f54?trk=backfilled_certificate&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B16oPA1LCTIGKoefkoRQtsQ%3D%3D',
+    },
+    {
+      id: 7,
+      name: 'Penetration Testing Essential Training',
+      issuerPhoto:"https://res.cloudinary.com/dvqawl4nw/image/upload/v1685602741/blofhl9qp4rcjcfogf9u.jpg",
+      issuer: 'LinkedIn',
+      credentialURL: 'https://www.linkedin.com/learning/certificates/b9d901bd486626652ee852f2afef0895f34abd030912d0bedd94fe34fb767a90?trk=backfilled_certificate&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B16oPA1LCTIGKoefkoRQtsQ%3D%3D',
+    },
+    {
+      id: 8,
+      name: 'Learning Cloud Computing: Core Concepts',
+      issuerPhoto:"https://res.cloudinary.com/dvqawl4nw/image/upload/v1685602741/blofhl9qp4rcjcfogf9u.jpg",
+      issuer: 'LinkedIn',
+      credentialURL: 'https://www.linkedin.com/learning/certificates/2aaeb00eeea06eb4e9cceecbbab56b48543fe4922ee4888a13c8693162e241f8?trk=backfilled_certificate&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B16oPA1LCTIGKoefkoRQtsQ%3D%3D',
     },
     // Add more certificate objects as needed
   ];
+  const certificatesAbel = [
+    {
+      id: 1,
+      name: 'Founder Academy',
+      issuer: 'alx',
+      issuerPhoto:"https://res.cloudinary.com/dvqawl4nw/image/upload/v1685602315/kzh6heqmawyk3rauq6bq.jpg",
+      credentialURL: 'https://www.virtualbadge.io/certificate-validator?credential=c40234dc-da11-456f-b588-53fcded6b45a',
+    },
+    // {
+    //   id: 2,
+    //   name: 'Introduction to Git and GitHub',
+    //   issuerPhoto:"https://media.licdn.com/dms/image/C4D0BAQGexnfBxeEG-g/company-logo_200_200/0/1608039227697?e=1693440000&v=beta&t=xEUTGKICllvYjAR8uWtLy3kPQPmqJHHCqZDw5LM_1rA",
+    //   issuer: 'alx',
+    //   credentialURL: 'https://www.coursera.org/account/accomplishments/verify/4W4N67YQ3R6N',
+    // },
+    // {
+    //   id: 3,
+    //   name: 'Introduction to Git and GitHub',
+    //   issuerPhoto:"https://media.licdn.com/dms/image/C4D0BAQGexnfBxeEG-g/company-logo_200_200/0/1608039227697?e=1693440000&v=beta&t=xEUTGKICllvYjAR8uWtLy3kPQPmqJHHCqZDw5LM_1rA",
+    //   issuer: 'alx',
+    //   credentialURL: 'https://www.coursera.org/account/accomplishments/verify/4W4N67YQ3R6N',
+    // },
+    // {
+    //   id: 4,
+    //   name: 'Introduction to Git and GitHub',
+    //   issuerPhoto:"https://media.licdn.com/dms/image/C4D0BAQGexnfBxeEG-g/company-logo_200_200/0/1608039227697?e=1693440000&v=beta&t=xEUTGKICllvYjAR8uWtLy3kPQPmqJHHCqZDw5LM_1rA",
+    //   issuer: 'alx',
+    //   credentialURL: 'https://www.coursera.org/account/accomplishments/verify/4W4N67YQ3R6N',
+    // },
+    // Add more certificate objects as needed
+  ];
+  const [showAll, setShowAll] = useState(false);
+  const [showAllAbuki, setShowAllAbuki] = useState(false);
+
+  const [showAllAbel, setShowAllAbel] = useState(false);
+
+
+  const visibleCount = showAll ? certificates.length : 3;
+  const visibleCountAbuki = showAllAbuki ? certificatesAbuki.length : 3;
+  const visibleCountAbel = showAllAbel ? certificatesAbel.length : 3;
+
+  const visibleCertificates = certificates.slice(0, visibleCount);
+  const visibleCertificatesAbuki = certificatesAbuki.slice(0, visibleCountAbuki);
+  const visibleCertificatesAbel= certificatesAbel.slice(0, visibleCountAbel);
+
+
+
+  const handleShowMore = () => {
+    setShowAll(true);
+  };
+
+  const handleShowLess = () => {
+    setShowAll(false);
+  };
+  const handleShowMoreAbuki = () => {
+    setShowAllAbuki(true);
+  };
+
+  const handleShowLessAbuki = () => {
+    setShowAllAbuki(false);
+  };
+  const handleShowMoreAbel = () => {
+    setShowAllAbel(true);
+  };
+
+  const handleShowLessAbel = () => {
+    setShowAllAbel(false);
+  };
   const Skills = [
     { name: "FE - Front-end Dev", },
     { name: "UI/UX - User interface & experience design",},
@@ -370,33 +535,47 @@ const chartRef = useRef(null);
   </div>
   
   ) },
-    { id: 3, label: "Certifications", content: () => (<div><div>          
-      <ul className='text-base pt-2'>
-      {certificates.map((certificate) => (
-          <li key={certificate.id}>
-           <div className='flex flex-row'>
-            <div className='w-16 object-fill mr-4'><img  className='object-contain ' src={certificate.issuerPhoto}/></div>
-            <div className='flex flex-col'>
-           <strong>{certificate.name}</strong>
+    { id: 3, label: "Certifications", content: () => (<div>
+      <div>
+        <ul className="text-base pt-2">
+          {visibleCertificates.map((certificate) => (
+            <li key={certificate.id}>
+              <div className="flex flex-row">
+                <div className="w-16 object-fill mr-4">
+                  <img className="object-contain" src={certificate.issuerPhoto} />
+                </div>
+                <div className="flex flex-col">
+                  <strong>{certificate.name}</strong>
+                  {certificate.issuer}
+                </div>
+              </div>
 
-{certificate.issuer}
-            </div> </div>
-           
-            <br />
-            <Button
-        className="flex flex-row bg-black text-white justify-center items-center hover:bg-white hover:text-black"
-        type="primary"
-        shape="round"
-        icon={<ArrowUpCircleIcon width={20} height={20} />}
-        size={size}
-        onClick={()=>{handleButtonClick(certificate.credentialURL)}}
-      >
-        Show credential
-      </Button>
-            <br />
-          </li>
-        ))}
-      </ul></div></div>) },
+              <br />
+              <Button
+                className="flex flex-row bg-black text-white justify-center items-center hover:bg-white hover:text-black"
+                type="primary"
+                shape="round"
+                icon={<ArrowUpCircleIcon width={20} height={20} />}
+                size={size}
+                onClick={() => {
+                  handleButtonClick(certificate.credentialURL);
+                }}
+              >
+                Show credential
+              </Button>
+              <br />
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {certificates.length > 3 && !showAll && (
+        <button onClick={handleShowMore}>Show More</button>
+      )}
+      {showAll && (
+        <button onClick={handleShowLess}>Show Less</button>
+      )}
+    </div>) },
     // { id: 4, label: "Selected works", content: () => (<div><div>          
     //   <ul className='text-base pt-2'>
     //     <li>Certifications</li>
@@ -444,12 +623,12 @@ Development
    {size<500&& <div>
     <p className='font-bold pb-4'>Legend</p>
     <ul className="list-none">
-    {SkillsAbuki.map((certificate, index) => (
+    {SkillsAbuki.map((skill, index) => (
         <div key={index} className="flex items-center mr-4 mb-4">
           <span
             className={`w-4 h-4 rounded-sm mr-2 bg-black`}
           ></span>
-          <p className="font-bold">{`${certificate.name}`}</p>
+          <p className="font-bold">{`${skill.name}`}</p>
         </div>
       ))}
 </ul>
@@ -458,33 +637,47 @@ Development
   </div>
   
   ) },
-    { id: 6, label: "Certifications", content: () => (<div><div>          
-      <ul className='text-base pt-2'>
-      {certificates.map((certificate) => (
-          <li key={certificate.id}>
-           <div className='flex flex-row'>
-            <div className='w-16 object-fill mr-4'><img  className='object-contain ' src={certificate.issuerPhoto}/></div>
-            <div className='flex flex-col'>
-           <strong>{certificate.name}</strong>
+    { id: 6, label: "Certifications", content: () => (<div>
+      <div>
+        <ul className="text-base pt-2">
+          {visibleCertificatesAbuki.map((certificate) => (
+            <li key={certificate.id}>
+              <div className="flex flex-row">
+                <div className="w-16 object-fill mr-4">
+                  <img className="object-contain" src={certificate.issuerPhoto} />
+                </div>
+                <div className="flex flex-col">
+                  <strong>{certificate.name}</strong>
+                  {certificate.issuer}
+                </div>
+              </div>
 
-{certificate.issuer}
-            </div> </div>
-           
-            <br />
-            <Button
-        className="flex flex-row bg-black text-white justify-center items-center hover:bg-white hover:text-black"
-        type="primary"
-        shape="round"
-        icon={<ArrowUpCircleIcon width={20} height={20} />}
-        size={size}
-        onClick={()=>{handleButtonClick(certificate.credentialURL)}}
-      >
-        Show credential
-      </Button>
-            <br />
-          </li>
-        ))}
-      </ul></div></div>) },
+              <br />
+              <Button
+                className="flex flex-row bg-black text-white justify-center items-center hover:bg-white hover:text-black"
+                type="primary"
+                shape="round"
+                icon={<ArrowUpCircleIcon width={20} height={20} />}
+                size={size}
+                onClick={() => {
+                  handleButtonClick(certificate.credentialURL);
+                }}
+              >
+                Show credential
+              </Button>
+              <br />
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {certificatesAbuki.length > 3 && !showAllAbuki && (
+        <button onClick={handleShowMoreAbuki}>Show More</button>
+      )}
+      {showAllAbuki && (
+        <button onClick={handleShowLessAbuki}>Show Less</button>
+      )}
+    </div>) },
     // { id: 4, label: "Selected works", content: () => (<div><div>          
     //   <ul className='text-base pt-2'>
     //     <li>Certifications</li>
@@ -537,12 +730,12 @@ dedicated to delivering exceptional results that meet both technical and busines
    {size<500&& <div>
     <p className='font-bold pb-4'>Legend</p>
     <ul className="list-none">
-    {SkillsAbel.map((certificate, index) => (
+    {SkillsAbel.map((skill, index) => (
         <div key={index} className="flex items-center mr-4 mb-4">
           <span
             className={`w-4 h-4 rounded-sm mr-2 bg-black`}
           ></span>
-          <p className="font-bold">{`${certificate.name}`}</p>
+          <p className="font-bold">{`${skill.name}`}</p>
         </div>
       ))}
 </ul>
@@ -551,33 +744,47 @@ dedicated to delivering exceptional results that meet both technical and busines
   </div>
   
   ) },
-    { id: 9, label: "Certifications", content: () => (<div><div>          
-      <ul className='text-base pt-2'>
-      {certificates.map((certificate) => (
-          <li key={certificate.id}>
-           <div className='flex flex-row'>
-            <div className='w-16 object-fill mr-4'><img  className='object-contain ' src={certificate.issuerPhoto}/></div>
-            <div className='flex flex-col'>
-           <strong>{certificate.name}</strong>
+    { id: 9, label: "Certifications", content: () => (<div>
+      <div>
+        <ul className="text-base pt-2">
+          {visibleCertificatesAbel.map((certificate) => (
+            <li key={certificate.id}>
+              <div className="flex flex-row">
+                <div className="w-16 object-fill mr-4">
+                  <img className="object-contain" src={certificate.issuerPhoto} />
+                </div>
+                <div className="flex flex-col">
+                  <strong>{certificate.name}</strong>
+                  {certificate.issuer}
+                </div>
+              </div>
 
-{certificate.issuer}
-            </div> </div>
-           
-            <br />
-            <Button
-        className="flex flex-row bg-black text-white justify-center items-center hover:bg-white hover:text-black"
-        type="primary"
-        shape="round"
-        icon={<ArrowUpCircleIcon width={20} height={20} />}
-        size={size}
-        onClick={()=>{handleButtonClick(certificate.credentialURL)}}
-      >
-        Show credential
-      </Button>
-            <br />
-          </li>
-        ))}
-      </ul></div></div>) },
+              <br />
+              <Button
+                className="flex flex-row bg-black text-white justify-center items-center hover:bg-white hover:text-black"
+                type="primary"
+                shape="round"
+                icon={<ArrowUpCircleIcon width={20} height={20} />}
+                size={size}
+                onClick={() => {
+                  handleButtonClick(certificate.credentialURL);
+                }}
+              >
+                Show credential
+              </Button>
+              <br />
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {certificatesAbel.length > 3 && !showAllAbel && (
+        <button onClick={handleShowMoreAbel}>Show More</button>
+      )}
+      {showAllAbel && (
+        <button onClick={handleShowLessAbel}>Show Less</button>
+      )}
+    </div>) },
     // { id: 4, label: "Selected works", content: () => (<div><div>          
     //   <ul className='text-base pt-2'>
     //     <li>Certifications</li>

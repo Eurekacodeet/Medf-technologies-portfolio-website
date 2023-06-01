@@ -131,7 +131,7 @@ setIsViewModalVisible(true)
   <Link to="/allprojects" className='text-blue-400 underline py-4'>View all</Link>
   </div>
       </div>   
-      <p className="text-sm sm:w-[100%] w-50% lg:w-[50%] brder-2 pt-4">
+      <p className="text-sm pt-4">
           
           At Tsinue, we provide a wide range of services to meet your technological needs.
           From web and mobile app development to computer maintenance, graphics design, 3D animation,

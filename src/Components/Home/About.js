@@ -13,7 +13,7 @@ const About = () => {
 
      
 {/* <div> */}
-   <p className="sm:w-[100%] w-50% lg:w-[50%]">At Tsinue, 
+   <p className="">At Tsinue, 
         we are a leading software company specializing in 
         providing a wide range of innovative services to 
         meet the unique needs of businesses across various industries.
