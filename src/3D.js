@@ -82,6 +82,16 @@ const Dh = () => {
       pointAtCenter: true,
     };
   }, [arrow]);
+  const [size, setSize] = useState(window.innerWidth);
+
+  useEffect(() => {
+    function handleResize() {
+      setSize(window.innerWidth);
+      // //console.log(window.innerWidth)
+    }
+
+    window.addEventListener("resize", handleResize);
+  }, [size]);
   const text="For better performance, switch to the video view by clicking the cube. We're optimizing the 3D view soon. Enjoy the video experience despite any performance issues."
   return (
     <div className="flex flex-col bg-black text-white p-10 h-[100vh] md:flex md:flex-row overflow-hidden dh-component">
@@ -99,9 +109,9 @@ const Dh = () => {
       
       )}
       
-      <div className="w-full mr-10 md:w-2/5 pl-10">
-      <Carousel autoplay className='pb-8 boder-2 border-blue-500' >
-    <div className='borer-2 pt-[20vh] lg:pt- sm:pt-  border-red-400'>
+      <div className="w-full mr-10 md:w-2/5">
+      <Carousel  className='pb-8 bordr-2 flex flex-row justify-evenly border-blue-500' >
+    <div className={` ${size>=768&&'pt-[20vh]'}`}>
     <p className="text-sm text-white">Obtain High Quality Webapps</p>
         <div className="relative group text-white">
           <h1 className="text-3xl py-4 font-bold text-white mb-8 hover:cursor-default">Full Stack Web Development</h1>
@@ -118,7 +128,7 @@ const Dh = () => {
 
 
 
-    <div className='boder-2 border-red-400 pl-10'>
+    <div className={` ${size>=768?'pr-4 pt-[20vh]':'pr-4 '}`}>
   <p className="text-sm text-white">Build Innovative Mobile Applications</p>
   <div className="relative group text-white">
     <h1 className="text-3xl py-4 font-bold text-white mb-8 hover:cursor-default">Mobile App Development</h1>
@@ -136,7 +146,7 @@ const Dh = () => {
 
     
     <div className=''>
-    <div className='boder-2 border-red-400 pl-10'>
+    <div className={` ${size>=768?'pr-4 pt-[20vh]':'pr-4 '}`}>
   <p className="text-sm text-white">Create Stunning Visual Designs</p>
   <div className="relative group text-white">
     <h1 className="text-3xl py-4 font-bold text-white mb-8 hover:cursor-default">Graphics Design Services</h1>
@@ -154,7 +164,7 @@ const Dh = () => {
 
 
     <div>
-    <div className='boder-2 border-red-400 pl-10'>
+    <div className={` ${size>=768?'pr-4 pt-[20vh]':'pr-4 '}`}>
   <p className="text-sm text-white">Bring Your Imagination to Life</p>
   <div className="relative group text-white">
     <h1 className="text-3xl py-4 font-bold text-white mb-8 hover:cursor-default">3D Animation & Design</h1>
