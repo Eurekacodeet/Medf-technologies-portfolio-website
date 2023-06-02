@@ -84,7 +84,7 @@ const Dh = () => {
   }, [arrow]);
   const text="For better performance, switch to the video view by clicking the cube. We're optimizing the 3D view soon. Enjoy the video experience despite any performance issues."
   return (
-    <div className="flex flex-col bg-black text-white p-10 h-[85vh] md:flex md:flex-row overflow-hidden dh-component">
+    <div className="flex flex-col bg-black text-white p-10 h-[100vh] md:flex md:flex-row overflow-hidden dh-component">
       {showButton ? (
         <button onClick={handleScroll} className="fixed bottom-10 z-50 right-10 bg-white text-black py-2 px-4 border-[1px] border-black rounded-full">
          <div className='flex flex-row justify-between items-center'>Scroll Past <ChevronDownIcon className="ml-1 rounded full text-black" width={20} height={20}/></div> 
@@ -99,8 +99,8 @@ const Dh = () => {
       
       )}
       
-      <div className="w-full mr-10 mt-[20vh] md:w-2/5">
-      <Carousel autoplay className='pb-20 boder-2 border-blue-500' >
+      <div className="w-full mr-10 md:w-2/5">
+      <Carousel autoplay className='pb-8 boder-2 border-blue-500' >
     <div className='boder-2 border-red-400'>
     <p className="text-sm text-white">Obtain High Quality Webapps</p>
         <div className="relative group text-white">
@@ -112,7 +112,12 @@ const Dh = () => {
                        <button className='bg-white mt-4 text-black hover:font-bold hover:bg-white hover:text-black rounded-full px-4 py-2'><p className='text-sm '>Contact Us</p></button>
                     </Link>
     </div>
+
+
     <div>
+
+
+
     <div className='boder-2 border-red-400 pl-10'>
   <p className="text-sm text-white">Build Innovative Mobile Applications</p>
   <div className="relative group text-white">
@@ -126,8 +131,10 @@ const Dh = () => {
     </button>
   </Link>
 </div>
-
     </div>
+
+
+    
     <div className=''>
     <div className='boder-2 border-red-400 pl-10'>
   <p className="text-sm text-white">Create Stunning Visual Designs</p>
@@ -142,8 +149,10 @@ const Dh = () => {
     </button>
   </Link>
 </div>
-
     </div>
+
+
+
     <div>
     <div className='boder-2 border-red-400 pl-10'>
   <p className="text-sm text-white">Bring Your Imagination to Life</p>
@@ -160,6 +169,8 @@ const Dh = () => {
 </div>
 
     </div>
+
+    
   </Carousel>
       </div>
       <div className="md:w-3/5 h-[100%] w-full md:h-full pt-2">
