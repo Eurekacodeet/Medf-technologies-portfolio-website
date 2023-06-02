@@ -107,13 +107,13 @@ const Dh = () => {
           <h1 className="text-3xl py-4 font-bold text-white mb-8 hover:cursor-default">Full Stack Web Development</h1>
           <div className="rounded-full bg-white w-10 h-[0.32rem] mt-1 absolute left-0 bottom-0 transition-all duration-500 ease-in-out shadow shadow-white group-hover:w-[87%]" />
         </div>
-        <p className="text-sm text-white">We help you to grow your business by developing awesome and interactive web and mobile apps </p>
+        <p className="text-sm text-white">We help you to grow your business by developing awesome and interactive web apps </p>
         <Link to="/contact" className="">
                        <button className='bg-white mt-4 text-black hover:font-bold hover:bg-white hover:text-black rounded-full px-4 py-2'><p className='text-sm '>Contact Us</p></button>
                     </Link>
     </div>
     <div>
-    <div className='boder-2 border-red-400'>
+    <div className='boder-2 border-red-400 pl-10'>
   <p className="text-sm text-white">Build Innovative Mobile Applications</p>
   <div className="relative group text-white">
     <h1 className="text-3xl py-4 font-bold text-white mb-8 hover:cursor-default">Mobile App Development</h1>
@@ -128,8 +128,8 @@ const Dh = () => {
 </div>
 
     </div>
-    <div>
-    <div className='boder-2 border-red-400'>
+    <div className=''>
+    <div className='boder-2 border-red-400 pl-10'>
   <p className="text-sm text-white">Create Stunning Visual Designs</p>
   <div className="relative group text-white">
     <h1 className="text-3xl py-4 font-bold text-white mb-8 hover:cursor-default">Graphics Design Services</h1>
@@ -145,7 +145,7 @@ const Dh = () => {
 
     </div>
     <div>
-    <div className='boder-2 border-red-400'>
+    <div className='boder-2 border-red-400 pl-10'>
   <p className="text-sm text-white">Bring Your Imagination to Life</p>
   <div className="relative group text-white">
     <h1 className="text-3xl py-4 font-bold text-white mb-8 hover:cursor-default">3D Animation & Design</h1>
