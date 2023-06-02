@@ -110,7 +110,7 @@ const Dh = () => {
       )}
       
       <div className="w-full mr-10 md:w-2/5">
-      <Carousel  className='pb-8 bordr-2 flex flex-row justify-evenly border-blue-500' >
+      <Carousel autoplay  className='pb-8 bordr-2 flex flex-row justify-evenly border-blue-500' >
     <div className={` ${size>=768&&'pt-[20vh]'}`}>
     <p className="text-sm text-white">Obtain High Quality Webapps</p>
         <div className="relative group text-white">
