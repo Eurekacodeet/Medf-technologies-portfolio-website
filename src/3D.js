@@ -100,8 +100,8 @@ const Dh = () => {
       )}
       
       <div className="w-full mr-10 md:w-2/5 pl-10">
-      <Carousel autoplay className='pb-8 boder-2 border-blue-500' >
-    <div className='boder-2 border-red-400'>
+      <Carousel  className='pb-8 boder-2 border-blue-500' >
+    <div className='borer-2 pt-[20vh] lg:pt- sm:pt-  border-red-400'>
     <p className="text-sm text-white">Obtain High Quality Webapps</p>
         <div className="relative group text-white">
           <h1 className="text-3xl py-4 font-bold text-white mb-8 hover:cursor-default">Full Stack Web Development</h1>
