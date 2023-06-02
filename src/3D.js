@@ -4,6 +4,8 @@ import { OrbitControls } from '@react-three/drei';
 import AnimationFixed from './Animationfixed';
 import { ChevronUpIcon, ChevronDownIcon, CubeIcon, VideoCameraIcon, InformationCircleIcon } from '@heroicons/react/24/outline';
 import { Button, Divider, Segmented, Tooltip } from 'antd';
+import { Link } from 'react-router-dom';
+import { Carousel } from 'antd';
 const Dh = () => {
   const [showButton, setShowButton] = useState(true);
   const [conditionalMode, setConditionalMode] = useState(true);
@@ -96,13 +98,69 @@ const Dh = () => {
       </button>
       
       )}
-      <div className="w-full mr-10 md:w-2/5">
-        <p className="text-sm">Obtain High Quality Webapps</p>
-        <div className="relative group">
-          <h1 className="text-3xl py-4 font-bold hover:text-white mb-8 hover:cursor-default">Full Stack Web Development</h1>
+      
+      <div className="w-full mr-10 mt-[20vh] md:w-2/5">
+      <Carousel autoplay className='pb-20 boder-2 border-blue-500' >
+    <div className='boder-2 border-red-400'>
+    <p className="text-sm text-white">Obtain High Quality Webapps</p>
+        <div className="relative group text-white">
+          <h1 className="text-3xl py-4 font-bold text-white mb-8 hover:cursor-default">Full Stack Web Development</h1>
           <div className="rounded-full bg-white w-10 h-[0.32rem] mt-1 absolute left-0 bottom-0 transition-all duration-500 ease-in-out shadow shadow-white group-hover:w-[87%]" />
         </div>
-        <p className="text-sm">We help you to grow your business by developing awesome and interactive web and mobile apps </p>
+        <p className="text-sm text-white">We help you to grow your business by developing awesome and interactive web and mobile apps </p>
+        <Link to="/contact" className="">
+                       <button className='bg-white mt-4 text-black hover:font-bold hover:bg-white hover:text-black rounded-full px-4 py-2'><p className='text-sm '>Contact Us</p></button>
+                    </Link>
+    </div>
+    <div>
+    <div className='boder-2 border-red-400'>
+  <p className="text-sm text-white">Build Innovative Mobile Applications</p>
+  <div className="relative group text-white">
+    <h1 className="text-3xl py-4 font-bold text-white mb-8 hover:cursor-default">Mobile App Development</h1>
+    <div className="rounded-full bg-white w-10 h-[0.32rem] mt-1 absolute left-0 bottom-0 transition-all duration-500 ease-in-out shadow shadow-white group-hover:w-[87%]" />
+  </div>
+  <p className="text-sm text-white">We specialize in creating cutting-edge mobile applications that provide seamless user experiences and drive business growth.</p>
+  <Link to="/contact" className="">
+    <button className='bg-white mt-4 text-black hover:font-bold hover:bg-white hover:text-black rounded-full px-4 py-2'>
+      <p className='text-sm'>Contact Us</p>
+    </button>
+  </Link>
+</div>
+
+    </div>
+    <div>
+    <div className='boder-2 border-red-400'>
+  <p className="text-sm text-white">Create Stunning Visual Designs</p>
+  <div className="relative group text-white">
+    <h1 className="text-3xl py-4 font-bold text-white mb-8 hover:cursor-default">Graphics Design Services</h1>
+    <div className="rounded-full bg-white w-10 h-[0.32rem] mt-1 absolute left-0 bottom-0 transition-all duration-500 ease-in-out shadow shadow-white group-hover:w-[87%]" />
+  </div>
+  <p className="text-sm text-white">We offer professional graphics design services to bring your ideas to life with captivating visuals and engaging designs.</p>
+  <Link to="/contact" className="">
+    <button className='bg-white mt-4 text-black hover:font-bold hover:bg-white hover:text-black rounded-full px-4 py-2'>
+      <p className='text-sm'>Contact Us</p>
+    </button>
+  </Link>
+</div>
+
+    </div>
+    <div>
+    <div className='boder-2 border-red-400'>
+  <p className="text-sm text-white">Bring Your Imagination to Life</p>
+  <div className="relative group text-white">
+    <h1 className="text-3xl py-4 font-bold text-white mb-8 hover:cursor-default">3D Animation & Design</h1>
+    <div className="rounded-full bg-white w-10 h-[0.32rem] mt-1 absolute left-0 bottom-0 transition-all duration-500 ease-in-out shadow shadow-white group-hover:w-[87%]" />
+  </div>
+  <p className="text-sm text-white">Our expert animators use Blender & other animation softwares to create immersive 3D animations that capture attention and tell compelling visual stories.</p>
+  <Link to="/contact" className="">
+    <button className='bg-white mt-4 text-black hover:font-bold hover:bg-white hover:text-black rounded-full px-4 py-2'>
+      <p className='text-sm'>Contact Us</p>
+    </button>
+  </Link>
+</div>
+
+    </div>
+  </Carousel>
       </div>
       <div className="md:w-3/5 h-[100%] w-full md:h-full pt-2">
       <button className='flex justify-start items-start' onClick={toggleConditionalMode}>
