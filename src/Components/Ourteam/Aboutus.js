@@ -391,6 +391,25 @@ const chartRef = useRef(null);
       issuerPhoto:"https://res.cloudinary.com/dvqawl4nw/image/upload/v1685602315/kzh6heqmawyk3rauq6bq.jpg",
       credentialURL: 'https://www.virtualbadge.io/certificate-validator?credential=c40234dc-da11-456f-b588-53fcded6b45a',
     },
+    {
+      id: 2,
+      name: 'ALX software engineering',
+      issuer: 'alx',
+      issuerPhoto:"https://res.cloudinary.com/dvqawl4nw/image/upload/v1685602315/kzh6heqmawyk3rauq6bq.jpg",
+      credentialURL: 'https://asset.cloudinary.com/dr9k0vqob/246d5355f854d39e9f8a958cc1bf27b1',
+    }, {
+      id: 3,
+      name: 'Sophos Certified Architect',
+      issuer: 'Sophos',
+      issuerPhoto:"https://res.cloudinary.com/dvqawl4nw/image/upload/v1685701919/mksy3sgp4ijwy7mnxoga.jpg",
+      credentialURL: 'https://asset.cloudinary.com/dr9k0vqob/9bc921cf13d31285d89180e3c6d4278a',
+    }, {
+      id: 4,
+      name: 'Sophos Certified Engineer',
+      issuer: 'Sophos',
+      issuerPhoto:"https://res.cloudinary.com/dvqawl4nw/image/upload/v1685701919/mksy3sgp4ijwy7mnxoga.jpg",
+      credentialURL: 'https://asset.cloudinary.com/dr9k0vqob/1423fe67d183498e24647c0cdf6059b8',
+    },
     // {
     //   id: 2,
     //   name: 'Introduction to Git and GitHub',
