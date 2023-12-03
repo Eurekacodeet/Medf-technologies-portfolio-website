@@ -71,7 +71,7 @@ const Footer = () => {
     <td className='p-5 border-y-8 border-r-8 border-black justify-center bg-zinc-900 rounded items-center ' rowspan="2">
      
     <DevicePhoneMobileIcon width={40} height={40}/></td>
-    <td><p>+251988177340</p><p>+251985197106</p><p>+251912121388</p></td>
+    <td><p>+251988177340</p></td>
     
   </tr>
   <tr>
