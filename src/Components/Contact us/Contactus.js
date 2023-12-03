@@ -63,7 +63,7 @@ const ContactUs = () => {
             <div>
               <div className="flex flex-row items-center mb-4">
                 <PhoneOutlined className='text-2xl pr-3' />
-                <div className='flex flex-col'><p>+251988177340</p><p>+251985197106</p><p>+251912121388</p></div>
+                <div className='flex flex-col'><p>+251988177340</p></div>
               </div>
               <div className="flex flex-row items-center mb-4">
                 <MailOutlined className='text-2xl pr-3' />
